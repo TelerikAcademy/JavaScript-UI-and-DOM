@@ -8,6 +8,7 @@ The **JavaScript UI and DOM** is about building of low-level user interface. The
 2.   Document Object Model
 3.   HTML5 Canvas
 4.   Working with SVG
+5.   Frameworks for Canvas and SVG
 5.   Animations with Canvas and SVG
 6.   DOM Operations
 7.   Events and Event Model
