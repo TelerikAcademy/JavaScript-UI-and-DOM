@@ -2,8 +2,8 @@
 JavaScript UI and DOM Course Repository
 
 ##Course Program
-*   Course Introduction
-*   Document Object Model
+1.   Course Introduction
+2.   Document Object Model
 *   HTML5 Canvas
 *   Working with SVG
 *   Animations with Canvas and SVG
