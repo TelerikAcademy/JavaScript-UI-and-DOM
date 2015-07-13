@@ -5,8 +5,6 @@ The **JavaScript UI and DOM** is about building of low-level user interface. The
 
 ##Course Program
 1.   Course Introduction
-    *   18:00, 13 July 2015
-    *   14:00, 14 July 2015
 2.   Document Object Model
 3.   HTML5 Canvas
 4.   Working with SVG
