@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Document Object Model - HTML Elements</title>	
+</head>
+<body>
+	<img id="ninja-image" >
+	<script>
+		var ninjaImg = document.getElementById('ninja-image');
+		ninjaImg.src='images/telerik-ninja.jpg';
+		ninjaImg.width=400;
+
+		var times = 20, 
+		update = -1;
+
+		var isNinjaVisible = true;
+
+		function animationFrame(){
+			if(isNinjaVisible){
+				ninjaImg.width=0;
+			}
+			else{
+				ninjaImg.width =400;
+			}
+			isNinjaVisible = !isNinjaVisible;
+
+			// uncomment for cooler animation
+			ninjaImg.width=(20 - times) * 50;
+			times+=update;
+			if(times===0){
+				update = 1;
+			}
+			if(times == 20){
+				update = -1;
+			}
+			requestAnimationFrame(animationFrame);
+		}
+		animationFrame();
+	</script>
+</body>
+</html>

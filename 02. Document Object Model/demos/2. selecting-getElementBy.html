@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Document Object Model - getElementsBy</title>
+	<script src="scripts/string-extensions.js"></script>
+</head>
+<body>
+	<header>
+		<nav id="main-nav">
+			<ul>
+				<li>
+					<a href="#">Home</a>
+				</li>
+				<li>
+					<a href="#">Profile</a>
+				</li>
+				<li>
+					<a href="#">Friends</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<script>		
+		var separatorLine = '-'.repeat(100);
+
+		var mainNav = document.getElementById('main-nav');
+		console.log('#main-nav innerHTML: ');
+		console.log(mainNav.innerHTML);
+		console.log(separatorLine);
+
+		var ul = mainNav.getElementsByTagName('ul')[0];
+		console.log('first UL innerHTML: ');
+		console.log(ul.innerHTML);
+		console.log(separatorLine);
+
+		var navItems = ul.getElementsByTagName('li');
+		console.log('All LIs innerHTML: ')		
+		for (var i = 0,len=navItems.length; i < len; i++) {
+			console.log('LIs['+i+'] innerHTML: ');
+			console.log(navItems[i].innerHTML.trim());
+		}
+		console.log(separatorLine);
+
+		var navButtons = mainNav.getElementsByTagName('a');
+		console.log('All As innerHTML: ')		
+		for (var i = 0, len = navButtons.length; i < len; i++) {
+			console.log('As['+i+'] innerHTML: ');
+			console.log(navButtons[i].innerHTML);
+		}
+		console.log(separatorLine);
+	</script>
+</body>
+</html>

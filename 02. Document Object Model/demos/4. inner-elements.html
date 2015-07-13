@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>DOM Manipulation - QuerySelector</title>
+</head>
+<body>
+	<header>
+		<nav id="main-nav">
+			<ul>
+				<li>
+					<a href="#">Home</a>
+				</li>
+				<li>
+					<a href="#">Profile</a>
+				</li>
+				<li>
+					<a href="#">Friends</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<script>			
+		var mainNav = document.querySelector('#main-nav');
+		var navItems = mainNav.querySelectorAll('ul > li > a');
+		for (var i = 0; i < navItems.length; i++) {
+			console.log(navItems[i].innerHTML)
+		}
+	</script>
+</body>
+</html>

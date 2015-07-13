@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>DOM Manipulation - NodeLists</title>
+	<style>
+		div{			  
+			display:inline-block;
+			*display:inline;
+			width:75px;
+			height:75px;
+			zoom:1;
+			border:1px solid black;
+			border-radius:5px;
+		}
+	</style>
+</head>
+<body>		
+	<div>
+		text
+	</div>
+	<div>
+		text
+	</div>
+	<div>
+		text
+	</div>
+	<div>
+		text
+	</div>
+
+	<script> 	
+		var divs = document.getElementsByTagName('div');
+		
+		console.log(divs instanceof Array);
+		console.log(divs instanceof HTMLCollection);
+		for (var index in divs) {
+			console.log('divs['+index+'] = ' + divs[index])
+		}
+	</script>
+</body>
+</html>
