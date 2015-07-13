@@ -9,6 +9,7 @@
 }
 .reveal .slides {
   height: 100%;
+  font-size: 47px;
 }
 .reveal .slides strong,
 .reveal .slides a {
@@ -37,6 +38,16 @@
   text-align: left;
   text-shadow: 3px 3px 10px #000;
 }
+.reveal .slides section li li {
+  font-size: 0.9em;
+}
+.reveal .slides section code {
+  color: #daedf2;
+}
+.reveal .slides section pre,
+.reveal .slides section code {
+  text-shadow: none;
+}
 .reveal .slides section section {
   background-image: url("../../css/imgs/bg-dark.png");
 }
@@ -50,7 +61,7 @@
   text-align: right;
 }
 .reveal .slides section h1 {
-  font-size: 1.5em;
+  font-size: 1.3em;
   margin-bottom: 5px;
 }
 .reveal .slides section h2 {
@@ -66,13 +77,16 @@
   width: 100%;
   margin-top: 100px;
   margin-left: 0;
-  font-size: 1.7em;
+  font-size: 1.4em;
 }
 .reveal .slides .slide-title h2 {
   margin-top: 25px;
   margin-left: 20px;
-  font-size: 1.4em;
+  font-size: 1.1em;
   width: 100%;
+}
+.reveal .slides .slide-section {
+  text-align: center;
 }
 .reveal .slides .slide-section h1,
 .reveal .slides .slide-section h2 {
@@ -82,11 +96,11 @@
 }
 .reveal .slides .slide-section h1 {
   margin-top: 20%;
-  font-size: 1.9em;
+  font-size: 1.7em;
 }
 .reveal .slides .slide-section h2 {
   margin-top: 25px;
-  font-size: 1.4em;
+  font-size: 1.1em;
 }
 .reveal .slides.slide-questions {
   font-size: 1em;
@@ -101,25 +115,26 @@
 }
 .reveal .slides .signature {
   float: right;
-  position: absolute;
+  position: fixed;
   bottom: 30px;
   text-align: left;
 }
 .reveal .slides .signature-course {
   color: #739900;
-  font-size: 1.2em;
+  font-size: 1.05em;
   font-weight: bold;
   line-height: 21px;
 }
 .reveal .slides .signature-initiative {
   color: #f5ffd6;
-  font-size: 1.02em;
+  font-size: 0.9em;
   line-height: 25px;
   padding-top: 10px;
   margin-bottom: 0;
 }
 .reveal .slides .signature-link {
   color: #739900;
+  font-size: 0.85;
   text-decoration: underline;
   line-height: 10px;
 }
