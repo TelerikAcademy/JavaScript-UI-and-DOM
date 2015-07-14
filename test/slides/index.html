@@ -1,0 +1,617 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript UI & DOM: Document Object Model</title>
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="../../slides-template-files/css/reveal.css">
+    <link rel="stylesheet" href="../../slides-template-files/css/theme/black.css" id="theme">
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="../../slides-template-files/lib/css/github.css">
+    <!-- Printing and PDF exports -->
+    <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+    <!--[if lt IE 9]>
+    <script src="../../slides-template-files/lib/js/html5shiv.js"></script>
+  <![endif]-->
+    <link rel="stylesheet" href="../../slides-template-files/css/theme/telerik-academy-dark.css">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section id="title" class="slide-title">
+                <h1>The HTML5 Canvas</h1>
+                <h2>Low-level graphics in the Web</h2>
+                <aside class="signature">
+                    <p class="signature-course">JavaScript DOM & UI</p>
+                    <p class="signature-initiative">Telerik Software Academy</p>
+                    <a href="http://academy.telerik.com" class="signature-link">http://academy.telerik.com</a>
+                </aside>
+            </section>
+
+            <!-- Table of Contents -->
+            <section id="table-of-contents" data-markdown style="font-size:40px">
+                <script type="text/template">
+                #Table of Contents
+                *   Overview and usage of the canvas
+                *   Drawing shapes
+                    *   Rectangles, arcs and ellipses
+                    *   Lines, paths and Bézier curves
+                *   Drawing Text
+                *   Per-pixel manipulations
+                *   Canvas styles
+                    *   `fillColor` and `strokeColor`
+                    *   Gradients, patterns and shadows
+                *   Transformations
+                    *   Save and restore context state
+                    *   Translate
+                </script>
+            </section>
+
+            <!-- The HTML5 Canvas -->
+            <section>
+                <section id="html5-canvas" data-markdown class="slide-section">
+                    <script type="text/template">
+                        #The HTML5 Canvas
+                        ##The way of the graphics in web
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                    #The HTML5 Canvas
+                    *   The Canvas is the way to draw in the browser
+                        *   Uses JavaScript for the drawing
+                        *   Enables high-performance drawing
+                    *   The Canvas is part of the HTML5 specification
+                        *   Supported in most browsers
+                            *   Both desktop and mobile
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                    #Using the Canvas
+                    *   The Canvas is a rectangular sheet
+                        *   All the drawing is done inside this sheet
+                    *   The canvas consists of:
+                        *   `<canvas>` HTML element
+                        *   JavaScript API for the drawing
+                                                
+                        <canvas id="the-canvas" width="100" height="100" />
+
+                    <p></p>
+
+                        var canvas = document.getElementById('the-canvas');
+                        var canvasCtx = canvas.getContext('2d');
+                        canvasCtx.fillRect(10, 10, 30, 30);
+
+                    *   Set width and height <!-- .element: style="top:48%; left: 70%" class="fragment balloon" -->
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                        #The HTML5 Canvas Context
+                        *   The canvas HTML element provides many ways for drawing
+                            *   Rectangular 2d drawing
+                            *   3d drawing
+                            *   WebGL drawing
+                        *   HTML5 provides APIs for all these types of drawing
+                         *   The way to use a specific canvas API is to get the corresponding context
+                    </script>
+                </section>
+                <section data-markdown class="slide-section">
+                    <script type="text/template">
+                        #Using the HTML5 Canvas
+                        ##Live Demo
+                    </script>
+                </section>
+            </section>
+
+            <!-- Drawing Shapes -->
+            <section>
+                <section id="drawing-shapes" data-markdown class="slide-section">
+                    <script type="text/template">
+                        #Drawing Shapes
+                        ##Rects, Arcs, Ellipses                        
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                        #Canvas Shapes
+                        *   The Canvas provides ways to draw all kinds of shapes
+                            *   Rects, arcs, ellipses, lines, etc…
+                        *   Each of these shapes can be either
+                            *   Drawn in full color (i.e. filled)
+                            *   Drawn only their border (i.e. stroked)
+
+
+                            var canvas = document.getElementById('the-canvas');
+                            var canvasCtx = canvas.getContext('2d');
+                            canvasCtx.fillRect(10, 10, 25, 25); 
+                            canvasCtx.strokeRect(10, 10, 25, 25);
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                        #Drawing Rects
+                        *   Drawing rects is the simplest way to draw with the canvas
+                            *   Build-in functionality
+                            *   `context.fillRect (x, y, width, height)` <!-- .element: style="font-size: 0.9em" -->
+                                *   Creates a rectangular shape at position (x, y) from the top left corner of the canvas
+                                *   The shape is drawn in full color
+                            *   `context.strokeRect (x, y, width, height)` <!-- .element: style="font-size: 0.9em" -->
+                                *   Same as fillRect
+                                *   Only the border of the shape is drawn
+                    </script>
+                </section>
+                <section>
+                    <h1>Drawing Rects: Example</h1>
+                    <ul>
+                        <li>Drawing a rectangle filled with light blue and with dark blue border</li>
+                    </ul>
+                    <pre><code><canvas id="rects-canvas"> </canvas></code></pre>                    
+                    <pre><code>var canvas = document.getElementById('rects-canvas'),
+    ctx = canvas.getContext('2d');
+ctx.fillStyle = 'rgb(107, 187, 201)';
+ctx.strokeStyle = 'rgb(2, 55, 155)';
+ctx.fillRect(20, 20, 140, 90);
+ctx.strokeRect(20, 20, 140, 90);</code></pre>
+                </section>
+                <section data-markdown class="slide-section">
+                    <script type="text/template">
+                        #Drawing Rects
+                        ##Live Demo
+                    </script>
+                </section>
+            </section>
+
+            <!-- Canvas Paths -->
+
+            <section>
+                <section id="canvas-paths" data-markdown class="slide-section">
+                    <script type="text/template">
+                        #Canvas Paths
+                        ##Drawing arcs and lines
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                        #Canvas Paths
+                        *   The Canvas can do much more than just drawing rectangles
+                            *   Bezier curves, ellipses, arcs
+                            *   Much of the power of the Canvas comes from the path
+                        *   The path is just a set of connected dots
+                            *   Depending on the method used, the dots can be connected using straight line or curve
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                        #Canvas Paths (2)
+                        *   The canvas context has methods for paths:
+                            *   beginPath()
+                                *   Starts path
+                            *   `moveTo(x, y)`
+                                *   Changes the position of the path marker
+                            *   `lineTo(x, y)`
+                                *   Draws a straight line from the position of the path marker to position (x, y)
+                            *   `fill()` / `stroke()`
+                                *   Fills or strokes the path
+                    </script>
+                </section>
+                <section data-markdown style="font-size: 45px">
+                    <script type="text/template">
+                        #How the Canvas Works?
+                        *   The canvas only marks dots on the canvas sheet
+                            *   And remembers how these dots are connected
+                            *   When `fill()` or `stroke()` is reached, all dots are connected at once
+
+                        <img src="imgs/canvas-path-demo.png" height="330px" style="float:right; margin-top: -10px; margin-left:15px"/>
+
+                            ctx.beginPath();
+                            ctx.lineTo(200, 50);
+                            ctx.lineTo(50, 50);
+                            ctx.stroke();
+                            ctx.beginPath();
+                            ctx.moveTo(200, 50);
+                            ctx.lineTo(200,300);
+                            ctx.lineTo(50, 300);
+                            ctx.closePath();
+                            ctx.fill();
+
+                    </script>
+                </section>
+                <section data-markdown class="slide-section">
+                    <script type="text/template">
+                        #Using the Path
+                        ##Live Demo
+                    </script>
+                </section>
+            </section>
+
+            <!-- Drawing Ellipses -->
+            <section>
+                <section id="drawing-ellipses" data-markdown class="slide-section">
+                    <script type="text/template">
+                        #Drawing Ellipses
+                        ##Using the path
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                        #Drawing Ellipses
+                        *   The Canvas has a built-in methods for drawing ellipses
+                        *   arc(x, y, radius, from, to, counterclockwise)
+                        *   Draws a circle with center at (x, y) from position "from" to position "to"
+                        *   Positions in ellipses are described using radians (degrees)
+                        *   The degrees to radians formula is:
+                            *  **`radians = degrees * PI/180`**
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                        #Degrees and Radians
+                        <div style="text-align: center; padding-top:5px">
+                            <img src="imgs/degrees-radians.png" width="600px"/>
+                        </div>
+                    </script>
+                </section>
+                <section data-markdown style="font-size: 40px">
+                    #Drawing Ellipses: Example
+                    *   To draw ellipses, a path must be started:
+
+
+                        ctx.beginPath();
+
+                    *   Draw a full circle:
+
+
+                        //clockwise
+                        ctx.arc(x, y, r, 0, 2*Math.PI); 
+                        //counter clockwise
+                        ctx.arc(x, y, r, 2*Math.PI, 0, true);
+
+                    *   Draw a segment of an ellipse:
+
+
+                        //The smaller part (clockwise)
+                        ctx.arc(x, y, r, Math.PI/2, 2*Math.PI);
+
+                        //the bigger part (counterclockwise)
+                        ctx.arc(x, y, r, Math.PI/2, 2*Math.PI, true);
+                </section>
+                <section data-markdown class="slide-section">
+                    <script type="text/template">
+                        #Drawing Ellipses and Segments
+                        ##Live Demo
+                    </script>
+                </section>                
+                <section data-markdown style="font-size: 40px">
+                    <script type="text/template">
+                        #Drawing Circular Sectors
+                        *   A circular sector is the portion of a circle enclosed by two radiuses
+                        *   The Canvas has no built-in methods for creating circular sectors
+                           *   Yet, the Canvas supports paths
+                        *   A circle sector can be done by creating a sector and then a line to the center of the circle
+
+                        <div style="text-align: center">
+                            <img src="imgs/drawing-ellipses-sector-small.png" width="250" style="margin-right:20px"/>
+                            <img src="imgs/drawing-ellipses-sector-big.png" width="250" />
+                        </div>
+                    </script>
+                </section>
+                <section data-markdown >
+                    <script type="text/template">
+                        #Drawing Circular Sectors: Example
+                        *   **context.closePath()** connects the first and the last dots from the Path
+
+
+                            function drawSector(x, y, r, from, to, isCounterClockwise) {
+                              ctx.beginPath();
+                              ctx.arc(x, y, r, from, to, isCounterClockwise);
+                              ctx.lineTo(x, y);
+                              ctx.closePath();
+                              ctx.stroke();
+                            }
+                    </script>
+                </section>
+                <section data-markdown class="slide-section">
+                    <script type="text/template">
+                        #Drawing Circular Sectors
+                        ##Live Demo
+                    </script>
+                </section>    
+            </section>
+            
+            <!-- Drawing Curves -->
+            <section>
+                <section id="drawing-curves" data-markdown class="slide-section">
+                    <script type="text/template">
+                        #Drawing Curves
+                        ##Quadratic and Bezier
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                        #Drawing Curves with the Canvas
+                        *   The Canvas supports two types of curves:
+                            *   **Quadratic** curves
+                                *   A simple curve drawn based on a control point 
+                            *   **Bezier** curves
+                                *   A more complex curve based on two control points
+                        *   Both quadratic and Bezier curves are done using a path
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                        #Quadratic Curves <!-- .element: style="margin-bottom: 45px" -->
+                        *   Quadratic curves are basic curves
+                            *   Using **two context points** and a **control point**
+                                *   The first is the last point from the path (sx, sy)
+                                *   The second is the one from the curve (cx, cy)
+                            *   `context.quadraticCurveTo(cx, cy, ex, ey)` <!-- .element: style="font-size: 0.9em" -->
+                        <div style="text-align: center">
+                            <img src="imgs/qudratic-curve-sample.png" width="450px" />
+                        </div>
+                    </script>
+                </section>
+                <section data-markdown class="slide-section">
+                    <script type="text/template">
+                        #Quadratic Curves
+                        ##Live Demo
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                        #Bezier Curves <!-- .element: style="margin-bottom: 45px" -->
+                        *   Bezier curves are like quadratic curves, but with **two context** and **two control** points
+
+                        <div style="text-align: center; margin-top: 15px">
+                            <img src="imgs/bezier-curve-sample.png" width="450px" style="border-radius: 15px; border: 1px solid black"/>
+                        </div>
+                    </script>
+                </section>
+                <section data-markdown class="slide-section">
+                    <script type="text/template">
+                        #Bezier Curves
+                        ##Live Demo
+                    </script>
+                </section>
+            </section>
+
+            <!-- Drawing Text in canvas -->
+
+            <section>                
+                <section id="drawing-text" data-markdown class="slide-section">
+                    <script type="text/template">
+                        #Drawing Text in Canvas
+                        ##With styles
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                        #Drawing Text
+                        *   The HTML5 canvas can also **draw text**:
+                            *   Methods:
+                                *   `context.fillText (text, x, y)` – fills the given text
+                                *   `context.strokeText (text, x, y)` – draws only the border of the text
+                            *   Properties:
+                                *   `context.font` – sets the font size and font family of the text
+                                *   `context.fillStyle` – the fill color of the text
+                                *   `context.strokeStyle` – the stroke color of the text
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                        #Drawing Text: Example
+                        *   Draw the text 'Telerik Academy'
+                            *   Filled with **yellowgreen** color, stroked with **dark green** color
+                            *   Font family – `Arial`
+                            *   Font sizes – from `28px` to `48px`
+
+
+                            var minFontSize = '28';
+                            var currentFontSize = 48;
+                            while (minFontSize <= currentFontSize) {
+                              ctx.font = currentFontSize + 'px ' + 'Arial';
+                              ctx.fillText(text, x, y);
+                              ctx.strokeText(text, x, y);
+                              y += currentFontSize + offset;
+                              currentFontSize -= 4;
+                            }
+
+                        <img class="fragment" src="imgs/drawing-text-demo.png" width="300" style="position: absolute; top: 30%; left: 70%" />
+                    </script>
+                </section>
+                <section data-markdown class="slide-section">
+                    <script type="text/template">
+                        #Drawing Text in Canvas
+                        ##Live Demo
+                    </script>
+                </section>
+            </section>
+
+            <!-- Canvas Styles -->
+            <section>
+                <section id="canvas-styles" data-markdown class="slide-section">
+                    <script type="text/template">
+                        #Canvas Styles
+                        ##Colors and Stuff
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                        #Canvas Styles
+                        *   The canvas supports two styles
+                            *   Styles for **fill** and **stroke**
+                                *   Can be either a solid color or pattern
+                            *   Styles for **types of stroke**
+                                *   Dashed or solid
+                                *   Done using kind of workaround 
+                    </script>
+                </section>
+                <section data-markdown class="slide-section">
+                    <script type="text/template">
+                        #Canvas Styles
+                        ##Live Demo
+                    </script>
+                </section>
+            </section>
+
+            <!-- Canvas Transformations -->
+            <section>
+                <section id="transformations" data-markdown class="slide-section">
+                    <script type="text/template">
+                        #Canvas Transformations
+                        ##scale(), rotate()
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                        #Canvas Transformations
+                        *   The Canvas can do transformations
+                            *   i.e. it can be rotated, scaled or transformed
+                        *   `context.scale(dx, dy)` – all coordinates and points are scaled
+                            *   `fillRect(X, X, W, H)` will draw a rectangle
+                            *   At position **(dx * X, dy * Y)**
+                            *   With width **(dx* W)** and height **(dy* H)**
+                        *   `context.rotate(D)` – all drawing is rotated with angle **D degrees**
+                    </script>
+                </section>
+                <section data-markdown class="slide-section">
+                    <script type="text/template">
+                        #Canvas Transformations
+                        ##Live Demo
+                    </script>
+                </section>
+            </section>
+
+
+            <!-- Per-pixel Manipulation -->
+            <section>
+                <section data-markdown id="per-pixel-manipulation" class="slide-section">
+                    <script type="text/template">
+                        #Canvas Per-pixel Manipulation
+                        ##Change only portions of the canvas
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                        #Canvas Per-pixel Manipulation
+                        *   Canvas supports **per-pixel manipulation**
+                            *   All the pixels can be **manipulated one-by-one**
+                        *   Use the `context.getImageData(x, y, w, h)` <!-- .element: style="font-size: 40px" -->
+                            *   Returns the image data object
+                                *   The image data is for the rectangle with **top-left corner at (x, y)** with **width w** and **height h**
+                            *   The image data contains **an array of numbers** for each of the pixels
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                        #Canvas Per-pixel Manipulation (2)
+                        *   The array of pixels holds values between `0` and `255`
+                            *   Each value represents a **color component** from **RGBA**
+                            *   The pixels are grouped in triples in the array
+                            *   The color values for the **i-th pixel** are at positions:
+                                *   `pixels[i]` holds the **RED** component
+                                *   `pixels[i+1]` holds the **GREEN** component
+                                *   `pixels[i+2]` holds the **BLUE** component
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                        #Canvas Per-pixel Manipulation: Example
+                        *   Invert all the colors of an canvas
+                            *   Change each color component `CC` with `255-CC`
+
+
+                            var i,
+                                len,
+                                width = canvas.width,
+                                height = canvas.height,
+                                imageData = ctx.getImageData(150, 150, width, height),
+                                data = imageData.data;
+                            for(i = 0, len = data.length; i < len; i+=4){
+                                data[i+1] = 255 - data[i+1];
+                                data[i] = 255 - data[i];
+                                data[i+2] = 255 - data[i+2];
+                            }
+                            ctx.putImageData(imageData, 0, 0);
+                    </script>
+                </section>
+                <section data-markdown class="slide-section">
+                    <script type="text/template">
+                        #Canvas Per-pixel Manipulations
+                        ##Live Demo
+                    </script>
+                </section>
+            </section>
+
+            <section data-markdown id="questions" class="slide-questions">
+                <script type="text/template">
+                    #The HTML5 Canvas
+                    ##Questions
+                </script>
+            </section>
+
+        </div>
+    </div>
+    <script src="../../slides-template-files/lib/js/head.min.js"></script>
+    <script src="../../slides-template-files/js/reveal.js"></script>
+    <script>
+    /* globals Reveal, hljs */
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        slideNumber: 'c / t',
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+        // Optional reveal.js plugins
+        dependencies: [{
+            src: '../../slides-template-files/lib/js/classList.js',
+            condition: function() {
+                return !document.body.classList;
+            }
+        }, {
+            src: '../../slides-template-files/plugin/markdown/marked.js',
+            condition: function() {
+                return !!document.querySelector('[data-markdown]');
+            }
+        }, {
+            src: '../../slides-template-files/plugin/markdown/markdown.js',
+            condition: function() {
+                return !!document.querySelector('[data-markdown]');
+            }
+        }, {
+            src: '../../slides-template-files/plugin/highlight/highlight.js',
+            async: true,
+            condition: function() {
+                return !!document.querySelector('pre code');
+            },
+            callback: function() {
+                hljs.initHighlightingOnLoad();
+            }
+        }, {
+            src: '../../slides-template-files/plugin/zoom-js/zoom.js',
+            async: true
+        }, {
+            src: '../../slides-template-files/plugin/notes/notes.js',
+            async: true
+        }]
+    });
+    </script>
+</body>
+
+</html>
