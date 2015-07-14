@@ -6,7 +6,8 @@ UI & DOM course
 
 #Project Description
 
-Implement a client-side JavaScript application using the HTML graphic APIs – canvas and SVG
+Implement a client-side JavaScript application using the HTML graphic APIs – canvas and SVG.
+
 The project can be a game, web statistics or anything else. Sample applications:
 *   Chess
 *   Backgammon
