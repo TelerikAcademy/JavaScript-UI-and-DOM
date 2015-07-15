@@ -1,0 +1,10 @@
+#the-svg rect {
+  fill: #add8e6;
+  stroke: #800080;
+  stroke-width: 5;
+}
+#the-svg circle {
+  fill: #90ee90;
+  stroke: #008000;
+  stroke-width: 3;
+}

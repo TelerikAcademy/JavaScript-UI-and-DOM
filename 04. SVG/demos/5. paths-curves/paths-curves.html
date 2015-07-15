@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SVG and SVG Frameworks Demos - Paths: Line commands</title>
+    <style>svg{margin: 30px; border: 1px solid black}</style>
+  </head>
+  <body>
+    <div id="root">
+      <svg width="900" height="450">
+        <g>
+          <rect x="90" y="345" width="140" height="40" fill="purple" stroke="black">				</rect>
+          <text x="100" y="370" fill="white">Cubic Bezier Curve</text>
+          <path stroke="purple" fill="none" stroke-width="5" d="M50 200 C60 450 145 300 200 200 S225 50 300 200"></path>
+        </g>
+        <g>
+          <rect x="360" y="345" width="165" height="40" fill="green" stroke="black">				</rect>
+          <text x="370" y="370" fill="white">Quadratic Bezier Curve</text>
+          <path stroke="green" fill="none" stroke-width="5" d="M350 200 Q360 450 400 200 T525 200"></path>
+        </g>
+      </svg>
+    </div>
+  </body>
+</html>
