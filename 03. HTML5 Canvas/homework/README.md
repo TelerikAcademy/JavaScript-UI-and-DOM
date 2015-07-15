@@ -2,10 +2,9 @@
 
 ##Task 1 (Optional)   
 Draw the following using canvas:
-
-1.    <img src="imgs/head.png" height="250" />
-2.    <img src="imgs/bicycle.png" height="250"/>
-3.    <img src="imgs/house.png" height="250"/>
+<img src="imgs/head.png" style="width:25%" />
+<img src="imgs/bicycle.png" height="250" style="width:25%"/>
+<img src="imgs/house.png" height="250" style="width:25%"/>
 
 ##Task 2 (Optional)
 `Draw a circle that flies inside a box
