@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript UI & DOM: SVG</title>
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css" id="theme">
+    <link rel="stylesheet" href="css/theme/telerik-academy-dark.css">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/github.css">
+ 
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section id="title" class="slide-title">
+                <h1>Scalable Vector Graphics</h1>
+                <h2>Like Canvas, but prettier and slower</h2>
+                <aside class="signature">
+                    <p class="signature-course">JavaScript DOM & UI</p>
+                    <p class="signature-initiative">Telerik Software Academy</p>
+                    <a href="http://academy.telerik.com" class="signature-link">http://academy.telerik.com</a>
+                </aside>
+            </section>
+
+            <!-- Table of Contents -->
+            <section id="table-of-contents" data-markdown style="font-size:40px">
+                <script type="text/template">
+                #Table of Contents
+                *   SVG Overview
+                *   Vector Graphics Overview
+                *   Basic SVG Shapes
+                    *   Rectangular
+                    *   Ellipse
+                    *   Path
+                *   Drawing Text
+                </script>
+            </section>
+
+            <!-- SVG Overview -->
+            <section>
+                <section data-markdown id="svg-overview" class="slide-section">
+                    <script type="text/template">
+                        #SVG Overview
+                        ##What is SVG?
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                        #SVG Overview
+                        *   SVG is a technology for describing two dimensional vector graphics
+                            *   Uses an extension of XML
+                        *   SVG stands for Scalable Vector Graphics
+                        *   SVG is platform independent
+                            *   Understood by most browsers
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                        #Vector Graphics Overview
+                        *   Vector graphics are based on mathematical expressions
+                            *   The same on any resolution and zoom level and are not pixelated 
+                        *   Consist of geometrical primitives such as:
+                            *   Points
+                            *   Lines and curves 
+                            *   Shapes or polygons
+                        *   Represent images in computer graphics
+                        *   Vectors are locations in a dimensional space
+                    </script>
+                </section>
+                <section>
+                    <h1>Using SVG in a Web Page</h1>
+                    <ul>
+                    <li>To use SVG you need to simply open the <strong>&lt;svg></strong> element and to start defining your shapes using XML notation</li>
+                    </ul>
+                    <pre style="font-size:20px"><code><svg width="300" height="450">
+    <rect x="50" y="50" width="150" height="150" fill="lightblue" />
+    <circle cx="125" cy="125" r="60" stroke="none" fill="darkblue" />
+</svg></code></pre>
+
+<!--                     <img src="imgs/svg-sample.png" width="150" class="fragment" style="position: absolute; top:30%; left:85%" /> -->
+                    <!-- <p class="balloon fragment">SVG uses a coordinate system for the sizes and positions</p> -->
+                </section>
+                <section data-markdown class="slide-section">
+                    <script type="text/template">
+                        #Simple SVG
+                        ##Live Demo
+                    </script>
+                </section>
+            </section>
+
+            <!-- SVG Shapes -->
+            <section>
+                <section data-markdown id="svg-shapes" class="slide-section">
+                    <script type="text/template">
+                        #SVG Shapes
+                        ##What can SVG do?
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                        #SVG Shapes
+                        *   As mentioned, vector graphics are built from graphic primitives
+                            *   Points
+                            *   Lines and curves
+                            *   Shapes: rectangular, circle, etc…
+                        *   SVG supports most of the basic shapes
+                            *   More complex shapes can be created using the basic ones
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                        #SVG Shapes: Line
+                        *   `<line>` is the most basic shape in SVG
+                        *   Creates a line between two points
+
+
+                            <line x1="0" y1="0" x2="300" y2="450" stroke="black" />
+                            <line x1="300" y1="0" x2="0" y2="450" stroke="black" />
+                            <line x1="0" y1="150" x2="300" y2="150" stroke="black" />
+                            <line x1="0" y1="300" x2="300" y2="300" stroke="black" />
+                            <line x1="0" y1="150" x2="300" y2="300" stroke="black" />
+                            <line x1="0" y1="300" x2="300" y2="150" stroke="black" />
+                    </script>
+                </section>
+            </section>
+
+        </div>
+    </div>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script>
+    /* globals Reveal, hljs */
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        slideNumber: 'c / t',
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+        // Optional reveal.js plugins
+        dependencies: [{
+            src: 'lib/js/classList.js',
+            condition: function() {
+                return !document.body.classList;
+            }
+        }, {
+            src: 'plugin/markdown/marked.js',
+            condition: function() {
+                return !!document.querySelector('[data-markdown]');
+            }
+        }, {
+            src: 'plugin/markdown/markdown.js',
+            condition: function() {
+                return !!document.querySelector('[data-markdown]');
+            }
+        }, {
+            src: 'plugin/highlight/highlight.js',
+            async: true,
+            condition: function() {
+                return !!document.querySelector('pre code');
+            },
+            callback: function() {
+                hljs.initHighlightingOnLoad();
+            }
+        }, {
+            src: 'plugin/zoom-js/zoom.js',
+            async: true
+        }, {
+            src: 'plugin/notes/notes.js',
+            async: true
+        }]
+    });
+    </script>
+</body>
+
+</html>
