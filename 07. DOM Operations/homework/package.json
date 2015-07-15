@@ -1,0 +1,19 @@
+{
+  "name": "test-driven-hw-mocha",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -R spec tests"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.0.0",
+    "handlebars": "^3.0.3",
+    "jquery": "^2.1.4",
+    "jsdom": "^3.1.2",
+    "mocha": "^2.2.5",
+    "mocha-jsdom": "^1.0.0"
+  }
+}
