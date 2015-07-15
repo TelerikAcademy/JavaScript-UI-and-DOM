@@ -1,7 +1,7 @@
 #HTML5 Canvas Homework
 
 ##Task 1 (Optional)   
-Draw the following using canvas:
+Draw the following using canvas:<br/>
 <img src="imgs/head.png" style="width:25%" />
 <img src="imgs/bicycle.png" height="250" style="width:25%"/>
 <img src="imgs/house.png" height="250" style="width:25%"/>
