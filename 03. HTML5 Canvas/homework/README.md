@@ -12,6 +12,8 @@ Draw the following using canvas:<br/>
 *   When it reaches an edge, it should bounce that edge
 *   __Example:__
 
+<img src="imgs/bouncing-ball.png" width="500" />
+
 ##Task 3 (Optional, no points, no deadline)
 
 Create the famous game "Snake"
