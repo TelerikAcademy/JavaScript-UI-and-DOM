@@ -10,7 +10,7 @@ Draw the following using canvas:<br/>
 `Draw a circle that flies inside a box
 
 *   When it reaches an edge, it should bounce that edge
-*   __Example:__
+*   _Example:_
 
 <img src="imgs/bouncing-ball.png" width="500" />
 
