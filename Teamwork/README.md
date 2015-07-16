@@ -46,7 +46,7 @@ If you have a chance, time and a suitable situation, you might add some of the f
 ##Non-required Work
 *   Completely finished project is not obligatory required. It will not be a big problem if your project is not completely finished or is not working greatly
     *   This team work project is for educational purpose
-    *   Its main purpose it to experience using graphics, dom manipulation and OOP in a real-world-like project and to get some experience in team working and team collaboration with a source control system.
+    *   Its main purpose it to experience using graphics, DOM manipulation and OOP in a real-world-like project and to get some experience in team working and team collaboration with a source control system.
 *   Implementation of server-side logic with ASP.NET, PHP, Java or Node.js
 
 ##Deliverables
