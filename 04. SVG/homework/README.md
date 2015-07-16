@@ -19,4 +19,3 @@ Define the Windows 8 image using SVG
 **Optional, no extra points, no deadline**
 
 Implement the previous tasks using the **SVG DOM API** for JavaScript
-

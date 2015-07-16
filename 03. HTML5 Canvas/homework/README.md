@@ -1,12 +1,15 @@
-#HTML5 Canvas Homework
+#HTML5 Canvas Practise Tasks:
 
-##Task 1 (Optional, no points, no deadline)
+##Task 1
+**Optional, no points, no deadline**
 Draw the following using canvas:<br/>
 <img src="imgs/head.png" style="width:25%" />
 <img src="imgs/bicycle.png" height="250" style="width:25%"/>
 <img src="imgs/house.png" height="250" style="width:25%"/>
 
-##Task 2 (Optional, no points, no deadline)
+##Task 2
+**Optional, no points, no deadline**
+
 `Draw a circle that flies inside a box
 
 *   When it reaches an edge, it should bounce that edge
@@ -14,7 +17,8 @@ Draw the following using canvas:<br/>
 
 <img src="imgs/bouncing-ball.png" width="500" />
 
-##Task 3 (Optional, no points, no deadline)
+##Task 3
+**Optional, no points, no deadline**
 
 Create the famous game "Snake"
 *   The snake is a sequence of rectangles/ellipses
