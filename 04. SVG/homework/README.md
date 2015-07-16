@@ -13,4 +13,10 @@ Define the MEAN image using SVG
 
 Define the Windows 8 image using SVG
 
-<img src="imgs/hw-windows-8.jpg"
+<img src="imgs/hw-windows-8.jpg" />
+
+##Task 2
+**Optional, no extra points, no deadline**
+
+Implement the previous tasks using the SVG DOM API for JavaScript
+
