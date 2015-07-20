@@ -6,7 +6,7 @@
 Using Kinetic create a family tree
 
 
-__Example:__
+_Example:_
 
     var familyMembers = [{
       mother: 'Maria Petrova',
