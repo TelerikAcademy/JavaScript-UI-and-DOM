@@ -1,21 +1,19 @@
-#Scallable Vector Graphics Prectise Tasks:
+#Frameworks for Graphics (KineticJS)
 
 ##Task 1
 **Optional, no extra points, no deadline**
 
-Define the MEAN image using SVG
-*   Use both circles and paths
+Using Kinetic create a family tree
+__Example:__
 
-<img src="imgs/hw-mean.png" />
+    var familyMembers = [{
+      mother: 'Maria Petrova',
+      father: 'Georgi Petrov',
+      children: ['Teodora Petrova', 'Peter Petrov']
+    }, {
+      mother: 'Petra Stamatova',
+      father: Todor Stamatov',
+      children: ['Maria Petrova']
+    }] 
 
-##Task 2
-**Optional, no extra points, no deadline**
-
-Define the Windows 8 image using SVG
-
-<img src="imgs/hw-windows-8.jpg" />
-
-##Task 3
-**Optional, no extra points, no deadline**
-
-Implement the previous tasks using the **SVG DOM API** for JavaScript
+<img src="imgs/hw-family-tree.png" />
