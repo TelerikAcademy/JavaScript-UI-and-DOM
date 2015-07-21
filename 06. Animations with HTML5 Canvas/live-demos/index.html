@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript UI & DOM: Animations</title>
+  <script type="text/javascript" 
+  src="bower_components/kineticjs/kinetic.js"></script>
+  <style>
+    canvas{
+      border: 1px solid black !important;
+    }
+  </style>
+</head>
+<body>
+<div id="container"></div>
+<script type="text/javascript">
+  var stage = new Kinetic.Stage({
+    container: 'container',
+    width: 500,
+    height: 350
+  });
+
+  var layer = new Kinetic.Layer();
+
+  var i,
+    count = 50;
+  for(i = 0; i < count; i += 1 ){
+    var ball = new Kinetic.Circle({
+      x: Math.random() * stage.getWidth(),
+      y: Math.random() * stage.getHeight(),
+      radius: 15,
+      fill: 'pink',
+      stroke: 'purple'
+    });
+    layer.add(ball);
+  }
+  stage.add(layer);
+
+  var updatexs = Array.apply(null, {length: count})
+    .map(function(){
+      return 5;
+    }) ,
+  updateys = Array.apply(null, {length: count})
+    .map(function(){
+      return 5;
+    });
+
+  function animFrame(){
+    var balls = layer.find('Circle');
+      balls.forEach(function(ball, index){
+        var updatex = updatexs[index];
+        var updatey = updateys[index];
+        var x = ball.getX() + updatex,
+          y = ball.getY() + updatey,
+          r = ball.getRadius();
+        if(x - r < 0 || x + r > stage.getWidth()){
+          // var sign = updatex/Math.abs(updatex);
+          updatex *= -1;
+        }
+
+        if(y - r < 0 || y + r > stage.getHeight()){
+          // var sign = updatey/Math.abs(updatey);
+          updatey *= -1;
+        }
+
+        if(balls.some(function(other){
+          if(other === ball){
+            return false;
+          }
+          var b1 = {
+            x: ball.getX(),
+            y: ball.getY(),
+            r: ball.getRadius()
+          },
+            b2 = {
+              x: other.getX(),
+              y: other.getY(),
+              r: other.getRadius()
+            };
+          var d = Math.sqrt((b1.x - b2.x) * (b1.x - b2.x) + 
+                            (b1.y - b2.y) * (b1.y - b2.y));
+          return d <= (b1.r + b2.r);
+        })){
+          updatex *= -1;
+          updatey *= -1;
+        }
+
+        ball.setX(ball.getX() + updatex);
+        ball.setY(ball.getY() + updatey);
+        updatexs[index] = updatex;
+        updateys[index] = updatey;
+      });
+    layer.draw();
+
+    requestAnimationFrame(animFrame);
+  }
+
+  animFrame();
+
+</script>
+
+</body>
+</html>

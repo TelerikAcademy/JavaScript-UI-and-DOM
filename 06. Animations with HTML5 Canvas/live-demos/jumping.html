@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript UI & DOM: Jumping </title>
+  <script type="text/javascript" 
+  src="bower_components/kineticjs/kinetic.js"></script>
+  <style>
+    canvas{
+      border: 1px solid black !important;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+  </div>
+  <script type="text/javascript">
+    var stage = new Kinetic.Stage({
+      container: 'container',
+      width: 800,
+      height: 650
+    });
+    var layer = new Kinetic.Layer();
+
+    var bgLayer = new Kinetic.Layer();
+    bgLayer.add(new Kinetic.Rect({
+      x: 0,
+      y: 500,
+      width: 800,
+      height: 150,
+      fill: 'green'
+    }));
+
+    var player = new Kinetic.Rect({
+      x: 0,
+      y: 450,
+      width: 30,
+      height: 80,
+      fill: 'pink',
+      stroke: 'purple'
+    });
+
+    layer.add(player);
+    stage.add(layer);
+    stage.add(bgLayer);
+
+    
+    var jump = (function(){
+    var jumpingShapes = [];
+
+    function jump(player, finishedCallback){
+      var x = player.getX(),
+        y = player.getY(),
+        originalPostion = {
+          x: x,
+          y: y
+        },
+        CONSTS = {
+          JUMP_HEIGHT: 150
+        },
+        updatex = 1,
+        updatey = -5;
+      if(jumpingShapes.indexOf(player)>=0){
+        return;
+      }
+      jumpingShapes.push(player);
+      function performJump(){
+        if(originalPostion.y - CONSTS.JUMP_HEIGHT > player.getY()){
+          updatey *= -1;
+        }
+        player.setX(player.getX() + updatex);
+        player.setY(player.getY() + updatey);
+        layer.draw();
+        if(originalPostion.y > player.getY()){
+          requestAnimationFrame(performJump);
+        }
+        else{
+          jumpingShapes.splice(
+            jumpingShapes.indexOf(player));
+          finishedCallback();
+        }
+      }
+
+      performJump();
+    }
+    return jump;
+  }());
+
+
+    function muchJumping(){
+      jump(player, function(){
+        muchJumping();
+      });
+    }
+    muchJumping();
+
+    // window.onkeydown = function(ev){
+    //   if(ev.keyCode === 32){
+    //     jump(player);
+    //     jumpingShapes = [];
+    //   }
+    // };
+
+  </script>
+  
+</body>
+</html>
