@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript UI and DOM: Animations</title>
+    <script src="bower_components/kineticjs/kinetic.js"></script>
+    <style>
+    canvas:first-of-type {
+        border: 1px solid black !important;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="container"></div>
+    <script>
+    var stage = new Kinetic.Stage({
+        container: 'container',
+        width: document.body.clientWidth,
+        height: 500
+    });
+    var layer = new Kinetic.Layer();
+    var bgLayer = new Kinetic.Layer();
+
+    var speedx = 25,
+        speedy = 20,
+        deltax = 1,
+        deltay = 1,
+        height = 100,
+        t = 1,
+        a = 0.01;
+
+    function update(ball) {
+        var x = ball.getX(),
+            y = ball.getY(),
+            r = ball.getRadius(),
+            height = ball.height,
+            deltax = ball.deltax,
+            deltay = ball.deltay,
+            newy = y + deltay * speedy;
+        if (deltay > 0 && newy + r >= stage.getHeight()) {
+            ball.deltay *= -1;
+        }
+
+        if (deltay < 0 && newy - r <= height) {
+            ball.deltay *= -1;
+            ball.height += height / 3;
+        }
+
+        if (x + r > stage.getWidth()) {
+            ball.deltax *= -1;
+        }
+        if (x - r < 0) {
+            ball.deltax *= -1;
+        }
+        ball.setX(x + ball.deltax * speedx);
+        ball.setY(y + ball.deltay * speedy);
+    }
+
+    function animationStep() {
+        layer.find('Circle')
+            .forEach(update);
+
+        layer.draw();
+        layer.find('Circle')
+            .forEach(function(ball) {
+                if (ball.height > stage.getHeight()) {
+                    bgLayer.add(ball);
+                }
+            })
+        bgLayer.draw();
+        if (height < stage.getHeight()) {
+            requestAnimationFrame(animationStep);
+        }
+    }
+
+    animationStep();
+
+    var i = 0,
+        count = 15;
+
+    function startAddBalls() {
+        var ball = new Kinetic.Circle({
+            x: Math.random() * stage.getWidth(),
+            y: 15,
+            radius: 15,
+            fill: 'lightblue',
+            stroke: 'blue'
+        });
+        ball.deltax = 1;
+        ball.deltay = 1;
+        ball.height = 100;
+
+        layer.add(ball);
+        setTimeout(startAddBalls, 100);
+    }
+    stage.add(bgLayer);
+    stage.add(layer);
+    // startAddBalls();
+
+    var createBallOnClick = function(ev) {
+        var ball = new Kinetic.Circle({
+            x: ev.offsetX,
+            y: 15,
+            radius: 15,
+            fill: 'lightblue',
+            stroke: 'blue'
+        });
+        ball.deltax = 1;
+        ball.deltay = 1;
+        ball.height = 100;
+
+        layer.add(ball);
+    };
+
+    document.getElementById('container')
+        .addEventListener('click', createBallOnClick);
+    document.getElementById('container')
+        .addEventListener('tap', createBallOnClick);
+    </script>
+</body>
+
+</html>
