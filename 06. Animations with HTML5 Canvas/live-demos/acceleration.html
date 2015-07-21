@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>JavaScript UI and DOM: Animations</title>
-  <script src="bower_components/kineticjs/kinetic.js"></script>
+  <script src="scripts/kinetic.js"></script>
 </head>
 
 <body>
@@ -28,7 +28,7 @@
   var deltay = 1,
     a = 0.0001;
 
-  var moveBall = function(ball, index) {
+  var moveBall = function(ball) {
     var t = ball.t;
     var speed = a * t * t;
     var isCollidingWithBall =

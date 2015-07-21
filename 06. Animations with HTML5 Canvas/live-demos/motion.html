@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>JavaScript UI and DOM: Animations</title>
-  <script src="bower_components/kineticjs/kinetic.js"></script>
+  <script src="scripts/kinetic.js"></script>
 </head>
 
 <body>
@@ -27,17 +27,8 @@
     stroke: 'lightblue'
   });
 
-  mainLayer.add(ball);
-  // layer.add(path);
   stage.add(bgLayer);
   stage.add(mainLayer);
-
-  // var path = new Kinetic.Circle({
-  //     x: 150,
-  //     y: 150,
-  //     radius: 100,
-  //     stroke: 'black'
-  // });
 
   var angle = 0,
     r = 1;
@@ -108,7 +99,7 @@
       bgLayer.draw();
       ballsInMainLayer = 0;
     }
-    
+
     ball = newBall;
     angle += Math.PI / 36;
     r += 0.1;
