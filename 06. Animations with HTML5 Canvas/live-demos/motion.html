@@ -2,90 +2,120 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>JavaScript UI and DOM: Animations</title>
-    <script src="bower_components/kineticjs/kinetic.js"></script>
+  <meta charset="UTF-8">
+  <title>JavaScript UI and DOM: Animations</title>
+  <script src="bower_components/kineticjs/kinetic.js"></script>
 </head>
 
 <body>
-    <div id="container"></div>
-    <script>
-        var stage = new Kinetic.Stage({
-            container: 'container',
-            width: document.body.clientWidth,
-            height: 500
+  <div id="container"></div>
+  <script>
+  /* globals Kinetic */
+  var stage = new Kinetic.Stage({
+    container: 'container',
+    width: document.body.clientWidth,
+    height: 500
+  });
+  var bgLayer = new Kinetic.Layer();
+  var mainLayer = new Kinetic.Layer();
+
+  var ball = new Kinetic.Circle({
+    x: 10,
+    y: 250,
+    radius: 3,
+    fill: 'blue',
+    stroke: 'lightblue'
+  });
+
+  mainLayer.add(ball);
+  // layer.add(path);
+  stage.add(bgLayer);
+  stage.add(mainLayer);
+
+  // var path = new Kinetic.Circle({
+  //     x: 150,
+  //     y: 150,
+  //     radius: 100,
+  //     stroke: 'black'
+  // });
+
+  var angle = 0,
+    r = 1;
+
+  //linear motion
+  // function calculateX(){
+  //     return ball.getX() + 5;
+  // }
+  // function calculateY() {
+  //     return ball.getY()
+  // }
+
+  /* circular motion */
+
+  // function calculateX(){
+  //     return path.getX() + path.getRadius() * Math.cos(angle);
+  // }
+
+  // function calculateY(){
+  //     return path.getY() + path.getRadius() * Math.sin(angle);
+  // }
+
+  /* spiral motion */
+
+  // var x = 150,
+  //     y = 150;
+  // function calculateX(){
+  //     return x + r * Math.cos(angle);
+  // }
+
+  // function calculateY(){
+  //     return y + r * Math.sin(angle);
+  // }
+
+  /* sine wave motion */
+  function calculateX() {
+    return ball.getX() + 1;
+  }
+
+  function calculateY() {
+    return 150 + Math.sin(angle) * 50;
+  }
+
+  var MAX_COUNT_IN_LAYER = 150,
+    ballsInMainLayer = 0;
+
+  function step() {
+    var newBall = new Kinetic.Circle({
+      x: 0,
+      y: 0,
+      radius: 3,
+      fill: 'blue',
+      stroke: 'lightblue'
+    });
+    newBall.setX(calculateX());
+    newBall.setY(calculateY());
+    mainLayer.add(newBall);
+    mainLayer.draw();
+    ballsInMainLayer += 1;
+
+    // if the balls in the main layer are too much, move them to the
+    // comment to see a performance slowdown
+    if (ballsInMainLayer === MAX_COUNT_IN_LAYER) {
+      mainLayer.find('Circle')
+        .forEach(function(ball){
+            bgLayer.add(ball);
         });
-        var layer = new Kinetic.Layer();
-
-        var ball = new Kinetic.Circle({
-            x: 10,
-            y: 250,
-            radius: 10,
-            fill: 'blue',
-            stroke: 'lightblue'
-        });
-
-        // var path = new Kinetic.Circle({
-        //     x: 150,
-        //     y: 150,
-        //     radius: 100,
-        //     stroke: 'black'
-        // });
-
-        var angle = 0,
-            r = 1;
-        // function calculateX(){
-        //     return ball.getX() + 5;
-        // }
-        // function calculateY() {
-        //     return ball.getY()
-        // }
-
-        /* circular movement */
-
-        // function calculateX(){
-        //     return path.getX() + path.getRadius() * Math.cos(angle);
-        // }
-
-        // function calculateY(){
-        //     return path.getY() + path.getRadius() * Math.sin(angle);
-        // }
-
-        /* spiral movement */
-
-        // var x = 150,
-        //     y = 150;
-        // function calculateX(){
-        //     return x + r * Math.cos(angle);
-        // }
-
-        // function calculateY(){
-        //     return y + r * Math.sin(angle);
-        // }
-
-        function calculateX(){
-            return ball.getX() + 1;
-        }
-
-        function calculateY(){
-            return 150 + Math.sin(angle) * 50;
-        }
-
-        layer.add(ball);
-        // layer.add(path);
-        stage.add(layer);
-
-        function step(){
-            ball.setX(calculateX());
-            ball.setY(calculateY());
-            layer.add(ball);
-            angle += Math.PI / 360;
-            r += 0.1;
-            layer.draw();
-            requestAnimationFrame(step);
-        }
-        step();
-
-    </script>
+      bgLayer.draw();
+      ballsInMainLayer = 0;
+    }
+    
+    ball = newBall;
+    angle += Math.PI / 36;
+    r += 0.1;
+    requestAnimationFrame(step);
+  }
+  step();
+  </script>
 </body>
-</html>    
+
+</html>

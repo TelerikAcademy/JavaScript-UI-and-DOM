@@ -12,18 +12,20 @@
   </style>
 </head>
 <body>
+<h1>Colling balls</h1>
 <div id="container"></div>
 <script type="text/javascript">
+/* globals Kinetic */
   var stage = new Kinetic.Stage({
     container: 'container',
-    width: 500,
-    height: 350
+    width: 850,
+    height: 550
   });
 
   var layer = new Kinetic.Layer();
 
   var i,
-    count = 50;
+    count = 20;
   for(i = 0; i < count; i += 1 ){
     var ball = new Kinetic.Circle({
       x: Math.random() * stage.getWidth(),
@@ -32,38 +34,35 @@
       fill: 'pink',
       stroke: 'purple'
     });
+    ball.updatex = 3;
+    ball.updatey = 3;
     layer.add(ball);
   }
   stage.add(layer);
 
-  var updatexs = Array.apply(null, {length: count})
-    .map(function(){
-      return 5;
-    }) ,
-  updateys = Array.apply(null, {length: count})
-    .map(function(){
-      return 5;
-    });
-
   function animFrame(){
     var balls = layer.find('Circle');
-      balls.forEach(function(ball, index){
-        var updatex = updatexs[index];
-        var updatey = updateys[index];
-        var x = ball.getX() + updatex,
-          y = ball.getY() + updatey,
+      balls.forEach(function(ball){
+        var x = ball.getX() + ball.updatex,
+          y = ball.getY() + ball.updatey,
           r = ball.getRadius();
         if(x - r < 0 || x + r > stage.getWidth()){
-          // var sign = updatex/Math.abs(updatex);
-          updatex *= -1;
+          ball.updatex *= -1;
         }
 
         if(y - r < 0 || y + r > stage.getHeight()){
-          // var sign = updatey/Math.abs(updatey);
-          updatey *= -1;
+          ball.updatey *= -1;
         }
 
-        if(balls.some(function(other){
+        if(balls.some(isBallCollidingWith)){
+          ball.updatex *= -1;
+          ball.updatey *= -1;
+        }
+
+        ball.setX(ball.getX() + ball.updatex);
+        ball.setY(ball.getY() + ball.updatey);
+
+        function isBallCollidingWith(other){
           if(other === ball){
             return false;
           }
@@ -80,15 +79,7 @@
           var d = Math.sqrt((b1.x - b2.x) * (b1.x - b2.x) + 
                             (b1.y - b2.y) * (b1.y - b2.y));
           return d <= (b1.r + b2.r);
-        })){
-          updatex *= -1;
-          updatey *= -1;
         }
-
-        ball.setX(ball.getX() + updatex);
-        ball.setY(ball.getY() + updatey);
-        updatexs[index] = updatex;
-        updateys[index] = updatey;
       });
     layer.draw();
 
