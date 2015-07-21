@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>JavaScript UI and DOM: Animations</title>
-    <script src="bower_components/kineticjs/kinetic.js"></script>
+    <script src="scripts/kinetic.js"></script>
     <style>
     canvas:first-of-type {
         border: 1px solid black !important;
@@ -13,8 +13,11 @@
 </head>
 
 <body>
+    <h1>Bouncing balls</h1>
+    <p><strong>Click</strong> anywhere on the canvas</p>
     <div id="container"></div>
     <script>
+    /* globals Kinetic */
     var stage = new Kinetic.Stage({
         container: 'container',
         width: document.body.clientWidth,
@@ -25,18 +28,13 @@
 
     var speedx = 25,
         speedy = 20,
-        deltax = 1,
-        deltay = 1,
-        height = 100,
-        t = 1,
-        a = 0.01;
+        height = 100;
 
     function update(ball) {
         var x = ball.getX(),
             y = ball.getY(),
             r = ball.getRadius(),
             height = ball.height,
-            deltax = ball.deltax,
             deltay = ball.deltay,
             newy = y + deltay * speedy;
         if (deltay > 0 && newy + r >= stage.getHeight()) {
@@ -68,7 +66,7 @@
                 if (ball.height > stage.getHeight()) {
                     bgLayer.add(ball);
                 }
-            })
+            });
         bgLayer.draw();
         if (height < stage.getHeight()) {
             requestAnimationFrame(animationStep);
@@ -76,9 +74,6 @@
     }
 
     animationStep();
-
-    var i = 0,
-        count = 15;
 
     function startAddBalls() {
         var ball = new Kinetic.Circle({
