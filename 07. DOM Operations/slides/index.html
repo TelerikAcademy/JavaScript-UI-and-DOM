@@ -3,13 +3,12 @@
 
 <head>
     <meta charset="utf-8">
-    <title>JavaScript UI & DOM: DOM Operations</title>
+    <title>JavaScript UI & DOM: Scallable Vector Graphics</title>
     <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
     <meta name="author" content="Hakim El Hattab">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">    
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme/black.css" id="theme">
     <link rel="stylesheet" href="css/theme/telerik-academy-dark.css">
@@ -19,6 +18,7 @@
  
     <!-- Printing and PDF exports -->
     <script>
+	
         var link = document.createElement('link');
         link.rel = 'stylesheet';
         link.type = 'text/css';
@@ -35,12 +35,191 @@
         <div class="slides">
             <section id="title" class="slide-title">
                 <h1>DOM Operations</h1>
-                <h2>Append, remove, styles and more</h2>
+                <h2>Creating dynamic pages</h2>
                 <aside class="signature">
                     <p class="signature-course">JavaScript DOM & UI</p>
                     <p class="signature-initiative">Telerik Software Academy</p>
                     <a href="http://academy.telerik.com" class="signature-link">http://academy.telerik.com</a>
                 </aside>
+            </section>
+
+            <!-- Table of Contents -->
+            <section id="table-of-contents" data-markdown style="font-size:40px">
+                <script type="text/template">
+                #Table of Contents
+                *   Traversing the DOM
+                *   Parents, Children and Siblings
+                *   DOM manipulation
+                *   Adding, Removing and Altering Elements
+                *   Static and Live NodeLists
+                </script>
+            </section>
+
+            <!-- DOM Elements -->
+            <section>
+                <section data-markdown id="dom-element" class="slide-section">
+                    <script type="text/template">
+                        #DOM Elements
+                        ##What is the DOM built from?
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                        #DOM Elements
+                        *   А **DOM element** is a JavaScript object that represents an element from the HTML
+                            *   **Selected** using any of the DOM selectors
+                            *   **Created** dynamically from code
+                        *   DOM elements can be changed
+                            *   This changes are **immediately** applied to the DOM, and the HTML page
+
+
+                            //changes the content of the div
+                            selectedDiv.innerHTML = "changed";
+                            //changes the background of the div to "#456"
+                            selectedDiv.style.background = "#456";
+                            var div = document.createElement("div");
+
+
+                    </script>
+                </section>                
+                <section data-markdown class="slide-section">
+                    <script type="text/template">
+                        #DOM Elements
+                        ##Live Demo
+                    </script>
+                </section>
+            </section>
+
+            <!-- Traversing the DOM -->
+            <section>
+                <section data-markdown class="slide-section" id="dom-traversing">
+                    <script type="text/template">
+                        #Traversing the DOM <!-- .element: style="margin-top:55px" -->
+                        <img src="imgs/traversing-the-dom-section-slide.png" />
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                        #Traversing the DOM
+                        *   DOM elements have properties about their position in the DOM:
+                           *   Their parent
+                           *   Their children
+                           *   Their Siblings
+                              *   Elements immediatelly before and after the element
+                        *   These properties can be used to traverse through the DOM
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                        #Traversing the DOM
+                        *   `element.parentNode`
+                            *   Returns the direct parent of the element
+                            *   The parent of document is null
+                        *   `element.childNodes`
+                            *   Returns a nodeList of all the child nodes
+                                *   Including the text nodes (whitespaces)
+
+                    </script>
+                </section>
+                <section>
+                    <h1>Traversing the DOM - Example</h1>
+                    <ul><li>Traverse a <code>&lt;UL></code> with <code>&lt;LI></code>s:</li></ul>
+                    <pre><code>function iterateList(listId){
+    var trainersList = document.getElementsById(listId);
+    var parent = trainersList.parentNode;
+    log("parent of trainers-list: " + parent.nodeName + 
+        " with id: " + parent.id);
+    var children = trainersList.childNodes;
+    log("elements in trainers-list: " + children.length);
+    log("element in trainers-list");
+    for (var i = 0, len = children.length; i < len; i++) {
+      var subItem = children[i];
+      log(subItem.nodeName + " content: " +
+          subItem.innerText);
+}</code></pre>
+                </section>
+                <section data-markdown class="slide-section">
+                    <script type="text/template">
+                        #Traversing the DOM
+                        ##Live Demo                    
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                        #Using the Named Elements in DOM Objects
+                        *   DOM elements have some properties for special elements around them:
+                            *   **First** and **last** child nodes
+                            *   The element **before**/**after** the current node
+                        *   The named elements are:
+                            *   `firstChild` and `lastChild`
+                            *   `nextSibling` / `nextElementSibling`
+                            *   `previousSibling` / `previousElementSibling`
+                    </script>
+                </section>
+                <section data-markdown class="slide-section">
+                    <script type="text/template">
+                        #Using the Named Elements in DOM Objects
+                        ##Live Demo
+                    </script>
+                </section>
+            </section>
+            <section>
+                <section data-markdown class="slide-section" id="dom-manipulation">
+                    <script type="text/template">
+                        #Manipulating the DOM
+                        ##Making a web page dynamic
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                        #Manipulating the DOM
+                        *   DOM can be manipulated dynamically with JS
+                            *   HTML elements can be created
+                            *   HTML elements can be removed
+                            *   HTML elements can be altered
+                                *   Change their content
+                                *   Change their styles
+                                *   Change their attributes
+
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                        #Creating HTML Еlements
+                        *   The document object has a method for creation of HTML elements
+                            *   document.createElement(elementName)
+                            *   Returns an object with the corresponding HTML element type
+
+
+                            var liElement = document.createElement("li");
+                            console.log(liElement instanceof HTMLLIElement); //true
+                            console.log(liElement instanceof HTMLElement); //true
+                            console.log(liElement instanceof HTMLDivElement); //false
+
+
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                        #Creating HTML Еlements
+                        *   After an HTML element is created it can be treated as if it was selected from the DOM
+                        *   When HTML elements are created dynamically they are just JavaScript objects
+                            *   They are still not in the DOM (the web page)
+                            *   New HTML elements must be appended to DOM
+
+
+                            var studentsList = document.createElement("ul");
+                            var studentLi = document.createElement("li");
+                            studentsList.appendChild(studentLi);
+                            document.body.appendChild(studentsList);
+                    </script>
+                </section>
+                <section data-markdown class="slide-section">
+                    <script type="text/template">
+                        #Appending Elements to the DOM
+                        ##Live Demo
+                    </script>
+                </section>
             </section>
         </div>
     </div>
