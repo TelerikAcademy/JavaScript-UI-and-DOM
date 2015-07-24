@@ -388,7 +388,7 @@
               </section>
               <section data-markdown>
                 <script type="text/template">
-                  #Capturing
+                  #Capturing Event Chain
                   * Capturing goes down the event chain
                     * The first executed handler is the one of the parent of all
                     
@@ -411,7 +411,80 @@
                     
 
                 </script>
-              </section>             
+              </section>    
+              <section data-markdown>
+                <script type="text/template">
+                  #Bubbling Event Chaing
+                  * Bubbling bubbles up the event chain
+                    * The first executed handler is the one on the target
+
+                    
+                    <div style="text-align: center">
+                      **HTML**<br/>
+                      **Body**<br/>
+                      **DIV**<br/>
+                      **BUTTON**<br/>
+                      <div class="fragment">
+                        User clicks the ***Button***
+                      </div>
+                    </div>
+                    
+                    * 1 <!-- .element: class="balloon fragment" style="top: 54%; left: 65%" -->
+                    * 2 <!-- .element: class="balloon fragment" style="top: 45.5%; left: 65%" -->
+                    * 3 <!-- .element: class="balloon fragment" style="top: 37.5%; left: 65%" -->
+                    * 4 <!-- .element: class="balloon fragment" style="top: 27%; left: 65%" -->
+                    
+                    <img class="fragment" src="imgs/sample-capturing-arrow-up.png" height="230" style="border: none; background: none;box-shadow: none; position: absolute; top: 28%; left: 25%">
+                </script>
+              </section>
+              <section data-markdown class="slide-section" style="font-size:40px">
+                <script type="text/template">
+                  <div style="float:left; width: 45%;">
+                    #Capturing and Bubbling Event Chains
+                    ##Live Demo
+                  </div>
+                  <img src="imgs/section-demo-capturing-bubbling.png" style="float:right; border-radius: 15px">                  
+                </script>
+              </section>              
+           </section>
+           
+           <!-- Custom Events -->
+           <section>
+             <section data-markdown class="slide-section" id="custom-events">
+               <script type="text/template">
+                #Custom Events
+                ##When built-ins are not enought
+               </script>
+             </section>         
+             <section data-markdown style="font-size: 40px">
+               <script type="text/template">
+                #Custom Events
+                * To create custom events use the `CustomEvent()` constructor
+                
+                
+                    var event = new CustomEvent(eventType);
+                 
+                 
+                * Create custom event `tripleclick`                 
+                  
+                     var event = new CustomEvent("tripleClick"); 
+                    
+                * Get body element to attach the custom event to and use `addEventListener`
+                                   
+                      
+                    var body = document.getElementsByTagName("body")[0];
+                    body.addEventListener("tripleClick", function() {
+                    	alert("You click three times");
+                    }, false);
+               </script>
+             </section>             
+           </section>
+           
+           <section data-markdown class="slide-questions" id="questions">
+             <script type="text/template">
+                #JavaScript Event Model
+                ##Questions
+             </script>             
            </section>
         </div>
     </div>
