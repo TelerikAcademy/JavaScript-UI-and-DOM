@@ -1,16 +1,16 @@
-# Running DOM tests with Mocha on JavaScript I/O
+#DOM Operations
 
-## Preparing the local machine for Unit testing with Mocha and Chai 
+##Task 1
+Create a function that takes an id or DOM element and an array of contents
 
-*   Install [JavaScript I/O](https://iojs.org/en/index.html "JavaScript I/O")
-    *   Try if it is working by typing in CMD/Terminal `$ iojs -v` (should produce result)
-*   Install [Python 2.7](https://www.python.org/downloads/ "Python 2.7")
- 
-*   Run `npm install` in CMD/Terminal
-    *   A folder `node_modules` should appear
-*   You are ready to run the tests
-
-## Running the tests
-
-*   Open the main folder and run `$ npm test`
-    *   Test results should appear on the CMD/Terminal 
+* if an id is provided, select the element
+* Add divs to the element
+  * Each div's content must be one of the items from the contents array
+* The function must remove all previous content from the DOM element provided
+* Throws if:
+  * The provided first parameter is neither string or existing DOM element
+  * The provided id does not select anything (there is no element that has such an id)
+  * Any of the function params is missing
+  * Any of the function params is not as described
+  * Any of the contents is neight `string` or `number`
+    * In that case, the content of the element **must not be** changed   
