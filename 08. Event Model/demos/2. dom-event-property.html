@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Event Model - DOM Element Event Property</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body>
+    <h1>JavaScript Event Model - DOM Element Event Property</h1>
+    <a id="1" data-id="Button #1" href="#" class="button">Button 1</a>
+    <a id="2" href="#" class="button">Button 2</a>
+    <a id="3" data-id="Button #3" href="#" class="button">Button 3</a>
+    <a id="4" href="#" class="button">Button 4</a>
+    
+    <script>
+        var body = document.getElementsByTagName('body')[0];
+
+        body.onload = onBodyLoaded();
+
+        function onBodyLoaded() {
+            var onButtonClick = function () {
+                alert("Button #" + this.id + " clicked!");
+            };
+
+            var buttons = document.getElementsByClassName("button");
+            for (var i = 0, len = buttons.length; i < len; i += 1) {
+                buttons[i].onclick = onButtonClick;
+            }
+        }
+    </script>
+</body>
+</html>
