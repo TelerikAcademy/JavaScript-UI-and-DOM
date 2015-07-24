@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>DOM Manipulation - Altering HTML elements</title>
+	<style type="text/css">
+	#wrapper{
+		width:500px;
+		padding:0;
+	}
+	#content{
+		position:relative;
+		margin:0;
+		width:500px;
+		height:500px;
+		border:1px solid black;
+		padding:0;
+	}
+
+	#moving-box{
+		position:absolute;
+		top:0;
+		left:0;
+	}
+
+	#controls{
+		text-align: center;
+		margin-top:15px;	
+	}
+
+	.button{
+		display:inline-block;
+		padding:5px 15px;
+		font-size:1.3em;
+		border:1px solid black;
+		border-radius: 5px;
+		width:17.5%;
+		text-align: center;
+		color:black;
+		text-decoration: none;
+	}
+
+	.button:hover{
+		text-decoration: underline;
+	}
+
+	.box {
+		display: inline-block;
+		position:relative;
+		width: 80px;
+		height: 80px;
+		margin: 5px;
+		padding: 0;
+		border: 3px solid lightblue;
+		border-radius: 15px;
+	}
+		div.box:nth-of-type(2n+1) {
+			background:pink;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrapper">
+		<div id="content">
+			<div id="moving-box" class="box">
+			</div>		
+		</div>
+		<div id="controls">
+			<a href="#" class="button" id="up-button">up</a>
+			<a href="#" class="button" id="right-button">right</a>
+			<a href="#" class="button" id="down-button">down</a>
+			<a href="#" class="button" id="left-button">left</a>
+		</div>
+	</div>	
+	<script src="scripts/working-with-styles.js">	
+
+	</script>
+</body>
+</html>

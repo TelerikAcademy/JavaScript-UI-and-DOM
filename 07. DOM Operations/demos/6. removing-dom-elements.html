@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>DOM Manipulation - Creating HTML elements</title>
+	<style>
+		#content div.colored {
+			border: 1px solid black;
+			border-radius: 15px;
+			width: 75px;
+			height: 75px;
+			margin: 5px;
+			padding: 0;
+			display: inline-block;
+			*display: inline;
+			zoom: 1;
+			position:relative;
+		}
+
+		#content div.colored .btn-close{
+			position:absolute;
+			top:5px;
+			right:10px;;
+			color:black;
+			text-decoration: none;			
+		}
+		#content div.colored .btn-close:hover{
+			text-decoration: underline;			
+		}
+
+			#content div.colored:nth-of-type(2n+1) {
+				border-color: lightblue;
+			}
+	</style>
+</head>
+<body>
+	<input type="text" id="tb-box-count" />
+	<a href="#" id="generate-boxes-btn">Generate boxes</a>
+	<div id="content">
+	</div>
+	<script src="scripts/removing-elements.js">
+
+	</script>
+</body>
+</html>
