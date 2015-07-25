@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Event Model - The Event Object</title>
+</head>
+<body>
+    <h1>Click to see Event Properties in the Console</h1>
+    <button class="button" id="button">Click me!</button>
+
+    <script type="text/javascript">
+        var button = document.getElementById("button");
+        alert('asdasdasd');
+        alert(button);
+        // button.onclick = function (e) {
+        button.addEventListener("click", function (e) {
+            if (!e) e = window.event;
+            
+            // Get Mouse Cordinates
+            console.log("Mouse coordinates:");
+            console.log(e.clientX);
+            console.log(e.clientY);
+
+            // Get Event target
+            console.log("Event Target:");
+            var currentTarget = e.target || e.srcElement;
+            console.log(currentTarget);
+
+            // Get Event type
+            console.log("Event Type:");
+            console.log(e.type);
+
+            // Get Event Object properties
+            console.log("Whole Event Object:");
+            console.log(e);
+        }, false);
+        // };
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Event Model - Cross Browser Events</title>
+    <script src="scripts/cross-browser-events.js"></script>
+    <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body>
+    <h1>Cross browser event</h1>
+    <a href="#" class="button" id="button">Click me!</a>
+    <script type="text/javascript">
+        var button = document.getElementById("button");
+        attachEventHandler(button, "click", function () {
+            alert("Cross browser event - works even in IE5!");
+        });
+    </script>
+</body>
+</html>
