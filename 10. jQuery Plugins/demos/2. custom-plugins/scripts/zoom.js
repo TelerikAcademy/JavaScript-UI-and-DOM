@@ -1,6 +1,7 @@
 (function($) {
     $.fn.zoom = function() {
         var $this = $(this);
+
         $this.on('mouseover', function() {
             $this = $(this);
             var oldWidth = parseInt($this.css('width'));
@@ -16,6 +17,7 @@
             $this.css('width', (oldWidth / 2) + 'px');
             $this.css('height', (oldHeight / 2) + 'px');
         });
+
         return this;
     };
 }(jQuery));
