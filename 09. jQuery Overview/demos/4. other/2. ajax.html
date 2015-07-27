@@ -27,8 +27,8 @@
         }
 
         $(function() {
-            //attach on 'keyup' for live update 
-            //('change' fires when the focus is lost)
+            // attach on 'keyup' for live update 
+            // ('change' fires when the focus is lost)
             $("#tb-filter").on('keyup', function() {
                 var value = $(this).val().toLowerCase(),
                     $countries = $('.country-item');

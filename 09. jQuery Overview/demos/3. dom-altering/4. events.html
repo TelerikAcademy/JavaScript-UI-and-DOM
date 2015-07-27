@@ -67,8 +67,9 @@
         $(document).ready(function() {
             $('.button').on('click', onButtonClick);
             $('#tb-text').on('change', onInputChange);
+            // https://api.jquery.com/category/events/
 
-            $('ul').on('click', 'li', onOptimizedButtonClick);
+            $('ul.buttons-group').on('click', 'a', onOptimizedButtonClick);
         });
     </script>
 </body>
