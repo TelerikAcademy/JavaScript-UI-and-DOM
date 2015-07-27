@@ -20,7 +20,9 @@
                 $countriesList.append(
                     $('<li />')
                     .addClass('country-item')
-                    .html(country.name)
+                    .html(country.name
+                        + ' (population: ' + country.population
+                        + '; capital: ' + country.capital + ')')
                 );
             });
             return $countriesList;
@@ -30,26 +32,20 @@
             // attach on 'keyup' for live update 
             // ('change' fires when the focus is lost)
             $("#tb-filter").on('keyup', function() {
-                var value = $(this).val().toLowerCase(),
-                    $countries = $('.country-item');
-                if (value === '') {
-                    $countries.show();
-                } else {
-                    $countries
-                        .hide()
-                        .filter(function(_, country) {
-                            return $(country).html().toLowerCase().indexOf(value.toLowerCase()) !== -1;
-                        })
-                        .show();
+                var value = $(this).val().toLowerCase();
+                if (value.length < 3) {
+                    $('#countries').html('');
+                    return;
                 }
+                $.get('http://restcountries.eu/rest/v1/name/' + value)
+                    .success(function(respCountries) {
+                        var $countriesList = createCountriesList(respCountries);
+                        $('#countries').html($countriesList);
+                    });
             });
-
-            $.get('http://restcountries.eu/rest/v1')
-                .success(function(respCountries) {
-                    var $countriesList = createCountriesList(respCountries);
-                    $('#countries').html($countriesList);
-                });
         });
+
+        // http://www.sitepoint.com/jquery-vs-raw-javascript-3-events-ajax
     </script>
 </body>
 </html>
