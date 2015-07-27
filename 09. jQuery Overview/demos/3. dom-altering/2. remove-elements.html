@@ -42,20 +42,35 @@
     <script type="text/javascript" src="../jquery-1.11.3.js"></script>
 </head>
 <body>
-    <a href="#" class="button">Delete at event positions</a>
+    <a href="#" class="button" id="delete-even">Delete at event positions</a>
+    <a href="#" class="button" id="fade-button">Fade out/fade in</a>
+    <a href="#" class="button" id="animate-button">Animate</a>
     <ul id="items-list">
     </ul>
     <script type="text/javascript">
         var i,
-            count = 50,
+            count = 64,
             $list;
         $list = $('#items-list');
         for (i = 0; i < count; i += 1) {
             $list.append('<li>Item #' + i + '</li>');
         }
 
-        $('.button').on('click', function() {
+        $('#delete-even').on('click', function () {
             $list.find('li:even').remove();
+        });
+
+        $('#fade-button').on('click', function () {
+            $list.fadeOut(3000);
+            $list.fadeIn(3000);
+        });
+
+        $('#animate-button').on('click', function () {
+            $list.animate({
+                height: "toggle"
+            }, 4000, function () {
+                // Animation complete.
+            });
         });
     </script>
 </body>

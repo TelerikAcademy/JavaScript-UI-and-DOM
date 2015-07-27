@@ -23,13 +23,14 @@
 
     <script type="text/javascript">
         function printMessage(text) {
-            $("#messages-list").append('<li>Message: ' + text + '</li>');
+            $("#messages-list").append('<li>' + text + '</li>');
         }
 
         var $specialItem = $(".special").first();
-        printMessage("id: " + $specialItem.parent().attr("id"));
-        printMessage("id: " + $specialItem.parents("div").attr("id"));
-        printMessage("id: " + $specialItem.parents("#wrapper").attr("id"));
+        printMessage("parent id: " + $specialItem.parent().attr("id"));
+        printMessage("div id: " + $specialItem.parents("div").attr("id"));
+        printMessage("#wrapper id: " + $specialItem.parents("#wrapper").attr("id"));
+        printMessage("#items-list children count: " + $("#items-list").children().length);
     </script>
 </body>
 </html>
