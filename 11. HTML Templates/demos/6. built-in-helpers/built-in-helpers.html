@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Handlebars.js demos: Conditional expressions</title>
+</head>
+<body>
+	<div id="posts"></div>	
+	<script type="text/x-handlebars-template" id="posts-list-template">
+		<h1>Posts</h1>
+		<div class="posts">
+			{{#each posts}}
+				<div>
+					<span class="number">{{@index}})</span>
+					<strong class="title">{{title}}</strong>
+					<br/>
+					{{#with author}}
+						<strong class="author">{{name}}</strong>
+					{{/with}}
+					<hr/>
+				</div>
+			{{/each}}
+		</div>
+	</script>
+	<script src='..\libs\handlebars.min.js'></script>
+	<script>
+	/* globals document, Handlebars */
+	'use strict';
+
+
+	function getPosts(count) {
+		var posts,
+			i;
+		count = count || 10;
+		posts = [];
+		for (i = 0; i < count; i += 1) {
+			posts.push({
+				id: i + 1,
+				title: 'Post #' + (i + 1),
+				author: {
+					name: 'Author #' + (i + 3)
+				}
+			});
+		}
+		return posts;
+	}
+
+
+	var postsTemplate = Handlebars.compile(document.getElementById('posts-list-template').innerHTML);
+	document.getElementById('posts').innerHTML = postsTemplate({
+		posts: getPosts(10)
+	});
+	</script>
+</body>
+</html>

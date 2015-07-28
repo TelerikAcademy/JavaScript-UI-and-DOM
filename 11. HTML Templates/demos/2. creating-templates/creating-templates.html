@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Handlebars.js demos: Creating templates</title>
+</head>
+<body>
+	<div id="root"></div>	
+	<script type="text/x-handlebars-template" id="post-template">
+		<div class='post' data-id='{{id}}'>
+			<h1 class="post-title">
+				<a href="#/posts/{{id}}">{{title}}</a>
+			</h1>
+			<p class="post-content">{{content}}</p>			
+		</div>
+	</script>
+	<script src='..\libs\handlebars.min.js'></script>
+	<script>
+	var post,
+		postTemplateHTML,
+		postTemplate;
+	post = {
+		id: 3,
+		title: 'Creating templates with Handlebars.js',
+		content: 'Creating templates with Handlebars.js is pretty easy and intuitive. Handlebars.js supports one-way data-binding and defines dynamic HTML.'
+	};
+
+	postTemplateHTML = document.getElementById('post-template').innerHTML;
+
+	postTemplate = Handlebars.compile(postTemplateHTML);
+
+	document.getElementById('root').innerHTML = postTemplate(post);
+
+
+	</script>
+</body>
+</html>

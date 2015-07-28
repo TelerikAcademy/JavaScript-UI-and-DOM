@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Handlebars.js demos: Creating templates</title>
+</head>
+<body>
+	<div id="root"></div>	
+	<script type="text/x-handlebars-template" id="template">
+		<div>
+			<p>
+				<strong>Normal</strong> (escaped):<br/><span>{{htmlString}}</span>
+			</p>
+			<hr />
+			<p>
+				<strong>Not escaped</strong> (in the template): <span>{{{htmlString}}}</span>
+			</p>
+			<hr />
+			<p>
+				<strong>Not escaped</strong> (in the value):<span>{{escapedHtmlString}}</span>
+			</p>
+			<hr />
+		</div>		
+	</script>
+	<script src='..\libs\handlebars.min.js'></script>
+	<script>
+		/* globals Handlebars, document */
+		'use strict';
+		var obj = {
+				htmlString: '<h1>This is heading</h1>',
+				escapedHtmlString: new Handlebars.SafeString('<h1>This is heading</h1>')
+			},
+			templateHtml = document.getElementById('template').innerHTML,
+			template = Handlebars.compile(templateHtml);
+		document.getElementById('root').innerHTML = template(obj);
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Handlebars.js demos: Block expressions</title>
+</head>
+<body>
+	<div id="root"></div>
+	<script type="text/x-handlebars-template" id="categories-list-template">
+		<h1>Categiries:</h1>
+		<ul class="categories-list"> 
+			{{#categories}}
+				<li class="category-item">
+					<a href="#/categories/{{id}}">{{name}}</a>
+				</li>
+			{{/categories}}
+		</ul>
+	</script>
+
+	<script type="text/x-handlebars-template" id="post-template">
+		<h1>Post:</h1>
+		<article class='post' data-id='{{id}}'>
+			<header>
+				<h1 class="post-title">
+					<a href="#/posts/{{id}}">{{title}}</a>
+				</h1>
+				<p class="category">
+					<a href="#/categories/{{category.id}}">{{category.name}}</a>
+				</p>
+			</header>
+			<p class="post-content">{{{content}}}</p>
+			<footer>
+				<span>Tags: 
+				<ul>
+					{{#tags}}
+						<li class='tag'>
+							{{name}}
+						</li>
+					{{/tags}}
+				</ul>
+			</footer>
+		</article>
+	</script>
+	<script src='..\libs\handlebars.min.js'></script>
+	<script>
+	/* globals document, Handlebars */
+
+	var post,
+		postTemplateHtml,
+		postTemplate,
+		categories,
+		categoriesTemplateHtml,
+		categoriesTemplate;
+	post = {
+		id: 3,
+		title: 'Creating templates with Handlebars.js',
+		content: 'Creating templates with Handlebars.js is pretty easy and intuitive. Handlebars.js supports <strong>one-way data-binding</strong> and defines dynamic HTML.',
+		category: {
+			id: 4,
+			name: 'Web'
+		},
+		tags: [{
+			name: 'web',
+		}, {
+			name: 'javascript'
+		}, {
+			name: 'js'
+		}, {
+			name: 'handlebars'
+		}, {
+			name: 'html-templates'
+		}]
+	};
+	categories = [{
+		id: 1,
+		name: 'Mobile'
+	}, {
+		id: 2,
+		name: 'Desktop'
+	}, {
+		id: 3,
+		name: 'Embedded'
+	}, {
+		id: 4,
+		name: 'Web'
+	}];
+
+	categoriesTemplateHtml = document.getElementById('categories-list-template').innerHTML;
+	categoriesTemplate = Handlebars.compile(categoriesTemplateHtml);
+	document.getElementById('root').innerHTML = categoriesTemplate({
+		categories: categories
+	});
+
+
+	postTemplateHtml = document.getElementById('post-template').innerHTML;
+	postTemplate = Handlebars.compile(postTemplateHtml);
+	document.getElementById('root').innerHTML += postTemplate(post);
+
+	</script>
+</body>
+</html>

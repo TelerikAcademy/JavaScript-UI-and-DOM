@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Handlebars Demos</title>
+</head>
+<body>
+	<div id="demos-container">		
+	</div>	
+	<script id="demos-list-template" type="text/x-handlebars-template">
+		<ol class="demos-list">
+			{{#demos}}
+				<li class="demo-item">
+					<a href="{{url}}">{{title}}</a>
+				</li>
+			{{/demos}}
+		</ol>
+	</script>
+	<script src='libs/handlebars.min.js'></script>
+	<script>
+	var demos = [{
+		title: 'Setup & Usage',
+		url: '1. setup-and-usage/setup-and-usage.html'
+	}, {
+		title: 'Creating HTML templates',
+		url: '2. creating-templates/creating-templates.html'
+	}, {
+		title: 'HTML Escaping',
+		url: '3. html-escaping/html-escaping.html'
+	}, {
+		title: 'Block expressions',
+		url: '4. expressions-blocks/expressions-blocks.html'
+	}, {
+		title: 'Conditional expressions',
+		url: '5. expressions-conditional/expressions-conditional.html'
+	}, {
+		title: 'Built-in helpers',
+		url: '6. built-in-helpers/built-in-helpers.html'
+	}, {
+		title: 'Custom helpers',
+		url: '7. custom-helpers/custom-helpers.html'
+	}];
+	var demosTemplateHtml = document.getElementById('demos-list-template').innerHTML,
+		demosTemplate = Handlebars.compile(demosTemplateHtml);
+
+	document.getElementById('demos-container').innerHTML = demosTemplate({demos:demos});
+	</script>
+</body>
+</html>
