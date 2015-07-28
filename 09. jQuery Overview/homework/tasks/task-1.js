@@ -21,23 +21,7 @@ Create a function that takes a selector and COUNT, then generates inside a UL wi
 
 function solve() {
   return function (selector, count) {
-    count = +count;
-    if(isNaN(count) || count <=0){
-      throw new Error('COUNT must be a positive number or convertible to number');
-    }
-    if(typeof selector  !== 'string' && !(selector instanceof jQuery)){
-      throw new Error('Selector must be either jQuery object or a string');
-    }
-        
-    var $list = $('<ul/>').addClass('items-list'),
-      i;
-    for (i = 0; i < count; i += 1) {
-      $('<li />')
-        .addClass('list-item')
-        .html('List item #' + i)
-        .appendTo($list);
-    }
-    $(selector).append($list);
+   
   };
 };
 
