@@ -153,7 +153,9 @@ https://github.com/TelerikAcademy/JavaScript-UI-and-DOM/blob/master/README.md#us
     * And executing:
       
       
-          $('#books-list').listview(books);
+            
+             $('#books-list').listview(books);
+          
           
           
     * Should generate:        
