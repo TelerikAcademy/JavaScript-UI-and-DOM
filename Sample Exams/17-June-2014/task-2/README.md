@@ -1,4 +1,4 @@
-Task 1: Gallery
+#Task 1: Gallery
 
 * Given the HTML (`index.html`), CSS (`styles.css`), JavaScript (`scripts.js` and `jquery.min.js`) and images build a jQuery plugin for a simple gallery control
 * The gallery must:
@@ -26,13 +26,13 @@ Task 1: Gallery
   
 * _Examples:_
   * Initial:
-    <img src="result/1.1. initial-three-columns.png" width="450" />    
-    <img src="result/1.2. initial-five-columns.png" width="450" />
-    <img src="result/1.3. initial-four-columns.png" width="450" />    
+    * <img src="result/1.1. initial-three-columns.png" width="450" />    
+    * <img src="result/1.2. initial-five-columns.png" width="450" />
+    * <img src="result/1.3. initial-four-columns.png" width="450" />    
   * Clicked image:  
-    <img src="result/2. clicked-picture.png" width="450" />
+    * <img src="result/2. clicked-picture.png" width="450" />
   * Next Image:
-    <img src="result/3. next-picture.png" width="450" />
+    * <img src="result/3. next-picture.png" width="450" />
   * Previous Image:
-    <img src="result/4. previous-picture.png" width="450" />
+    * <img src="result/4. previous-picture.png" width="450" />
   
