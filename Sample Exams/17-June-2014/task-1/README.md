@@ -1,4 +1,4 @@
-Task 1: ImagesPreviewer
+#Task 1: ImagesPreviewer
 
 * Given the HTML `index.html` write JavaScript function `createImagesPreviewer(selector, items)` in file `scripts.js`
 
