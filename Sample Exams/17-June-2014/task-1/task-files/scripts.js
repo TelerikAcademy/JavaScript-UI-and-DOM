@@ -1,0 +1,3 @@
+function createImagesPreviewer(selector, items) {
+
+}
