@@ -1,4 +1,4 @@
-#Task 1: Gallery
+#Task 2: Gallery
 
 * Given the HTML (`index.html`), CSS (`styles.css`), JavaScript (`scripts.js` and `jquery.min.js`) and images build a jQuery plugin for a simple gallery control
 * The gallery must:
