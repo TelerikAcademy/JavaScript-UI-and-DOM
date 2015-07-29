@@ -1,6 +1,8 @@
 function solve(){
   return function(){
-    
+    $.fn.listview = function(data){
+      
+    };
   };
 }
 
