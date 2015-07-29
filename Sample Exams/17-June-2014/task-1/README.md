@@ -20,19 +20,19 @@ Task 1: ImagesPreviewer
     * The first item from the items collection should be displayed bigger on the left
       * With its title on top
     * _Example_:
-      * <img src="result/1. initial.png" width="450" />      
+      <img src="result/1. initial.png" width="450" />      
       
   * Images in the list (on the right) have some properties:
     * When `hovered`
       * They should change their **background color**      
       * _Example:_      
-        * <img src="result/2. cow-hovered.png" width="450" />
+        <img src="result/2. cow-hovered.png" width="450" />
     * When `unhovered`
       * They should return to their **default background color**
     * When `clicked`
       * The **bigger image and its title** (on the left) are **replaced with the clicked image on the left**
       * _Example:_      
-        * <img src="result/3. hamster-clicked.png" width="450" />
+        <img src="result/3. hamster-clicked.png" width="450" />
       
   * The filter should provide functionality for **filtering the images** on the list of images (on the right)
     * When the text in the box changes
@@ -41,7 +41,7 @@ Task 1: ImagesPreviewer
     * When the text in the box is empty
       * All images should be visible
     * _Example:_      
-      * <img src="result/4. text-in-filter.png" width="450" />
+      <img src="result/4. text-in-filter.png" width="450" />
       
   * Constraints:
     * You are allowed only to edit the contents of the file "scripts.js"
