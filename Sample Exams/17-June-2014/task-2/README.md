@@ -26,9 +26,12 @@
   
 * _Examples:_
   * Initial:
-    * <img src="result/1.1. initial-three-columns.png" width="450" />    
-    * <img src="result/1.2. initial-five-columns.png" width="450" />
-    * <img src="result/1.3. initial-four-columns.png" width="450" />    
+    * Three columns:
+      * <img src="result/1.1. initial-three-columns.png" width="450" />
+    * Five columns:    
+      * <img src="result/1.2. initial-five-columns.png" width="450" />
+    * Four columns:
+      * <img src="result/1.3. initial-four-columns.png" width="450" />    
   * Clicked image:  
     * <img src="result/2. clicked-picture.png" width="450" />
   * Next Image:
