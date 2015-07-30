@@ -1,6 +1,6 @@
 #DOM Performance key points:
   * Creating DOM elements
-    * Use node.cloneNode(true) for better performance when creating many similar elements 
+    * Use `node.cloneNode(true)` for better performance when creating many similar elements 
       * Only when there is a small difference between the elements
         * i.e. when many links have only different `href` and `innerHTML` 
   * Appending elements to the DOM
