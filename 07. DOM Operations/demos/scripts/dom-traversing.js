@@ -1,10 +1,10 @@
 (function () {
     'use strict';
-    var log = console.log.bind(console),
-        list;
+    var list;
 
     function printElementInfo(element) {
-        var i,
+        var log = console.log.bind(console),
+            i,
             len;
 
         log("-".repeat(100));
