@@ -4,7 +4,7 @@ var jsdom = require('jsdom');
 var jq = require('jquery');
 var result = require('../tasks/task-2')();
 
-describe('Task #1 Tests', function () {
+describe('Task #2 Tests', function () {
 
   before(function (done) {
     jsdom.env({
