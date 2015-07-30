@@ -14,5 +14,5 @@ Create a function that takes an id or DOM element and an array of contents
   * The provided id does not select anything (there is no element that has such an id)
   * Any of the function params is missing
   * Any of the function params is not as described
-  * Any of the contents is neight `string` or `number`
+  * Any of the contents is neither `string` nor `number`
     * In that case, the content of the element **must not be** changed   
