@@ -4,7 +4,7 @@
 |Time | Team
 |-----|-----
 |10:30|JS UI and DOM Team "Rose Water Rickey"
-|10:40|JS UI and DOM Team "Mint Julep"
+|10:40|JS UI and DOM Team "Mary Pickford"
 |10:50|JS UI and DOM Team "Whiskey Sour"
 |11:00|JS UI and DOM Team "Mojito"
 |11:10|JS UI and DOM Team "French Connection"
@@ -22,7 +22,7 @@
 |13:10|JS UI and DOM Team "Dirty Martini"
 |13:20|JS UI and DOM Team "Singapore Sling"
 |13:30|JS UI and DOM Team "Rusty Nail"
-|13:40|JS UI and DOM Team "Mary Pickford"
+|13:40|JS UI and DOM Team "Mint Julep"
 |13:50|JS UI and DOM Team "Sazerac"
 |14:00|JS UI and DOM Team "Mai-Tai"
 |15:10|JS UI and DOM Team "Sea Breeze"
