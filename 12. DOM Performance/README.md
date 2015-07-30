@@ -8,28 +8,30 @@
       * _Example:_
       
         
-            var docFragment = document.createDocumentFragment();
-            //append newly created elements to the docFragment          
-            container.appendChild(docFragment)
+              var docFragment = document.createDocumentFragment();
+              //append newly created elements to the docFragment          
+              container.appendChild(docFragment);
             
             
     * Always append the elements to an element, that is not yet in the DOM
       * _Example:_
         
-          var list = document.createElement('ul');
-          
-          //Do not do this here
-          //  Too much refresh of the DOM 
-          //container.appendChild(list);
-          
-          for( i = 0; i < count; i += 1){
-            item.innerHTML = 'Item #' + i;
-            list.appendChild(node);
-          }
-          
-          //Better do it here
-          //  Only a single refresh
-          container.appendChild(list);
+        
+        
+              var list = document.createElement('ul');
+              
+              //Do not do this here
+              //  Too much refresh of the DOM 
+              //container.appendChild(list);
+              
+              for( i = 0; i < count; i += 1){
+                item.innerHTML = 'Item #' + i;
+                list.appendChild(node);
+              }
+              
+              //Better do it here
+              //  Only a single refresh
+              container.appendChild(list);
           
     * Same for jQuery
           
@@ -39,20 +41,29 @@
       * _Example:_
         
         
-          var listItems = document.getElementsByClassName('list-item');
-          //use everywhere listItems
+        
+              
+                var listItems = document.getElementsByClassName('list-item');
+                //use everywhere listItems
           
     * Prefer to query the elements by a common selector:
       * If `list` is already selected
         * prefer
           
           
-              var items = list.getElementsByTagName('li');
+          
+           
+           
+                     var items = list.getElementsByTagName('li');
           
         * before
               
               
-              var items = list.querySelectorAll('.list li');
+                var items = list.querySelectorAll('.list li');
+                
+                
+                
+                
     * Same for jQuery
                   
   * Events
