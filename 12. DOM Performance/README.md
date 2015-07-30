@@ -43,8 +43,8 @@
         
         
               
-                var listItems = document.getElementsByClassName('list-item');
-                //use everywhere listItems
+              var listItems = document.getElementsByClassName('list-item');
+              //use everywhere listItems
           
     * Prefer to query the elements by a common selector:
       * If `list` is already selected
@@ -54,7 +54,7 @@
           
            
            
-                     var items = list.getElementsByTagName('li');
+                var items = list.getElementsByTagName('li');
           
         * before
               
@@ -71,16 +71,19 @@
       * prefer:
         
         
-          parent.addEventListener('click', function(ev){
-              var target = ev.target;
-          });
+      
+              parent.addEventListener('click', function(ev){
+                  var target = ev.target;
+              });
           
       * before:
           
           
-          var items = parent.getElementsByXXX();
+              var items = parent.getElementsByXXX();
           
-          for(i = 0, 1, ... items.length-1_{
-            items[i].addEventListener(handler);
-          }
+              for(i = 0, 1, ... items.length-1_{
+                items[i].addEventListener(handler);
+              }
+              
+              
     * Same for jQuery
