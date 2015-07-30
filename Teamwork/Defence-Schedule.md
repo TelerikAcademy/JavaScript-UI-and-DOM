@@ -1,4 +1,5 @@
-#JavaScript UI & DOM: Teamwork Defence Schedule
+#JavaScript UI & DOM Teamwork
+##Defences Schedule
 
 |Time | Team
 |-----|-------
