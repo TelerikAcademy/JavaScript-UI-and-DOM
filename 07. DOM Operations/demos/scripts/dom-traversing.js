@@ -1,19 +1,20 @@
 (function () {
     'use strict';
-    var list;
+    var log = console.log.bind(console),
+        list;
 
     function printElementInfo(element) {
         var i,
             len;
 
-        console.log("-".repeat(100));
-        console.log("Type of the node: " + element.nodeName);
-        console.log("Number of child nodes:" + element.childNodes.length);
-        console.log("child nodes: ");
+        log("-".repeat(100));
+        log("Type of the node: " + element.nodeName);
+        log("Number of child nodes:" + element.childNodes.length);
+        log("child nodes: ");
         for (i = 0, len = element.childNodes.length; i < len; i++) {
-            console.log("childNode at (" + i + ") position: " + element.childNodes[i].nodeName);
+            log("childNode at (" + i + ") position: " + element.childNodes[i].nodeName);
         }
-        console.log("-".repeat(100));
+        log("-".repeat(100));
     }
 
     list = document.getElementById("trainers-list");
