@@ -47,6 +47,6 @@
           		</div>
   
   
-      to look like this:
+      * to look like this:<br/>
         <img src="result/tabs-sample.png" />
   
