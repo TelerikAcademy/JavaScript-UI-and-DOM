@@ -1,5 +1,5 @@
 (function () {
-	var log = console.log;
+	var log = console.log.bind(console);
 
 	function traverseElement(element, indent) {
 		var child = element.firstChild,
