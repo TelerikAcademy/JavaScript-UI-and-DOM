@@ -16,9 +16,9 @@ https://github.com/TelerikAcademy/JavaScript-UI-and-DOM/blob/master/README.md#us
     
     
               data = {        
-                headers = ['Vendor', 'Model', 'OS'],          
-                items = [{          
-                col1: 'Nokia',            
+                headers : ['Vendor', 'Model', 'OS'],          
+                items : [{          
+                  col1: 'Nokia',            
                   col2: 'Lumia 920',            
                   col3: 'Windows Phone'                      
                 }, {          
@@ -116,7 +116,7 @@ https://github.com/TelerikAcademy/JavaScript-UI-and-DOM/blob/master/README.md#us
                   <a href="https://susanmcmovies.files.wordpress.com/2014/12/the-lion-king-wallpaper-the-lion-king-2-simbas-pride-4685023-1024-768.jpg">See a Lion</a>                
                 </li>                
                 <li>
-                  <a href="http://www.enkivillage.com/s/upload/images/a231e4349b9e3f28c740d802d4565eaf.jpg">See a Turtle</a>                
+                  <a href="http://www.enkivillage.com/s/upload/images/a231e4349b9e3f28c740d802d4565eaf.jpg">See a Turtle</a>
                 </li>                
                 <li>
                   <a href="http://cdn.playbuzz.com/cdn/3170bee8-985c-47bc-bbb5-2bcb41e85fe9/d8aa4750-deef-44ac-83a1-f2b5e6ee029a.jpg">No link for Dog, here is Batman!</a>                
