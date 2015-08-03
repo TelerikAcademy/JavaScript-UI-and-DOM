@@ -23,6 +23,7 @@
       <img src="result/1. initial.png" width="450" />      
       
   * Images in the list (on the right) have some properties:
+    * The title and the image must have a parent with class `image-container`
     * When `hovered`
       * They should change their **background color**      
       * _Example:_      
@@ -33,6 +34,7 @@
       * The **bigger image and its title** (on the left) are **replaced with the clicked image on the left**
       * _Example:_      
         <img src="result/3. hamster-clicked.png" width="450" />
+  * The big image and title on the left must have a parent with class `image-preview`
       
   * The filter should provide functionality for **filtering the images** on the list of images (on the right)
     * When the text in the box changes
