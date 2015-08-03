@@ -1,14 +1,7 @@
-<!doctype html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Task 3 - Handlebars</title>	
-	<link rel="stylesheet" href="styles.css">
-</head>
-<body>
-	<div id="authors">
-	</div>
-	<script id="authors-template" type='text/x-handlebars-template'>
+/* globals module */
+function solve() {
+  return function(selector){
+    $(selector).html(`
     {{#each authors}}
   		<div class="box {{#if right}}right{{/if}}">
         <div class="inner">
@@ -30,9 +23,8 @@
           </div>
         </div>
       </div>
-    {{/each}}
-	</script>
-	<script src="handlebars.js"></script>
-	<script src="scripts.js"></script>
-</body>
-</html>
+    {{/each}}`);
+  }
+}
+
+module.exports = solve;

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8">
+    <title>Task 1 - JavaScript</title>
+  </head>
+  
+  <body>
+    <div id="container"></div>
+    <script src="task-1.js"></script>{{#each authors}}
+    <div class="box">
+      <div class="inner">
+        <p>
+          <img alt="{{name}}" src="{{image}}" width="100" height="133">
+        </p>
+        <div>
+          <h3>{{name}}</h3>{{#each titles}}
+          <p>{{this}}</p>{{/each}}
+          <ul>{{#each urls}}
+            <li>
+              <a href="{{this}}" target="_blank">{{this}}</a>
+            </li>{{/each}}</ul>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>
