@@ -81,7 +81,7 @@ https://github.com/TelerikAcademy/JavaScript-UI-and-DOM/blob/master/README.md#us
       * The default URL is "http://cdn.playbuzz.com/cdn/3170bee8-985c-47bc-bbb5-2bcb41e85fe9/d8aa4750-deef-44ac-83a1-f2b5e6ee029a.jpg"
     * The content of the anchor is always built from the **data object**, but is different if a href is available or not:
       * If a href is available, the content must be "See a THE_NAME_FROM_THE_DATA_OBJECT"
-      * Otherwise the content must be "No link for THE_NAME_FROM_THE_DATA_OBJECT, here is Batman!"
+      * Otherwise the content must be "No link for THE_NAME_FROM_THE_DATA_OBJECT , here is Batman!"
       
   * _Example:_
     * Having:
