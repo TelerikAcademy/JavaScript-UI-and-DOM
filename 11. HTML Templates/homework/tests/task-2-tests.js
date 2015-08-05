@@ -196,7 +196,7 @@ describe('Task #2 Tests', function () {
       }
       else {
         expect($link.attr('href')).to.equal(BATMAN_LINK);
-        expect($link.html()).to.equal(`No link for ${animals[index].name} , here is Batman!`);
+        expect($link.html()).to.equal(`No link for ${animals[index].name}, here is Batman!`);
       }
     });
   });
