@@ -1,0 +1,142 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Untitled Document.md</title><style></style></head><body id="preview">
+<h1><a id="JavaScript_UI__DOM__Practical_Exam_0"></a>JavaScript UI &amp; DOM – Practical Exam</h1>
+<p>6 August 2015</p>
+<h2><a id="Task_3_3"></a>Task 3</h2>
+<h3><a id="Task_5"></a>Task</h3>
+<p>Given the HTML (index.html), CSS (styles.css) and JavaScript (scripts.js) <strong>build a Handlebar template</strong> that produces the HTML in <strong>result.html</strong>.</p>
+<p>You should only fill the template in the element with id <strong>“calendar-template”</strong>.</p>
+<p>When the user hovers an event the “comment” should pop up (use title property).</p>
+<p><em>Note: html elements with no title have “Free slot” as content in the title container (element with class “title”).</em></p>
+<p><em>Note: You cannot use jQuery in the solution.</em></p>
+<h3><a id="Final_result_16"></a>Final result</h3>
+<p><img src="https://cloud.githubusercontent.com/assets/3619393/9065226/15f50932-3ad9-11e5-878c-8602b1a1d109.jpg" alt="task-3 result"></p>
+<h3><a id="Constraints_19"></a>Constraints:</h3>
+<ul>
+<li>You are allowed only to edit the contents of the file &quot;index.html &quot; and only the template inside the element with ID “calendar-template”</li>
+<li>You are NOT allowed to edit the contents of the JavaScript and/or the CSS files</li>
+</ul>
+<h3><a id="Files_to_Submit_23"></a>Files to Submit:</h3>
+<p>When ready submit the .js file in BGCoder. Send the template as a string in the “task-3.js” as shown in the example:</p>
+<pre><code>function solve() {
+    return function (selector) {
+        var template = '';
+        document.getElementById(selector).innerHTML = template;
+    };
+}
+</code></pre>
+<h3><a id="Test_data_33"></a>Test data:</h3>
+<pre><code>var data = {
+    year: 2015,
+    month: 'August',
+    days: [{
+        day: 3,
+        events: [{
+            duration: 765,
+            importance: 'none'
+        }, {
+            title: 'My Event 1',
+            time: '12:45',
+            duration: 60,
+            comment: 'no comment',
+            importance: 'critical'
+        }, {
+            duration: 15,
+            importance: 'none'
+        }, {
+            title: 'My Event 2',
+            time: '14:00',
+            duration: 120,
+            comment: 'no comment',
+            importance: 'important'
+        }, {
+            duration: 60,
+            importance: 'none'
+        }, {
+            title: 'My Event 4',
+            time: '17:00',
+            duration: 60,
+            comment: 'no comment',
+            importance: 'unimportant'
+        }, {
+            duration: 360,
+            importance: 'none'
+        }]
+    }, {
+        day: 4,
+        events: [{
+            duration: 750,
+            importance: 'none'
+        }, {
+            title: 'Prepare for the Exam',
+            time: '12:30',
+            duration: 480,
+            comment: 'no comment',
+            importance: 'important'
+        }, {
+            duration: 210,
+            importance: 'none'
+        }],
+    }, {
+        day: 5,
+        events: [{
+            duration: 1320,
+            importance: 'none'
+        }, {
+            title: 'PARTY',
+            time: '22:00',
+            duration: 120,
+            comment: 'I must be there',
+            importance: 'unimportant'
+        }],
+    }, {
+        day: 6,
+        events: [{
+            title: 'PARTY',
+            time: '0:00',
+            duration: 180,
+            comment: 'I must be there',
+            importance: 'unimportant'
+        }, {
+            duration: 390,
+            importance: 'none'
+        }, {
+            title: 'JS UI &amp; DOM Exam',
+            time: '9:30',
+            duration: 780,
+            comment: 'Keep your fingers crossed',
+            importance: 'critical'
+        }, {
+            duration: 90,
+            importance: 'none'
+        }],
+    }, {
+        day: 7,
+        events: [{
+            title: 'Vacation',
+            time: '0:00',
+            duration: 1440,
+            comment: 'Finaly some time to relax',
+            importance: 'vacation'
+        }],
+    }, {
+        day: 8,
+        events: [{
+            title: 'Vacation',
+            time: '0:00',
+            duration: 1440,
+            comment: 'Finaly some time to relax',
+            importance: 'vacation'
+        }],
+    }, {
+        day: 9,
+        events: [{
+            title: 'Vacation',
+            time: '0:00',
+            duration: 1440,
+            comment: 'Finaly some time to relax',
+            importance: 'vacation'
+        }],
+    }]
+};</code></pre>
+
+</body></html>

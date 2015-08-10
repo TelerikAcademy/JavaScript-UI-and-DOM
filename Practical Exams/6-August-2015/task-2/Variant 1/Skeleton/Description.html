@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Untitled Document.md</title>
+    <style></style>
+</head>
+<body id="preview">
+    <p>#Task 2: Datepicker</p>
+    <ul>
+        <li>
+            <p>Given the HTML (<code>index.html</code>), CSS (<code>styles.css</code>), JavaScript (<code>scripts.js</code> and <code>jquery.min.js</code>) build a jQuery plugin for a simple datepicker control</p>
+        </li>
+        <li>
+            <p><em>The datepicker must:</em></p>
+            <ul>
+                <li>Be built from a simple text input tag</li>
+                <li>Show a calendar with the current month - the calendar should always show 6 rows of data and fill the empty spaces with the previous and next month’s dates</li>
+                <li>Allow the user to navigate to the previous and next months</li>
+                <li>Allow the user to select a date from the calendar</li>
+                <li>Always show at the bottom the current date</li>
+            </ul>
+        </li>
+        <li>
+            <p><em>See the pictures below for better understanding of the control</em></p>
+            <ul>
+                <li>
+                    Initial
+					<br />
+                    <img src="Images/initial.png" width="450" />
+                </li>
+                <li>
+                    Clicking on the input must show the calendar with the current month
+					<br />
+                    <img src="Images/clicked.png" width="450" />
+                </li>
+                <li>
+                    Clicking on the left and right buttons must navigate to the previous or next month
+					<br />
+                    <img src="Images/previous.png" width="450" />
+					<br />
+                    <img src="Images/next.png" width="450" />
+                </li>
+                <li>
+                    Selecting a date should close the calendar and fill the input with the correct date in the format showed in the picture
+					<br />
+                    <img src="Images/selecting.png" width="450" />
+					<br />
+                    <img src="Images/selected.png" width="450" />
+                </li>
+                <li>
+                    Clicking on the current date at the bottom should fill the input with the current date
+					<br />
+                    <img src="Images/current.png" width="450" />
+					<br />
+                    <img src="Images/current-selected.png" width="450" />
+                </li>
+            </ul>
+        </li>
+        <li>
+            <p><em>Additional requirements:</em></p>
+            <ul>
+                <li>
+                    You should wrap the input in another element and add all your new HTML elements inside the wrapper (jQuery may help you)
+					<br />
+                    <img src="Images/Before.png" width="450" />
+					<br />
+                    <img src="Images/After.png" width="450" />
+                </li>
+				<li>The plugin should support chaining</li>
+                <li>Clicking on the previous or next month dates should not populate the input value</li>
+                <li><strong>IMPORTANT</strong>: Always attach your events by classes and not by HTML elements!</li>
+                <li><strong>HARDCORE TASK</strong>: Initially when the input is focused - the calendar should show. Add the functionality to hide the calendar only if the user clicks outside of the datepicker control</li>
+            </ul>
+        </li>
+        <li>
+            <p><em>Hints:</em></p>
+            <ul>
+                <li>The provided CSS will help you build the HTML structure of the plugin</li>
+                <li>See the windows calendar to compare it with your control</li>
+                <li>
+                    Useful Date functions in JavaScript
+                    <ul>
+                        <li><code>var date = new Date()</code> - returns the current date and time</li>
+                        <li><code>var date = new Date(2016, 11, 3)</code> - returns a date instance with information for December 3rd 2016 (January is zero)</li>
+                        <li><code>date.getDate()</code> - returns the date number from the date’s instance object</li>
+                        <li><code>date.getMonth()</code> - returns the zero-based month index from the date’s instance object (zero is January)</li>
+                        <li><code>date.getFullYear()</code> - returns the year from the date’s instance object</li>
+                        <li><code>date.getDay()</code> - returns the day from the week from the date’s instance object (zero is Sunday)</li>
+                        <li><code>date.setMonth(0)</code> - sets the month of the date’s instance object to be January</li>
+                        <li><code>date.setDate(1)</code> - sets the date of the date’s instance object to be the first day of the month</li>
+                        <li>More available <a href="http://lmgtfy.com/?q=javascript+date+mdn" target="_blank">HERE</a> and <a href="http://lmgtfy.com/?q=javascript+get+last+day+of+month" target="_blank">HERE</a></li>
+                    </ul>
+                </li>
+                <li>Some functionality is already written to help you. Thank me later! :)</li>
+            </ul>
+        </li>
+        <li>
+            <p><em>Constaints:</em></p>
+            <ul>
+                <li>You must alter only the scripts (JavaScript) and do not touch the HTML structure or the CSS styles</li>
+                <li>You must use jQuery to alter the DOM and build the plugin. You are not allowed to use the native document API</li>
+                <li>You are allowed only to edit the contents of the file “scripts.js”</li>
+                <li>You are NOT allowed to edit the contents of the HTML and/or the CSS files</li>
+            </ul>
+        </li>
+        <li>
+            <p>
+                <em>Don’t be sad! Here is a picture of cat to cheer you up:</em>
+				<br />
+                <img src="Images/cat.jpg" width="450" />
+            </p>
+        </li>
+    </ul>
+</body>
+</html>

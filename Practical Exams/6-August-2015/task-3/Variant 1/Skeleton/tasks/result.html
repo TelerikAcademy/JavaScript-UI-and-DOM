@@ -1,0 +1,126 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 3 - Handlebars</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="calendar">
+        <div class="events-calendar">
+            <h2 class="header">
+                Appointments for <span class="month">August</span> <span class="year">2015</span>
+            </h2>
+
+            <div class="col-date">
+                <div class="date">3</div>
+                <div class="events">
+                    <div class="event none">
+                        <div class="title">Free slot</div>
+                    </div>
+                    <div class="event critical" title="no comment">
+                        <div class="title">My Event 1</div>
+                        <span class="time">at: 12:45</span>
+                    </div>
+                    <div class="event none">
+                        <div class="title">Free slot</div>
+                    </div>
+                    <div class="event important" title="no comment">
+                        <div class="title">My Event 2</div>
+                        <span class="time">at: 14:00</span>
+                    </div>
+                    <div class="event none">
+                        <div class="title">Free slot</div>
+                    </div>
+                    <div class="event unimportant" title="no comment">
+                        <div class="title">My Event 4</div>
+                        <span class="time">at: 17:00</span>
+                    </div>
+                    <div class="event none">
+                        <div class="title">Free slot</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-date">
+                <div class="date">4</div>
+                <div class="events">
+                    <div class="event none">
+                        <div class="title">Free slot</div>
+                    </div>
+                    <div class="event important" title="no comment">
+                        <div class="title">Prepare for the Exam</div>
+                        <span class="time">at: 12:30</span>
+                    </div>
+                    <div class="event none">
+                        <div class="title">Free slot</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-date">
+                <div class="date">5</div>
+                <div class="events">
+                    <div class="event none">
+                        <div class="title">Free slot</div>
+                    </div>
+                    <div class="event unimportant" title="I must be there">
+                        <div class="title">PARTY</div>
+                        <span class="time">at: 22:00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-date">
+                <div class="date">6</div>
+                <div class="events">
+                    <div class="event unimportant" title="I must be there">
+                        <div class="title">PARTY</div>
+                        <span class="time">at: 0:00</span>
+                    </div>
+                    <div class="event none">
+                        <div class="title">Free slot</div>
+                    </div>
+                    <div class="event critical" title="Keep your fingers crossed">
+                        <div class="title">JS UI &amp; DOM Exam</div>
+                        <span class="time">at: 9:30</span>
+                    </div>
+                    <div class="event none">
+                        <div class="title">Free slot</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-date">
+                <div class="date">7</div>
+                <div class="events">
+                    <div class="event vacation" title="Finaly some time to relax">
+                        <div class="title">Vacation</div>
+                        <span class="time">at: 0:00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-date">
+                <div class="date">8</div>
+                <div class="events">
+                    <div class="event vacation" title="Finaly some time to relax">
+                        <div class="title">Vacation</div>
+                        <span class="time">at: 0:00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-date">
+                <div class="date">9</div>
+                <div class="events">
+                    <div class="event vacation" title="Finaly some time to relax">
+                        <div class="title">Vacation</div>
+                        <span class="time">at: 0:00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script id="calendar-template" type='text/x-handlebars-template'>
+        <!-- template here -->
+    </script>
+    <!--<script src="handlebars.js"></script>-->
+    <!-- <script src="main.js"></script> -->
+</body>
+</html>

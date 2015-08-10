@@ -1,0 +1,69 @@
+body {
+    font-size: 14px;
+    font-family: 'Corbel';
+}
+
+#calendar:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+#calendar {
+    display: block;
+    width: 1400px;
+}
+
+    #calendar .col-date {
+        width: 10%;
+        float: left;
+        background-color: #ccc;
+        padding: 10px;
+        margin: 2px;
+    }
+
+        #calendar .col-date .date {
+            text-align: center;
+            font-size: 2em;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid black;
+        }
+
+        #calendar .col-date .events {
+            padding: 5px;
+            background-color: #fff;
+        }
+
+            #calendar .col-date .events .event {
+                padding: 5px;
+                -moz-box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+
+                #calendar .col-date .events .event.critical {
+                    background-color: #f55;
+                }
+
+                #calendar .col-date .events .event.important {
+                    background-color: #48e;
+                }
+
+                #calendar .col-date .events .event.unimportant {
+                    background-color: #4d6;
+                }
+
+                #calendar .col-date .events .event.vacation {
+                    background-color: #fc3;
+                }
+
+                #calendar .col-date .events .event.none {
+                    border: 1px solid black;
+                }
+
+                #calendar .col-date .events .event .title {
+                    font-size: 1.2em;
+                    font-weight: bold;
+                    border-bottom: 1px solid black;
+                }

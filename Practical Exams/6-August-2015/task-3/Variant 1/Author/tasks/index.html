@@ -1,0 +1,39 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 3 - Handlebars</title>
+    <link rel="stylesheet" href="styles.css">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+<body>
+    <div id="calendar"></div>
+    <script id="calendar-template" type='text/x-handlebars-template'>
+		<div class="events-calendar">
+			<h2 class="header">Appointments for <span class="month">{{month}}</span> <span class="year">{{year}}</span></h2>
+			{{#days}}
+				<div class="col-date">
+					<div class="date">{{day}}</div>
+					<div class="events">                    
+						{{#each events}}
+							{{#if title}}
+								<div class="event {{importance}}" title="{{comment}}">
+									<div class="title">{{title}}</div>
+									<span class="time">at: {{time}}</span>
+								</div>
+							{{else}}	
+								<div class="event {{importance}}">
+									<div class="title">Free slot</div>
+								</div>
+							{{/if}}
+						{{/each}}
+					</div>
+				</div>
+			{{/days}}
+		</div>
+    </script>
+    <script src="handlebars.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
