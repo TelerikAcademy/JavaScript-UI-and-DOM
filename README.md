@@ -1,9 +1,9 @@
 # JavaScript-UI-and-DOM
 JavaScript UI and DOM Course Repository
 
-The **JavaScript UI and DOM** is about building of low-level user interface. The course covers titles like DOM, jQuery, events, graphics & animations with HTML5 Canvas and templates
+The **JavaScript UI and DOM** is about building of low-level user interface. The course covers topics like DOM, jQuery, events, graphics & animations with HTML5 Canvas and templates
 
-##Course Program
+##	Course Program
 1.   Course Introduction
 2.   Document Object Model
 3.   HTML5 Canvas
@@ -20,36 +20,36 @@ The **JavaScript UI and DOM** is about building of low-level user interface. The
 13.  Teamwork Defense
 14.  Exam
 
-## Preparing the local machine for Unit testing with Mocha and Chai 
+// ## Preparing the local machine for Unit testing with Mocha and Chai 
 
-* Install [JavaScript I/O](https://iojs.org/en/index.html "JavaScript I/O")
-    * Try if it is working by typing in CMD/Terminal `$ iojs -v` (should produce result)
-*	Open CMD/Terminal and run `$ npm install -g mocha`
+// * Install [JavaScript I/O](https://iojs.org/en/index.html "JavaScript I/O")
+//     * Try if it is working by typing in CMD/Terminal `$ iojs -v` (should produce result)
+// *	Open CMD/Terminal and run `$ npm install -g mocha`
 
-## Preparing for the tests for each homework
+// ## Preparing for the tests for each homework
 
-*	Checkout the repository for the particular homework	
-*	Open CMD/Terminal and navigate to the checked out repository with the homework
-*	Run `npm install` in CMD/Terminal
-	*	A folder `node_modules` should appear
-*	You are ready to run the tests
+// *	Checkout the repository for the particular homework	
+// *	Open CMD/Terminal and navigate to the checked out repository with the homework
+// *	Run `npm install` in CMD/Terminal
+// 	*	A folder `node_modules` should appear
+// *	You are ready to run the tests
 
-## Running the tests
+// ## Running the tests
 
-*	Navigate to the folder of the particular homework in CMD/Terminal
-*	Requirements:
-	*	JavaScript files must be called task-1.js, task-2.js etc..
-	*	Each .js file must contain `module.exports=[name of the object/function]`
-* 	Run `npm test`
-	*	Test results should appear on the CMD/Terminal
+// *	Navigate to the folder of the particular homework in CMD/Terminal
+// *	Requirements:
+// 	*	JavaScript files must be called task-1.js, task-2.js etc..
+// 	*	Each .js file must contain `module.exports=[name of the object/function]`
+// * 	Run `npm test`
+// 	*	Test results should appear on the CMD/Terminal
 	
-## Upload in [BGCoder.com](http://bgcoder.com/)
+// ## Upload in [BGCoder.com](http://bgcoder.com/)
 
-*	Go to the specific homework
-*	Select the task you will be sending
-*	Wrap your result in:
+// *	Go to the specific homework
+// *	Select the task you will be sending
+// *	Wrap your result in:
 
-		function solve() {
-			return [your solution object/function];
-		}
+// 		function solve() {
+// 			return [your solution object/function];
+// 		}
 	
