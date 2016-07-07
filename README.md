@@ -1,24 +1,59 @@
 # JavaScript-UI-and-DOM
-JavaScript UI and DOM Course Repository
+
+Repository for the course [JavaScript UI and DOM](https://telerikacademy.com/Courses/Courses/Details/339) at [Telerik Academy](https://telerikacademy.com)
 
 The **JavaScript UI and DOM** is about building of low-level user interface. The course covers topics like DOM, jQuery, events, graphics & animations with HTML5 Canvas and templates
 
 ##	Course Program
-1.   Course Introduction
-2.   Document Object Model
-3.   HTML5 Canvas
-4.   Working with SVG
-5.   Frameworks for Canvas and SVG
-5.   Animations with Canvas and SVG
-6.   DOM Operations
-7.   Events and Event Model
-8.   jQuery Overview
-9.   jQuery plugins
-10.  HTML Templates
-11.  DOM Performance
-12.  Exam preparation
-13.  Teamwork Defense
-14.  Exam
+
+### [00. Course Introduction](/Topics/00. Course-intro)
+
+##### [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/presentation.png" height="18"/>Slides](https://rawgit.com/TelerikAcademy/JavaScript-UI-and-DOM/master/Topics/00. Course-intro/index.html) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/code.png" height="15"> Demos](/Topics/00. Course-intro/demos) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/homework.png" height="15">Tasks](/Topics/00. Course-intro/homework) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/video.png" height="15"> Videos](/Topics/00. Course-intro/VIDEOS.md)
+
+### [01. Document Object Model](/Topics/01. Document Object Model)
+
+##### [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/presentation.png" height="18"/>Slides](https://rawgit.com/TelerikAcademy/JavaScript-UI-and-DOM/master/Topics/01. Document Object Model/index.html) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/code.png" height="15"> Demos](/Topics/01. Document Object Model/demos) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/homework.png" height="15">Tasks](/Topics/01. Document Object Model/homework) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/video.png" height="15"> Videos](/Topics/01. Document Object Model/VIDEOS.md)
+
+### [02. HTML5 Canvas](/Topics/02. HTML5 Canvas)
+
+##### [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/presentation.png" height="18"/>Slides](https://rawgit.com/TelerikAcademy/JavaScript-UI-and-DOM/master/Topics/02. HTML5 Canvas/index.html) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/code.png" height="15"> Demos](/Topics/02. HTML5 Canvas/demos) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/homework.png" height="15">Tasks](/Topics/02. HTML5 Canvas/homework) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/video.png" height="15"> Videos](/Topics/02. HTML5 Canvas/VIDEOS.md)
+
+### [03. Scalable Vector Graphics](/Topics/03. Scalable Vector Graphics)
+
+##### [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/presentation.png" height="18"/>Slides](https://rawgit.com/TelerikAcademy/JavaScript-UI-and-DOM/master/Topics/03. Scalable Vector Graphics/index.html) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/code.png" height="15"> Demos](/Topics/03. Scalable Vector Graphics/demos) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/homework.png" height="15">Tasks](/Topics/03. Scalable Vector Graphics/homework) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/video.png" height="15"> Videos](/Topics/03. Scalable Vector Graphics/VIDEOS.md)
+
+### [04. Frameworks for Graphics](/Topics/04. Frameworks for Graphics)
+
+##### [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/presentation.png" height="18"/>Slides](https://rawgit.com/TelerikAcademy/JavaScript-UI-and-DOM/master/Topics/04. Frameworks for Graphics/index.html) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/code.png" height="15"> Demos](/Topics/04. Frameworks for Graphics/demos) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/homework.png" height="15">Tasks](/Topics/04. Frameworks for Graphics/homework) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/video.png" height="15"> Videos](/Topics/04. Frameworks for Graphics/VIDEOS.md)
+
+### [05. Animations with HTML5 Canvas](/Topics/05. Animations with HTML5 Canvas)
+
+##### [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/presentation.png" height="18"/>Slides](https://rawgit.com/TelerikAcademy/JavaScript-UI-and-DOM/master/Topics/05. Animations with HTML5 Canvas/index.html) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/code.png" height="15"> Demos](/Topics/05. Animations with HTML5 Canvas/demos) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/homework.png" height="15">Tasks](/Topics/05. Animations with HTML5 Canvas/homework) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/video.png" height="15"> Videos](/Topics/05. Animations with HTML5 Canvas/VIDEOS.md)
+
+### [06. DOM Operations](/Topics/06. DOM Operations)
+
+##### [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/presentation.png" height="18"/>Slides](https://rawgit.com/TelerikAcademy/JavaScript-UI-and-DOM/master/Topics/06. DOM Operations/index.html) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/code.png" height="15"> Demos](/Topics/06. DOM Operations/demos) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/homework.png" height="15">Tasks](/Topics/06. DOM Operations/homework) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/video.png" height="15"> Videos](/Topics/06. DOM Operations/VIDEOS.md)
+
+### [07. Event Model](/Topics/07. Event Model)
+
+##### [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/presentation.png" height="18"/>Slides](https://rawgit.com/TelerikAcademy/JavaScript-UI-and-DOM/master/Topics/07. Event Model/index.html) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/code.png" height="15"> Demos](/Topics/07. Event Model/demos) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/homework.png" height="15">Tasks](/Topics/07. Event Model/homework) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/video.png" height="15"> Videos](/Topics/07. Event Model/VIDEOS.md)
+
+### [08. jQuery Overview](/Topics/08. jQuery Overview)
+
+##### [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/presentation.png" height="18"/>Slides](https://rawgit.com/TelerikAcademy/JavaScript-UI-and-DOM/master/Topics/08. jQuery Overview/index.html) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/code.png" height="15"> Demos](/Topics/08. jQuery Overview/demos) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/homework.png" height="15">Tasks](/Topics/08. jQuery Overview/homework) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/video.png" height="15"> Videos](/Topics/08. jQuery Overview/VIDEOS.md)
+
+### [09. jQuery Plugins](/Topics/09. jQuery Plugins)
+
+##### [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/presentation.png" height="18"/>Slides](https://rawgit.com/TelerikAcademy/JavaScript-UI-and-DOM/master/Topics/09. jQuery Plugins/index.html) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/code.png" height="15"> Demos](/Topics/09. jQuery Plugins/demos) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/homework.png" height="15">Tasks](/Topics/09. jQuery Plugins/homework) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/video.png" height="15"> Videos](/Topics/09. jQuery Plugins/VIDEOS.md)
+
+### [10. HTML Templates](/Topics/10. HTML Templates)
+
+##### [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/presentation.png" height="18"/>Slides](https://rawgit.com/TelerikAcademy/JavaScript-UI-and-DOM/master/Topics/10. HTML Templates/index.html) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/code.png" height="15"> Demos](/Topics/10. HTML Templates/demos) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/homework.png" height="15">Tasks](/Topics/10. HTML Templates/homework) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/video.png" height="15"> Videos](/Topics/10. HTML Templates/VIDEOS.md)
+
+### [11. DOM Performance](/Topics/11. DOM Performance)
+
+##### [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/presentation.png" height="18"/>Slides](https://rawgit.com/TelerikAcademy/JavaScript-UI-and-DOM/master/Topics/11. DOM Performance/index.html) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/code.png" height="15"> Demos](/Topics/11. DOM Performance/demos) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/homework.png" height="15">Tasks](/Topics/11. DOM Performance/homework) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/video.png" height="15"> Videos](/Topics/11. DOM Performance/VIDEOS.md)
+
 
 <!--
 ## Preparing the local machine for Unit testing with Mocha and Chai 
