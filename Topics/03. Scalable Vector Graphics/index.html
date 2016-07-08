@@ -1,408 +1,50 @@
 <!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8">
-    <title>JavaScript UI & DOM: Scallable Vector Graphics</title>
+    <title>Scalable Vector Graphics</title>
     <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
     <meta name="author" content="Hakim El Hattab">
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">    
-    <link rel="stylesheet" href="css/reveal.css">
-    <link rel="stylesheet" href="css/theme/black.css" id="theme">
-    <link rel="stylesheet" href="css/theme/telerik-academy-dark.css">
-
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="https://rawgit.com/TelerikAcademy/Common/master/revealjs-theme/css/reveal.css">
+    <link rel="stylesheet" href="https://rawgit.com/TelerikAcademy/Common/master/revealjs-theme/css/theme/black.css" id="theme">
+    <link rel="stylesheet" href="https://rawgit.com/TelerikAcademy/Common/master/revealjs-theme/css/theme/telerik-academy-dark.css">
     <!-- Code syntax highlighting -->
-    <link rel="stylesheet" href="lib/css/github.css">
- 
+    <link rel="stylesheet" href="https://rawgit.com/TelerikAcademy/Common/master/revealjs-theme/lib/css/tomorrow.css">
     <!-- Printing and PDF exports -->
     <script>
-	
-        var link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.type = 'text/css';
-        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
-        document.getElementsByTagName('head')[0].appendChild(link);
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match(/print-pdf/gi)
+        ? 'https://rawgit.com/TelerikAcademy/Common/master/revealjs-theme/css/print/pdf.css'
+        : 'css/print/paper.css';
+      document.getElementsByTagName('head')[0].appendChild(link);
     </script>
-    <!--[if lt IE 9]>
-    <script src="lib/js/html5shiv.js"></script>
-  <![endif]-->
-</head>
-
-<body>
+    <!--[if lt IE 9]> <script src="https://rawgit.com/TelerikAcademy/Common/master/revealjs-theme/lib/js/html5shiv.js"></script> <![endif]-->
+  </head>
+  <body>
     <div class="reveal">
-        <div class="slides">
-            <section id="title" class="slide-title">
-                <h1>Scalable Vector Graphics</h1>
-                <h2>Like Canvas, but prettier and slower</h2>
-                <aside class="signature">
-                    <p class="signature-course">JavaScript DOM & UI</p>
-                    <p class="signature-initiative">Telerik Software Academy</p>
-                    <a href="http://academy.telerik.com" class="signature-link">http://academy.telerik.com</a>
-                </aside>
-            </section>
-
-            <!-- Table of Contents -->
-            <section id="table-of-contents" data-markdown style="font-size:40px">
-                <script type="text/template">
-                #Table of Contents
-                *   SVG Overview
-                *   Vector Graphics Overview
-                *   Basic SVG Shapes
-                    *   Rectangular
-                    *   Ellipse
-                    *   Path
-                *   Drawing Text
-                </script>
-            </section>
-
-            <!-- SVG Overview -->
-            <section>
-                <section data-markdown id="svg-overview" class="slide-section">
-                    <script type="text/template">
-                        #SVG Overview
-                        ##What is SVG?
-                    </script>
-                </section>
-                <section data-markdown>
-                    <script type="text/template">
-                        #SVG Overview
-                        *   SVG is a technology for describing two dimensional vector graphics
-                            *   Uses an extension of XML
-                        *   SVG stands for Scalable Vector Graphics
-                        *   SVG is platform independent
-                            *   Understood by most browsers
-                    </script>
-                </section>
-                <section data-markdown>
-                    <script type="text/template">
-                        #Vector Graphics Overview
-                        *   Vector graphics are based on mathematical expressions
-                            *   The same on any resolution and zoom level and are not pixelated 
-                        *   Consist of geometrical primitives such as:
-                            *   Points
-                            *   Lines and curves 
-                            *   Shapes or polygons
-                        *   Represent images in computer graphics
-                        *   Vectors are locations in a dimensional space
-                    </script>
-                </section>
-                <section>
-                    <h1>Using SVG in a Web Page</h1>
-                    <ul>
-                    <li>To use SVG you need to simply open the <strong>&lt;svg></strong> element and to start defining your shapes using XML notation</li>
-                    </ul>
-                    <pre style="font-size:20px"><code><svg width="300" height="450">
-    <rect x="50" y="50" width="150" height="150" fill="lightblue" />
-    <circle cx="125" cy="125" r="60" stroke="none" fill="darkblue" />
-</svg></code></pre>
-
-<!--                     <img src="imgs/svg-sample.png" width="150" class="fragment" style="position: absolute; top:30%; left:85%" /> -->
-                    <!-- <p class="balloon fragment">SVG uses a coordinate system for the sizes and positions</p> -->
-                </section>
-                <section data-markdown class="slide-section">
-                    <script type="text/template">
-                        #Simple SVG
-                        ##Live Demo
-                    </script>
-                </section>
-            </section>
-
-            <!-- SVG Shapes -->
-            <section>
-                <section data-markdown id="svg-shapes" class="slide-section">
-                    <script type="text/template">
-                        #SVG Shapes
-                        ##What can SVG do?
-                    </script>
-                </section>
-                <section data-markdown>
-                    <script type="text/template">
-                        #SVG Shapes
-                        *   As mentioned, vector graphics are built from graphic primitives
-                            *   Points
-                            *   Lines and curves
-                            *   Shapes: rectangular, circle, etc…
-                        *   SVG supports most of the basic shapes
-                            *   More complex shapes can be created using the basic ones
-                    </script>
-                </section>
-
-                <!-- Lines -->
-                <section data-markdown style="font-size: 40px">
-                    <script type="text/template">
-                        #SVG Shapes: Line
-                        *   `<line>` is the most basic shape in SVG
-                        *   Creates a line between two points
-                            *   **Lines** are defined by start and end points
-                            *   Each points has a coordinates: `(x, y)`
-
-                                
-
-                            <line x1="0" y1="0" x2="300" y2="450" stroke="black" />
-                            <line x1="300" y1="0" x2="0" y2="450" stroke="black" />
-                            <line x1="0" y1="150" x2="300" y2="150" stroke="black" />
-                            <line x1="0" y1="300" x2="300" y2="300" stroke="black" />
-                            <line x1="0" y1="150" x2="300" y2="300" stroke="black" />
-                            <line x1="0" y1="300" x2="300" y2="150" stroke="black" />
-
-                        <img src="imgs/svg-line-example.png" class="fragment" style="width:150px; position: absolute; top: 25%; left: 80%"/>
-
-                        <p class="balloon fragment" style="top: 55%; left: 75%">Stroke sets the <br/>**color** of the line </p>
-                    </script>
-                </section>
-                <section data-markdown class="slide-section">
-                    <script type="text/template">
-                        #Defining Lines with SVG
-                        ##Live Demo
-                    </script>
-                </section>
-
-                <!-- Rects and Circles -->
-                <section data-markdown>
-                    <script type="text/template">
-                        #SVG Shapes: Rects and Circles
-                        *   `<rect>` creates a rectangular with a **top-left position**, **width** and **height**
-                        *   `<circle>` creates a circle with **center position** and **radius**
-
-
-                            <rect x="10" y="10" width="280" height="280" fill="#222"/>
-                            <circle cx="150" cy="150" r="135" fill="#333"/>
-                            <rect x="55" y="55" width="190" height="190" fill="#444"/>
-                            <circle cx="150" cy="150" r="95" fill="#555"/>
-                            <rect x="85" y="85" width="130" height="130" fill="#666"/>
-                            <circle cx="150" cy="150" r="65" fill="#777"/>
-                            <rect x="105" y="105" width="90" height="90" fill="#888"/>
-                            <circle cx="150" cy="150" r="45" fill="#999"/>
-
-                        <img src="imgs/svg-rects-circles-example.png" width="150px" style="position: absolute; top: 40%; right:2%" class="fragment" />
-                    </script>
-                </section>
-                <section data-markdown class="slide-section">
-                    <script type="text/template">
-                        #Circles and Rectangles with SVG
-                        ##Live Demo
-                    </script>
-                </section>
-            </section>
-
-
-            <!-- SVG Paths -->
-             <section>
-                <section data-markdown id="svg-paths" class="slide-section">
-                    <script type="text/template">
-                        #SVG Paths
-                        ##Defining more than rects
-                    </script>
-                </section>
-                <section data-markdown>
-                    <script type="text/template">
-                        #SVG Paths
-                        *   SVG can define more complex shapes using the path
-                            *   Create straight line from a point to other point
-                            *   Create a curve between two points
-                            *   Used with the element `<path>`
-                                *   **Add commands** and **points** for the lines using the `"d"` attribute`
-
-
-                            <path d="M 50 50 L 175 310 H210"></path>
-                    </script>
-                </section>
-                <section data-markdown>
-                    <script type="text/template">
-                        #SVG Paths: Commands
-                        *   The path commands are as follows:
-                            *   `M x y` or `m x y`
-                                *   **Moves** the path marker to **position (x, y)**
-                            *   `L x y` or `l x y`
-                                *   Creates a **straight line** between the **marker point** and **point (x, y)**
-                            *   (`H x` or `h x`) and (`V y` or `v y`)
-                                *   Creates a **horizontal**/**vertical** line from the **marker point** to the **given point**
-                            *   `Z` or `z`
-                                *   **Closes the path**, connects the first and last pointsю
-                    </script>
-                </section>
-                <section data-markdown style="font-size:40px">
-                    <script type="text/template">
-                        #SVG Paths: Line Commands
-                        *   Paths example
-                            *   Drawing the letter **"R"** 
-
-                        
-                            <path stroke="yellowgreen" fill="none"
-                               d="M 475 50 V 150 M 475 50 H 525 L 550 75 V 100 H 475 L 550 150" />
-
-
-                        *   Drawing the letter **"E"**
-
-                            
-                            <path stroke="yellowgreen" fill="none" 
-                               d="M 375 50 H 450 M 375 50 V 150 H 450 M 375 100 H 430" />
-
-                        <div style="text-align: center">
-                            <img src="imgs/svg-paths-sample.png" style="width:70%" />
-                        </div>
-                    </script>
-                </section>
-                <section data-markdown class="slide-section">
-                    <script type="text/template">
-                        #SVG Paths: Line Commands
-                        ##Live Demo
-                    </script>
-                </section>
-                <section data-markdown style="font-size:40px">
-                    <script type="text/template">
-                        #SVG Paths: Curves
-                        *   `C x1 y1 x2 y2 x y`
-                            *   Cubic Bezier curve
-                            *   **Two control** points: `(x1, y1)` and `(x2, y2)`
-                            *   **Ending point** at `(x, y)`
-                            *   `S x2 y2 x y` continues the curve
-                        *   `Q x1 y1 x y`
-                            *   Quadratic Bezier curve
-                            *   **One control** point: `(x1, y1)`
-                            *   **Ending point** at `(x, y)`
-                            *   `T x y` continues the curve
-                    </script>
-                </section>
-                <section data-markdown style="font-size:43px">
-                    <script type="text/template">
-                        #SVG Paths: Curves Example
-                        *   Cubic Bezier Curve:
-
-                                
-                            <path d="M50 200 C60 450 145 300 200 200 S225 50 300 200" /> 
-
-                        *   Quadratic Bezier Curve:
-
-
-                            <path d="M350 200 Q360 450 400 200 T525 200" />
-
-                        <div style="text-align: center">
-                            <img src="imgs/svg-paths-cubic-bezier-curve-sample.png" height="250" />
-                            <img src="imgs/svg-paths-quadratic-bezier-curve-sample.png" height="250" />
-                        </div>
-                    </script>
-                </section>
-                <section data-markdown class="slide-section">
-                    <script type="text/template">
-                        #SVG Paths: Curves
-                        ##Live Demo
-                    </script>
-                </section>
-            </section>
-
-            <!-- SVG DOM API -->
-              <section>
-                <section data-markdown id="svg-dom-api" class="slide-section">
-                    <script type="text/template">
-                        #SVG DOM API
-                        ##SVG with JavaScript
-                    </script>
-                </section>
-                <section data-markdown>
-                    <script type="text/template">
-                        #SVG DOM API
-                        *   SVG is plain old XML
-                            *   SVG elements **can be selected** just as DOM elements
-                            *   `getElementsByXXX(…)` and `querySelector(…)`
-                            *   SVG elements can be **created dynamically**
-                                *   `document.createElement('rect')`
-
-
-                            var svgNS = 'http://www.w3.org/2000/svg';
-                            var rect = document.createElementNS(svgNs, 'rect');
-                            rect.setAttribute('x', x);
-                            rect.setAttribute('y', y);
-                            rect.setAttribute('width', width);
-                            rect.setAttribute('height', height);
-                            document.getElementById('the-svg').appendChild(rect);
-                    </script>
-                </section>
-                <section>
-                    <h1>SVG Styles</h1>
-                    <ul>
-                        <li>SVG elements can also be styled with CSS:</li>
-                    </ul>
-                    <div style="text-align: center">
-                        <pre style="width:40%; display: inline-block; margin-right: 5px"><code><!-- SVG -->
-<svg id='the-svg' …>
-  <rect … />
-  </rect>
-  <circle … />
-</svg></code></pre>
-                         <pre style="width:40%; display: inline-block; margin-right: 5px"><code>/* CSS */
-#the-svg rect{
-  fill: white;
-  stroke: purple;
-  stroke-width: '5';
-}</code></pre>
-                        <img src="imgs/svg-styles-sample.png" height="250" class="fragment"/>
-                    </div>
-                </section>
-                <section data-markdown class="slide-section">
-                    <script type="text/template">
-                        #SVG DOM and Styles
-                        ##Live Demo
-                    </script>
-                </section>
-            </section>
-            <section data-markdown id="questions" class="slide-questions">
-                <script type="text/template">
-                    #Scallable Vector Graphics
-                    ##Questions
-                </script>
-            </section>
-        </div>
+		<div id="slides-container" class="slides"></div>
     </div>
-    <script src="lib/js/head.min.js"></script>
-    <script src="js/reveal.js"></script>
+    <script src="https://rawgit.com/TelerikAcademy/Common/master/revealjs-theme/lib/js/head.min.js"></script>
+    <script src="https://rawgit.com/TelerikAcademy/Common/master/revealjs-theme/js/reveal.js"></script>
+    <script src="https://rawgit.com/TelerikAcademy/Common/master/revealjs-theme/lib/js/jquery.js"></script>
+    <script src="https://rawgit.com/TelerikAcademy/Common/master/revealjs-theme/js/main.js"></script>
+    <script src="https://rawgit.com/TelerikAcademy/Common/master/revealjs-theme/js/setup-func.js"></script>
+    <script src="https://rawgit.com/TelerikAcademy/Common/master/revealjs-theme/js/render.js"></script>
     <script>
-    /* globals Reveal, hljs */
-    // Full list of configuration options available at:
-    // https://github.com/hakimel/reveal.js#configuration
-    Reveal.initialize({
-        controls: true,
-        progress: true,
-        history: true,
-        center: true,
-        slideNumber: 'c / t',
-        transition: 'slide', // none/fade/slide/convex/concave/zoom
-        // Optional reveal.js plugins
-        dependencies: [{
-            src: 'lib/js/classList.js',
-            condition: function() {
-                return !document.body.classList;
-            }
-        }, {
-            src: 'plugin/markdown/marked.js',
-            condition: function() {
-                return !!document.querySelector('[data-markdown]');
-            }
-        }, {
-            src: 'plugin/markdown/markdown.js',
-            condition: function() {
-                return !!document.querySelector('[data-markdown]');
-            }
-        }, {
-            src: 'plugin/highlight/highlight.js',
-            async: true,
-            condition: function() {
-                return !!document.querySelector('pre code');
-            },
-            callback: function() {
-                hljs.initHighlightingOnLoad();
-            }
-        }, {
-            src: 'plugin/zoom-js/zoom.js',
-            async: true
-        }, {
-            src: 'plugin/notes/notes.js',
-            async: true
-        }]
-    });
+      var protocol = window.location.protocol,
+     	  pathname = window.location.pathname.replace(/index\.html$/, ''),
+        host = window.location.host,
+        readmeLocation = protocol + "//" + host + pathname;
+      if (readmeLocation[readmeLocation.length - 1] !== '/') {
+        readmeLocation += '/';
+      }
+      readmeLocation += 'README.md';
+      render(readmeLocation);
     </script>
-</body>
-
+  </body>
 </html>
