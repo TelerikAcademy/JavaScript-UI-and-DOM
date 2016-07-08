@@ -19,7 +19,6 @@
   - Block and conditional
 - Helpers
 
-
 <!-- HTML Templates Overview-->
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" id:"html-templates-overview" } -->
@@ -35,7 +34,6 @@
 - HTML templates are many:
   - Basic: Handlebars.js, mustache.js, underscore.js, jQuery templates
   - Advanced: KendoUI, AngularJS
-
 
 <!-- Handlebars.js -->
 <!-- section start -->
@@ -87,13 +85,11 @@
 # Setup and Usage
 ## Live Demo
 
-
 <!-- Templates with Handlebars.js -->
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true,  class:"slide-section" id:"creating-templates" } -->
 # Creating HTML Templates with Handlebars.js
 ## Start from the beginning
-
 
 <!-- attr: { hasScriptWrapper:true, style:"font-size:45px" } -->
 # Templates with Handlebars.js
@@ -127,12 +123,9 @@
 - If the value should not be escaped there are two possibilities:
     - Use **triple curly brackets** in the template string:
 
-
     {{{value}}}
 
-
 - Mark in the value **not to be escaped**
-
 
      var post = { title: '…',
          content: new Handlebars.SafeString('…')
@@ -143,7 +136,6 @@
 <!-- attr: { hasScriptWrapper:true, class:"slide-section"  } -->
 # HTML Escaping
 ## Live Demo
-
 
 <!-- Handlebars Expressions-->
 
@@ -175,7 +167,6 @@
 
 The id and the name of every object <!-- .element: class="fragment balloon" style="top: 80%; right: 15%" -->
 
-
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
 # Block Expressions
 ## Live Demo
@@ -184,7 +175,6 @@ The id and the name of every object <!-- .element: class="fragment balloon" styl
 # Conditional Expressions
 - Render code only if a condition is fulfulled
   - Using `{{# if condition}}` `{{/if}}` or `{{#unless condition}} {{/unless}}`
-
 
     <h1>Posts</h1>
     <ul class="posts">
@@ -200,14 +190,11 @@ The id and the name of every object <!-- .element: class="fragment balloon" styl
      {{/posts}}
     </ul>
 
-
 If author is false-like value,  this code will not be rendered <!-- .element: class="fragment balloon" style="top:61%; right: 8%" -->
 
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
 # Conditional Expressions
 ## Live Demo
-
-
 
 <!-- Handlebars Helpers-->
 <!-- section start -->
@@ -234,7 +221,6 @@ If author is false-like value,  this code will not be rendered <!-- .element: cl
 - Handlebars.js supports extension of the built-in helpers
   - Using `Handlebars.registerHelper(…)`;
 
-
     Handlebars.registerHelper ('tags', function(tags){
       var html = '<ul class="tags-list">',
           tag;
@@ -244,7 +230,6 @@ If author is false-like value,  this code will not be rendered <!-- .element: cl
       return new Handlebars.SafeString(html);
     });
 
-
 SafeString is mandatory here  <!-- .element: class="balloon fragment" style="top:70%; right: 20%" -->
 
 Otherwise the result will be escaped  <!-- .element: class="balloon fragment"  style="top:75%; right: 10%" -->
@@ -252,7 +237,6 @@ Otherwise the result will be escaped  <!-- .element: class="balloon fragment"  s
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
 # Registering Handlebars.js Helpers
 ## Live Demo
-
 
 <!-- Questions -->
 <!-- section start -->

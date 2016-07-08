@@ -41,7 +41,6 @@
     - Write JavaScript to interact with the DOM
         - JavaScript uses the DOM API (native implementation for each browser)
 
-
 <!-- DOM API -->
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" style:"text-align: center" } -->
@@ -92,7 +91,6 @@
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
 # DOM Objects
 ## Live Demo
-
 
 <!-- Selecting DOM Elements -->
 <!-- section start -->
@@ -146,7 +144,6 @@
 - Both methods take as a string parameter
     - The CSS selector of the element
 
-
     //the element with id="header"
     var header = document.querySelector('# header');
     //li elements contained in element with id=main-nav
@@ -178,7 +175,6 @@ var divsInWrapper = wrapper.getElementsByTagName('div');</code></pre>
 # Selecting Nested Elements
 ## Live Demo
 
-
 <!-- NodeLists -->
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
@@ -193,8 +189,6 @@ var divsInWrapper = wrapper.getElementsByTagName('div');</code></pre>
     - `getElementsByClassName(className)`
     - `querySelectorAll(selector)`
 
-
-
     var divs = document.getElementsByTagName('div');
     var queryDivs = document.querySelectorAll('div');
     for(var i=0; i < divs.length; i++){
@@ -208,7 +202,6 @@ var divsInWrapper = wrapper.getElementsByTagName('div');</code></pre>
         - Has length and indexer
     - Traversing an array with for-in loop works unexpected:
 
-
     for (var i in divs) {
        console.log('divs[' + i + '] = ' + divs[i]);
     }
@@ -220,7 +213,6 @@ var divsInWrapper = wrapper.getElementsByTagName('div');</code></pre>
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
 # NodeLists
 ## Live Demo
-
 
 <!-- Static and Live Node Lists -->
 <!-- section start -->

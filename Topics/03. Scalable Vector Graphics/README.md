@@ -19,7 +19,6 @@
     - Path
 - Drawing Text
 
-
 <!-- SVG Overview -->
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, id:"svg-overview" class:"slide-section" } -->
@@ -62,7 +61,6 @@
 # Simple SVG
 ## Live Demo
 
-
 <!-- SVG Shapes -->
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, id:"svg-shapes" class:"slide-section" } -->
@@ -78,7 +76,6 @@
 - SVG supports most of the basic shapes
     - More complex shapes can be created using the basic ones
 
-
 <!-- Lines -->
 <!-- attr: { hasScriptWrapper:true, style:"font-size: 40px" } -->
 # SVG Shapes: Line
@@ -86,8 +83,6 @@
 - Creates a line between two points
     - **Lines** are defined by start and end points
     - Each points has a coordinates: `(x, y)`
-
-
 
     <line x1="0" y1="0" x2="300" y2="450" stroke="black" />
     <line x1="300" y1="0" x2="0" y2="450" stroke="black" />
@@ -104,13 +99,11 @@
 # Defining Lines with SVG
 ## Live Demo
 
-
 <!-- Rects and Circles -->
 <!-- attr: { hasScriptWrapper:true } -->
 # SVG Shapes: Rects and Circles
 - `<rect>` creates a rectangular with a **top-left position**, **width** and **height**
 - `<circle>` creates a circle with **center position** and **radius**
-
 
     <rect x="10" y="10" width="280" height="280" fill="# 222"/>
     <circle cx="150" cy="150" r="135" fill="# 333"/>
@@ -127,8 +120,6 @@
 # Circles and Rectangles with SVG
 ## Live Demo
 
-
-
 <!-- SVG Paths -->
  <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, id:"svg-paths" class:"slide-section" } -->
@@ -142,7 +133,6 @@
     - Create a curve between two points
     - Used with the element `<path>`
         - **Add commands** and **points** for the lines using the `"d"` attribute`
-
 
     <path d="M 50 50 L 175 310 H210"></path>
 
@@ -163,13 +153,10 @@
 - Paths example
     - Drawing the letter **"R"**
 
-
     <path stroke="yellowgreen" fill="none"
        d="M 475 50 V 150 M 475 50 H 525 L 550 75 V 100 H 475 L 550 150" />
 
-
 - Drawing the letter **"E"**
-
 
     <path stroke="yellowgreen" fill="none"
        d="M 375 50 H 450 M 375 50 V 150 H 450 M 375 100 H 430" />
@@ -199,11 +186,9 @@
 # SVG Paths: Curves Example
 - Cubic Bezier Curve:
 
-
     <path d="M50 200 C60 450 145 300 200 200 S225 50 300 200" />
 
 - Quadratic Bezier Curve:
-
 
     <path d="M350 200 Q360 450 400 200 T525 200" />
 
@@ -215,7 +200,6 @@
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
 # SVG Paths: Curves
 ## Live Demo
-
 
 <!-- SVG DOM API -->
   <!-- section start -->
@@ -230,7 +214,6 @@
     - `getElementsByXXX(…)` and `querySelector(…)`
     - SVG elements can be **created dynamically**
         - `document.createElement('rect')`
-
 
     var svgNS = 'http://www.w3.org/2000/svg';
     var rect = document.createElementNS(svgNs, 'rect');

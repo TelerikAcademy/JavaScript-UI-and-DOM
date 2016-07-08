@@ -23,7 +23,6 @@
     - Save and restore context state
     - Translate
 
-
 <!-- The HTML5 Canvas -->
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, id:"html5-canvas" data-markdown class:"slide-section" } -->
@@ -70,7 +69,6 @@
 # Using the HTML5 Canvas
 ## Live Demo
 
-
 <!-- Drawing Shapes -->
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, id:"drawing-shapes" data-markdown class:"slide-section" } -->
@@ -84,7 +82,6 @@
 - Each of these shapes can be either
     - Drawn in full color (i.e. filled)
     - Drawn only their border (i.e. stroked)
-
 
     var canvas = document.getElementById('the-canvas');
     var canvasCtx = canvas.getContext('2d');
@@ -117,7 +114,6 @@ ctx.strokeRect(20, 20, 140, 90);</code></pre>
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
 # Drawing Rects
 ## Live Demo
-
 
 <!-- Canvas Paths -->
 
@@ -165,11 +161,9 @@ ctx.strokeRect(20, 20, 140, 90);</code></pre>
     ctx.closePath();
     ctx.fill();
 
-
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
 # Using the Path
 ## Live Demo
-
 
 <!-- Drawing Ellipses -->
 <!-- section start -->
@@ -196,11 +190,9 @@ ctx.strokeRect(20, 20, 140, 90);</code></pre>
 # Drawing Ellipses: Example
 - To draw ellipses, a path must be started:
 
-
             ctx.beginPath();
 
         - Draw a full circle:
-
 
             //clockwise
             ctx.arc(x, y, r, 0, 2- Math.PI);
@@ -208,7 +200,6 @@ ctx.strokeRect(20, 20, 140, 90);</code></pre>
             ctx.arc(x, y, r, 2- Math.PI, 0, true);
 
         - Draw a segment of an ellipse:
-
 
             //The smaller part (clockwise)
             ctx.arc(x, y, r, Math.PI/2, 2- Math.PI);
@@ -235,7 +226,6 @@ ctx.strokeRect(20, 20, 140, 90);</code></pre>
 # Drawing Circular Sectors: Example
 - **context.closePath()** connects the first and the last dots from the Path
 
-
     function drawSector(x, y, r, from, to, isCounterClockwise) {
       ctx.beginPath();
       ctx.arc(x, y, r, from, to, isCounterClockwise);
@@ -247,7 +237,6 @@ ctx.strokeRect(20, 20, 140, 90);</code></pre>
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
 # Drawing Circular Sectors
 ## Live Demo
-
 
 <!-- Drawing Curves -->
 <!-- section start -->
@@ -291,7 +280,6 @@ ctx.strokeRect(20, 20, 140, 90);</code></pre>
 # Bezier Curves
 ## Live Demo
 
-
 <!-- Drawing Text in canvas -->
 
 <!-- section start -->
@@ -317,7 +305,6 @@ ctx.strokeRect(20, 20, 140, 90);</code></pre>
     - Font family – `Arial`
     - Font sizes – from `28px` to `48px`
 
-
     var minFontSize = '28';
     var currentFontSize = 48;
     while (minFontSize <= currentFontSize) {
@@ -333,7 +320,6 @@ ctx.strokeRect(20, 20, 140, 90);</code></pre>
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
 # Drawing Text in Canvas
 ## Live Demo
-
 
 <!-- Canvas Styles -->
 <!-- section start -->
@@ -354,7 +340,6 @@ ctx.strokeRect(20, 20, 140, 90);</code></pre>
 # Canvas Styles
 ## Live Demo
 
-
 <!-- Canvas Transformations -->
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, id:"transformations" data-markdown class:"slide-section" } -->
@@ -374,8 +359,6 @@ ctx.strokeRect(20, 20, 140, 90);</code></pre>
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
 # Canvas Transformations
 ## Live Demo
-
-
 
 <!-- Per-pixel Manipulation -->
 <!-- section start -->
@@ -407,7 +390,6 @@ ctx.strokeRect(20, 20, 140, 90);</code></pre>
 - Invert all the colors of an canvas
     - Change each color component `CC` with `255-CC`
 
-
     var i,
         len,
         width = canvas.width,
@@ -424,7 +406,6 @@ ctx.strokeRect(20, 20, 140, 90);</code></pre>
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
 # Canvas Per-pixel Manipulations
 ## Live Demo
-
 
 <!-- attr: { hasScriptWrapper:true, id:"questions" class:"slide-questions" } -->
 # The HTML5 Canvas

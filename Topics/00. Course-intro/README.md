@@ -215,5 +215,5 @@
 
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, class:"slide-questions" } -->
-<h1>JavaScript UI & DOM:<br/>Course Introduction</h1>
-<h2>Questions</h2>
+# JavaScript UI & DOM:<br/>Course Introduction
+## Questions

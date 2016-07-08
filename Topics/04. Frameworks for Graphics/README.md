@@ -19,7 +19,6 @@
 - Event handlers
     - Attaching click, drag&drop
 
-
 <!-- SVG Overview -->
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, id:"svg-overview" class:"slide-section" } -->
@@ -52,7 +51,6 @@
 - To use KineticJS (cont.):
     - Do the following in the script:
 
-
     function initKinetic(){
         var stage = new Kinetic.Stage({
           container: 'canvas-container',
@@ -66,9 +64,6 @@
         layer.add (circle);
         stage.add(layer);
     }
-
-
-
 
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
 # Setting up KineticJS
@@ -180,9 +175,7 @@
 # Drawing Shapes
 ## Live Demo
 
-
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, class:"slide-questions" id:"questions" } -->
 # KineticJS Overview
 ## Questions
-

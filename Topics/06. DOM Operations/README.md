@@ -17,7 +17,6 @@
 - Adding, Removing and Altering Elements
 - Static and Live NodeLists
 
-
 <!-- DOM Elements -->
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, id:"dom-element" class:"slide-section" } -->
@@ -32,19 +31,15 @@
 - DOM elements can be changed
     - This changes are **immediately** applied to the DOM, and the HTML page
 
-
     //changes the content of the div
     selectedDiv.innerHTML = "changed";
     //changes the background of the div to "# 456"
     selectedDiv.style.background = "# 456";
     var div = document.createElement("div");
 
-
-
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
 # DOM Elements
 ## Live Demo
-
 
 <!-- Traversing the DOM -->
 <!-- section start -->
@@ -69,7 +64,6 @@
 - `element.childNodes`
     - Returns a nodeList of all the child nodes
         - Including the text nodes (whitespaces)
-
 
 <!-- attr: { hasScriptWrapper:true } -->
 <h1>Traversing the DOM - Example</h1>
@@ -121,20 +115,16 @@
         - Change their styles
         - Change their attributes
 
-
 <!-- attr: { hasScriptWrapper:true } -->
 # Creating HTML Еlements
 - The document object has a method for creation of HTML elements
     - document.createElement(elementName)
     - Returns an object with the corresponding HTML element type
 
-
     var liElement = document.createElement("li");
     console.log(liElement instanceof HTMLLIElement); //true
     console.log(liElement instanceof HTMLElement); //true
     console.log(liElement instanceof HTMLDivElement); //false
-
-
 
 <!-- attr: { hasScriptWrapper:true } -->
 # Creating HTML Еlements
@@ -142,7 +132,6 @@
 - When HTML elements are created dynamically they are just JavaScript objects
     - They are still not in the DOM (the web page)
     - New HTML elements must be appended to DOM
-
 
     var studentsList = document.createElement("ul");
     var studentLi = document.createElement("li");
@@ -168,7 +157,6 @@
 - Elements can be removed from the DOM
   - Using `element.removeChild(elToRemove)`
   - Pass the element-to-remove to their parent
-
 
       var trainers = document.getElementsByTagName("ul")[0];
       var trainer = trainers.getElementsByTagName("li")[0];
@@ -206,7 +194,6 @@
     <div id="f"></div>
     <div id="s"><p id="the-p">text</p></div>
 
-
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
 # Altering HTML Elements
 ## Live Demo
@@ -217,7 +204,6 @@
   - Meaning changing the style attribute
     - The inline styles, not CSS
 
-
     var div = document.getElementById("content");
     div.style.display = "block";
     div.style.width = "123px";
@@ -227,7 +213,6 @@ Do not forget the unit <!-- .element: class="fragment balloon" style="position:a
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
 # Altering the Style
 ## Live Demo
-
 
 <!-- DOM Optimizations-->
 <!-- section start -->
@@ -258,7 +243,6 @@ Do not forget the unit <!-- .element: class="fragment balloon" style="position:a
   - Appending DocumentFragment to the DOM appends only its child elements
   - http://jsperf.com/append-doc-fragment/2 <!-- .element: target="_blank" -->
 
-
     var dFrag = document.createDocumentFragment();
 
     dFrag.appendChild(div);
@@ -270,7 +254,6 @@ Do not forget the unit <!-- .element: class="fragment balloon" style="position:a
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
 # Working with DocumentFragment
 ## Live Demo
-
 
 <!-- attr: { hasScriptWrapper:true } -->
 # Faster Creation of Elements
@@ -290,13 +273,11 @@ Do not forget the unit <!-- .element: class="fragment balloon" style="position:a
 - `DomElement.cloneNode(true)` can be used
   - Creates a full copy (deep copy) of the element
 
-
     var clonedNode = someElement.cloneNode(true)
 
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
 # Faster Creation of Elements
 ## Live Demo
-
 
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, class:"slide-questions" id:"questions" } -->

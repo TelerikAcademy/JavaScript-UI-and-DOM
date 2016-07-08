@@ -18,7 +18,6 @@
 - Capturing and Bubbling Events
 - Custom Events
 
-
 <!--Event Model-->
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" id:"event-model" } -->
@@ -114,8 +113,6 @@
 # Register Event Handlers using HTML Attributes
 ## Live Demo
 
-
-
 <!-- attr: { hasScriptWrapper:true } -->
 # Using DOM Element Properties
 - Use standard DOM events on certain DOM element and assign a reference to a function
@@ -123,12 +120,9 @@
 
 - **HTML**
 
-
     <button id="click-button">Click me</button>
 
-
 - **JavaScript**
-
 
     var button = document.getElementById("click-button");
     button.onclick = function onButtonClick() {
@@ -144,15 +138,11 @@
 - The standard way for attaching event handlers to DOM
   - The Basic Syntax is:
 
-
-
     domElement.addEventListener(eventType,
       eventHandler,
       isCaptureEvent)
 
  - _Example:_
-
-
 
     var button = document.getElementById("click-button");
     button.addEventListener("click", function () {
@@ -162,7 +152,6 @@
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
 # Registering Event Handlers Using DOM
 ## Live Demo
-
 
 <!-- The Event Object-->
 
@@ -186,7 +175,6 @@
 # Event Object
 - The event object is accessible as the only argument of the function handler
 
-
     function onButtonClick(event) {
       console.log(event.target);
       console.log(event.type);
@@ -197,7 +185,6 @@
 - Yet, there is IE - it does not pass event object
   - Keeps the event object in window.event
   - Fortunately there is a simple fix
-
 
     function onButtonClick(event) {
       if(!event) event = window.event;
@@ -211,7 +198,6 @@
   <img src="imgs/section-event-object-demo.jpg" style="height:35%; border-radius:15px;" />
 </script>
 
-
 <!-- Cross-browser Event handlers-->
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" id:"cross-browser-handlers" } -->
@@ -223,11 +209,9 @@
 - `addEventListener()` is n0t supported everywhere
   - Older versions of IE have their own method for registering event handlers
 
-
       domElement.attachEvent('onclick', eventHander);
 
   - Yet, you can use **feature detection**
-
 
       // Up to IE8
       if (document.attachEvent){
@@ -250,7 +234,6 @@
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
 # Cross-Browser Event Handler
 ## Live Demo
-
 
 <!-- Capturing and bubbling Events-->
 <!-- section start -->
@@ -318,13 +301,10 @@
 
   <img class="fragment" src="imgs/sample-capturing-arrow-down.png" height="230" style="border: none; background: none;box-shadow: none; position: absolute; top: 42%; left: 25%">
 
-
-
 <!-- attr: { hasScriptWrapper:true } -->
 # Bubbling Event Chaing
 - Bubbling bubbles up the event chain
   - The first executed handler is the one on the target
-
 
   <div style="text-align: center">
     - **HTML**<br/>
@@ -350,7 +330,6 @@
 </div>
 <img src="imgs/section-demo-capturing-bubbling.png" style="float:right; border-radius: 15px">
 
-
 <!-- Custom Events -->
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" id:"custom-events" } -->
@@ -361,9 +340,7 @@
 # Custom Events
 - To create custom events use the `CustomEvent()` constructor
 
-
     var event = new CustomEvent(eventType);
-
 
 - Create custom event `tripleclick`
 
@@ -371,15 +348,12 @@
 
 - Get body element to attach the custom event to and use `addEventListener`
 
-
     var body = document.getElementsByTagName("body")[0];
     body.addEventListener("tripleClick", function() {
     	alert("You click three times");
     }, false);
 
-
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, class:"slide-questions" id:"questions" } -->
 # JavaScript Event Model
 ## Questions
-
