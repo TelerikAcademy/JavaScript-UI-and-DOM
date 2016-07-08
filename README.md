@@ -1,6 +1,6 @@
 # JavaScript-UI-and-DOM
 
-Repository for the course [JavaScript UI and DOM](https://telerikacademy.com/Courses/Courses/Details/339) at [Telerik Academy](https://telerikacademy.com)
+Repository for the course [JavaScript UI and DOM](https://telerikacademy.com/Courses/Courses/Details/344) at [Telerik Academy](https://telerikacademy.com)
 
 The **JavaScript UI and DOM** is about building of low-level user interface. The course covers topics like DOM, jQuery, events, graphics & animations with HTML5 Canvas and templates
 
