@@ -1,0 +1,334 @@
+<!-- attr: { hasScriptWrapper:true, id:"title" class:"slide-title" } -->
+    <h1>DOM Operations</h1>
+    <h2>Creating dynamic pages</h2>
+    <aside class="signature">
+        <p class="signature-course">JavaScript DOM & UI</p>
+        <p class="signature-initiative">Telerik Software Academy</p>
+        <a href="http://academy.telerik.com" class="signature-link">http://academy.telerik.com</a>
+    </aside>
+
+<!-- Table of Contents -->
+<!-- attr: { hasScriptWrapper:true, id:"table-of-contents" data-markdown style:"font-size:40px" } -->
+    <script type="text/template">
+    # Table of Contents
+    - Traversing the DOM
+    - Parents, Children and Siblings
+    - DOM manipulation
+    - Adding, Removing and Altering Elements
+    - Static and Live NodeLists
+    </script>
+
+<!-- DOM Elements -->
+<!-- section start -->
+<!-- attr: { hasScriptWrapper:true, id:"dom-element" class:"slide-section" } -->
+        <script type="text/template">
+            # DOM Elements
+            ## What is the DOM built from?
+        </script>
+<!-- attr: { hasScriptWrapper:true } -->
+        <script type="text/template">
+            # DOM Elements
+            - А **DOM element** is a JavaScript object that represents an element from the HTML
+                - **Selected** using any of the DOM selectors
+                - **Created** dynamically from code
+            - DOM elements can be changed
+                - This changes are **immediately** applied to the DOM, and the HTML page
+
+
+                //changes the content of the div
+                selectedDiv.innerHTML = "changed";
+                //changes the background of the div to "# 456"
+                selectedDiv.style.background = "# 456";
+                var div = document.createElement("div");
+
+
+        </script>
+<!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
+        <script type="text/template">
+            # DOM Elements
+            ## Live Demo
+        </script>
+
+<!-- Traversing the DOM -->
+<!-- section start -->
+<!-- attr: { hasScriptWrapper:true, class:"slide-section" id:"dom-traversing" } -->
+        <script type="text/template">
+            # Traversing the DOM <!-- .element: style="margin-top:55px" -->
+            <img src="imgs/traversing-the-dom-section-slide.png" />
+        </script>
+<!-- attr: { hasScriptWrapper:true } -->
+        <script type="text/template">
+            # Traversing the DOM
+            - DOM elements have properties about their position in the DOM:
+               - Their parent
+               - Their children
+               - Their Siblings
+                  - Elements immediatelly before and after the element
+            - These properties can be used to traverse through the DOM
+        </script>
+<!-- attr: { hasScriptWrapper:true } -->
+        <script type="text/template">
+            # Traversing the DOM
+            - `element.parentNode`
+                - Returns the direct parent of the element
+                - The parent of document is null
+            - `element.childNodes`
+                - Returns a nodeList of all the child nodes
+                    - Including the text nodes (whitespaces)
+
+        </script>
+    <!-- section start -->
+        <h1>Traversing the DOM - Example</h1>
+        <ul><li>Traverse a <code>&lt;UL></code> with <code>&lt;LI></code>s:</li></ul>
+        <pre><code>function iterateList(listId){
+    var trainersList = document.getElementsById(listId);
+    var parent = trainersList.parentNode;
+    log("parent of trainers-list: " + parent.nodeName +
+        " with id: " + parent.id);
+    var children = trainersList.childNodes;
+    log("elements in trainers-list: " + children.length);
+    log("element in trainers-list");
+    for (var i = 0, len = children.length; i < len; i+=1) {
+      var subItem = children[i];
+      log(subItem.nodeName + " content: " +
+          subItem.innerText);
+}</code></pre>
+<!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
+        <script type="text/template">
+            # Traversing the DOM
+            ## Live Demo
+        </script>
+<!-- attr: { hasScriptWrapper:true } -->
+        <script type="text/template">
+            # Using the Named Elements in DOM Objects
+            - DOM elements have some properties for special elements around them:
+                - **First** and **last** child nodes
+                - The element **before**/**after** the current node
+            - The named elements are:
+                - `firstChild` and `lastChild`
+                - `nextSibling` / `nextElementSibling`
+                - `previousSibling` / `previousElementSibling`
+        </script>
+<!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
+        <script type="text/template">
+            # Using the Named Elements in DOM Objects
+            ## Live Demo
+        </script>
+<!-- section start -->
+<!-- attr: { hasScriptWrapper:true, class:"slide-section" id:"dom-manipulation" } -->
+        <script type="text/template">
+            # Manipulating the DOM
+            ## Making a web page dynamic
+        </script>
+<!-- attr: { hasScriptWrapper:true } -->
+        <script type="text/template">
+            # Manipulating the DOM
+            - DOM can be manipulated dynamically with JS
+                - HTML elements can be created
+                - HTML elements can be removed
+                - HTML elements can be altered
+                    - Change their content
+                    - Change their styles
+                    - Change their attributes
+
+        </script>
+<!-- attr: { hasScriptWrapper:true } -->
+        <script type="text/template">
+            # Creating HTML Еlements
+            - The document object has a method for creation of HTML elements
+                - document.createElement(elementName)
+                - Returns an object with the corresponding HTML element type
+
+
+                var liElement = document.createElement("li");
+                console.log(liElement instanceof HTMLLIElement); //true
+                console.log(liElement instanceof HTMLElement); //true
+                console.log(liElement instanceof HTMLDivElement); //false
+
+
+        </script>
+<!-- attr: { hasScriptWrapper:true } -->
+        <script type="text/template">
+            # Creating HTML Еlements
+            - After an HTML element is created it can be treated as if it was selected from the DOM
+            - When HTML elements are created dynamically they are just JavaScript objects
+                - They are still not in the DOM (the web page)
+                - New HTML elements must be appended to DOM
+
+
+                var studentsList = document.createElement("ul");
+                var studentLi = document.createElement("li");
+                studentsList.appendChild(studentLi);
+                document.body.appendChild(studentsList);
+        </script>
+<!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
+        <script type="text/template">
+            # Appending Elements to the DOM
+            ## Live Demo
+        </script>
+<!-- attr: { hasScriptWrapper:true } -->
+        <script type="text/template">
+            # Inserting Elements Before/After Other Element
+            - The DOM API supports inserting a element before or after a specific element
+              - `appendChild()` inserts the element always at the end of the DOM element
+              - `parent.insertBefore(newNode, specificElement)`
+        </script>
+<!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
+        <script type="text/template">
+            # Inserting Elements After/Before Other Elements
+            ## Live Demo
+        </script>
+<!-- attr: { hasScriptWrapper:true } -->
+        <script type="text/template">
+            # Removing Elements
+            - Elements can be removed from the DOM
+              - Using `element.removeChild(elToRemove)`
+              - Pass the element-to-remove to their parent
+
+
+                  var trainers = document.getElementsByTagName("ul")[0];
+                  var trainer = trainers.getElementsByTagName("li")[0];
+                  trainers.removeChild(trainer);
+
+                  //remove a selected element
+                  var selectedElement = //select the element
+                  selectedElement.parentNode.removeChild(selectedElement);
+        </script>
+<!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
+        <script type="text/template">
+            # Removing Elements
+            ## Live Demo
+        </script>
+<!-- attr: { hasScriptWrapper:true } -->
+        <script type="text/template">
+            # Altering the Elements
+            - DOM elements can be remove and/or changed
+              - Both the node's children and the node itself
+            - With the DOM API each DOM element node can be altered
+              - Change its properties
+              - Change its appearance
+        </script>
+<!-- attr: { hasScriptWrapper:true } -->
+        <script type="text/template">
+            # Altering the Elements
+            - Keep in mind that each HTML element is unique in the DOM
+              - If JavaScript changes its appearance or its position, it is still the same element object
+
+                <div id="f"><p id="the-p">text</p></div>
+                <div id="s"></div>
+                …
+                var second = document.getElementById("s");
+                var theP = document.getElementById("the-p");
+                second.appendChild(theP);
+                …
+                //the DOM is:
+                <div id="f"></div>
+                <div id="s"><p id="the-p">text</p></div>
+
+        </script>
+<!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
+        <script type="text/template">
+            # Altering HTML Elements
+            ## Live Demo
+        </script>
+<!-- attr: { hasScriptWrapper:true } -->
+        <script type="text/template">
+            # Altering the Style
+            - The style of each HTML element can be altered using JavaScript
+              - Meaning changing the style attribute
+                - The inline styles, not CSS
+
+
+                var div = document.getElementById("content");
+                div.style.display = "block";
+                div.style.width = "123px";
+
+            Do not forget the unit <!-- .element: class="fragment balloon" style="position:absolute; top: 55%; left:45%" -->
+        </script>
+<!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
+        <script type="text/template">
+            # Altering the Style
+            ## Live Demo
+        </script>
+
+           <!-- DOM Optimizations-->
+           <!-- section start -->
+<!-- attr: { hasScriptWrapper:true, class:"slide-section" id:"dom-optimizations" } -->
+   <script type="text/template">
+    # DOM Optimizations
+    ## Everybody likes it fast, right?
+   </script>
+<!-- attr: { hasScriptWrapper:true } -->
+   <script type="text/template">
+    # Appending DOM Elements
+    - The DOM API provides a method for appending DOM elements to a element
+      - The `appendChild()` method
+    - `parentNode.appendChild(node)` appends the DOM element node to the DOM element `parentNode`
+      - If `parentNode` is appended to the DOM, the node is also appended
+   </script>
+<!-- attr: { hasScriptWrapper:true, style:"font-size: 40px" } -->
+   <script type="text/template">
+    # Optimizing <br/>the Appending of Elements
+    - Appending elements to the DOM is a **very slow operation**
+      - When an elements is appended to the DOM, the DOM is **rendered anew**
+      - All newly created elements must be appended together
+    - Here comes the `DocumentFragment` element
+      - It is a **minimal DOM element**, with no parent
+      - It is used to **store ready-to-append** elements and append them at once to the DOM
+   </script>
+<!-- attr: { hasScriptWrapper:true, style:"font-size: 40px" } -->
+   <script type="text/template">
+    # Optimizing <br/>the Appending of Elements
+    - Using DocumentFragment
+      - Append the elements to a DocumentFragment
+      - Appending DocumentFragment to the DOM appends only its child elements
+      - http://jsperf.com/append-doc-fragment/2 <!-- .element: target="_blank" -->
+
+
+        var dFrag = document.createDocumentFragment();
+
+        dFrag.appendChild(div);
+
+        //appending more elements
+
+        document.body.appendChild(dFrag);
+   </script>
+<!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
+   <script type="text/template">
+    # Working with DocumentFragment
+    ## Live Demo
+   </script>
+
+<!-- attr: { hasScriptWrapper:true } -->
+   <script type="text/template">
+    # Faster Creation of Elements
+    - **Creating a DOM element** is a slow operation
+      - Create the element
+      - Set its **content**
+      - Set its **style**
+      - Set its **attributes**
+    - This is an issue when creating many elements that have a common structure
+      - Only **one or two** things are different for all elements
+   </script>
+<!-- attr: { hasScriptWrapper:true } -->
+   <script type="text/template">
+    # Faster Creation of Elements
+    - Creating a **dynamic list** of elements
+      - All of the LI elements have the **same classes**, **styles**, **attributes**
+      - Only the `innerHTML` is different
+    - `DomElement.cloneNode(true)` can be used
+      - Creates a full copy (deep copy) of the element
+
+
+        var clonedNode = someElement.cloneNode(true)
+   </script>
+<!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
+   <script type="text/template">
+    # Faster Creation of Elements
+    ## Live Demo
+   </script>
+
+           <!-- Questions -->
+<!-- attr: { hasScriptWrapper:true, class:"slide-questions" id:"questions" } -->
+ # DOM Operations
+ ## Questions
