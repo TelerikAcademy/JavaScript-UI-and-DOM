@@ -7,7 +7,6 @@
         <a href="http://academy.telerik.com" class="signature-link" target="_blank">http://academy.telerik.com</a>
     </aside>
 <!-- attr: { hasScriptWrapper:true } -->
-    <script type="text/template">
         # Table of Contents
         - What's next in the Academy
         - The JavaScript DOM & UI Course Program
@@ -15,15 +14,13 @@
             - Standart Criteria
             - Bonuses
         - Resources for the Course
-    </script>
+
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
-        <script type="text/template">
             # JavaScript DOM & UI
             ## Coming To The Next Module
-        </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-        <script type="text/template">
             # What's next?
             - JavaScript DOM & UI
                 - Continuation of JS Fundamentals and JS OOP
@@ -34,14 +31,12 @@
             - The course exam?
                 - 3 problems for 4 hours
                 - <a href="http://bgcoder.com" title="http://bgcoder.com" target="_blank">http://bgcoder.com</a>
-        </script>
+
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
-        <script type="text/template">
             # The Trainers Team
-        </script>
+
 <!-- attr: { hasScriptWrapper:true, style:"font-size:40px" } -->
-        <script type="text/template">
             # The Trainers Team:<br/>Lead Trainer
             <img src="imgs/doncho-minkov.jpg" style="float:right; margin-right:50px" height="230"/>
             - **Doncho Minkov**
@@ -53,9 +48,8 @@
                 - Email: doncho.minkov [at] telerik.com
                 - Blog: <a href="http://minkov.it" title="http://minkov.it" target="_blank">http://minkov.it</a>
                 - GitHub: <a href="https://github.com/Minkov" title="https://github.com/Minkov" target="_blank">https://github.com/Minkov</a>
-        </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-        <script type="text/template">
             # The Trainers Team:<br/>Deputy Trainer
             <img src="imgs/evlogi-hristov.jpg" style="float:right" height="240"/>
             - **Evlogi Hristov**
@@ -63,9 +57,8 @@
                 - Graduate from the fourth season<br/>of Telerik Software Academy
                 - Ex-developer, Sharepoint
                 - E-mail: evlogi.hristov [at] telerik.com
-        </script>
+
 <!-- attr: { hasScriptWrapper:true, style:"font-size:40px" } -->
-        <script type="text/template">
             # The Trainers Team
             <img src="imgs/nikolay-kostov.png" style="float:right" height="200"/>
             - **Nikolay Kostov**
@@ -77,9 +70,8 @@
                 - Email: nikolay.kostov [at] telerik.com
                 - Blog: <a href="http://nikolay.it" title="http://nikolay.it" target="_blank">http://nikolay.it</a>
                 - GitHub: <a href="https://github.com/NikolayIT" title="https://github.com/NikolayIT" target="_blank">https://github.com/NikolayIT</a>
-        </script>
+
 <!-- attr: { hasScriptWrapper:true, style:"font-size:40px" } --><
-        <script type="text/template">
             # The Trainers Team
             <img src="imgs/ivaylo-kenov.png" style="float:right" height="240"/>
             - **Ivaylo Kenov**
@@ -90,15 +82,13 @@
                 - Champion in OOP and DSA
                 - Blog: <a href="http://ivaylo.bgcoder.com/" title="http://ivaylo.bgcoder.com/" target="_blank">http://ivaylo.bgcoder.com/</a>
                 - GitHub: <a href="https://github.com/ivaylokenov" title="https://github.com/ivaylokenov" target="_black">https://github.com/ivaylokenov</a>
-        </script>
+
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
-        <script type="text/template">
             # JavaScript DOM & UI: Course Program
             ## Titles to cover in the course
-        </script>
+
 <!-- attr: { hasScriptWrapper:true, style:"font-size:40px" } -->
-        <script type="text/template">
             # JavaScript UI & DOM:<br/>Course program
             - Course Introduction
                 - Materials, course program, exams, evaluation
@@ -110,9 +100,8 @@
             - Working with SVG
                 - Using the SVG
                 - Basic operations with SVG
-        </script>
+
 <!-- attr: { hasScriptWrapper:true, style:"font-size:43px" } -->
-        <script type="text/template">
             # JavaScript UI & DOM:<br/>Course program
             - Frameworks for Canvas
                 - Using frameworks for easier drawing with Canvas
@@ -124,7 +113,7 @@
                 - **Removing** DOM Elements
                 - **Adding** DOM Elements
                 - Working with **innerHTML**
-        </script>
+
 <!-- attr: { hasScriptWrapper:true, style:"font-size:43px" } -->
         <script type="text/template" >
             # JavaScript UI & DOM:<br/>Course program
@@ -140,7 +129,6 @@
                 - jQuery Features: chaining, styles, creation
         </script>
 <!-- attr: { hasScriptWrapper:true, style:"font-size:43px" } -->
-        <script type="text/template">
             # JavaScript UI & DOM:<br/>Course program
             - jQuery plugins
                 - Working with jQuery plugins
@@ -151,9 +139,8 @@
             - DOM Performance
                 - Element creation
                 - Setting styles
-        </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-        <script type="text/template">
             # JavaScript UI & DOM:<br/>Course program
             - Exam preparation
                 - Solving problems similar to the exam
@@ -161,13 +148,12 @@
                 - Defending the project live in front of jury
             - Exam
                 - 4 hours, 3 tasks
-        </script>
+
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
-        <script type="text/template">
             # Course Evaluation
             ## Thank God there are Bonuses
-        </script>
+
 <!-- attr: { hasScriptWrapper:true, style:"font-size: 50px" } -->
             # Course Evaluation
             - **Practical exam** - 60%
@@ -177,12 +163,10 @@
             - **Helping other students** - 5%
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
-        <script type="text/template">
             # JS DOM & UI Resources
             ## Sites, Software
-        </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-        <script type="text/template">
             # Course Web site & Forum
             - Register for the "**Telerik Academy Forums**":
                 - <a href="http://telerikacademy.com/Forum/Category/24/javascript-part-2" title="http://telerikacademy.com/Forum/Category/24/javascript-part-2" target="_blank">http://telerikacademy.com/Forum/Category/24/javascript-part-2</a>
@@ -191,9 +175,8 @@
                 - Share source code / discuss ideas
             - The JavaScript UI & DOM official Web site:
                 - <a href="http://academy.telerik.com/student-courses/web-design-and-ui/javascript-ui-dom/about" title="http://academy.telerik.com/student-courses/web-design-and-ui/javascript-ui-dom/about" target="_blank">http://academy.telerik.com/student-courses/web-design-and-ui/javascript-ui-dom/about</a>
-        </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-        <script type="text/template">
             # Telerik Integrated Learning System (TILS)
             - The Telerik Integrated Learning System (TILS)
                 - <a href="http://telerikacademy.com" title="http://telerikacademy.com" target="_blank">http://telerikacademy.com</a>
@@ -204,9 +187,8 @@
                 - Reports about your results
             - JavaScript UI & DOM course page:
                 - <a href="http://telerikacademy.com/Courses/Courses/Details/251" title="http://telerikacademy.com/Courses/Courses/Details/251" target="_blank">http://telerikacademy.com/Courses/Courses/Details/251</a>
-        </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-        <script type="text/template">
             # JavaScript UI & DOM:<br/>GitHub repository
             - JavaScript UI & DOM GitHub repository
                 - <a href="https://github.com/TelerikAcademy/JavaScript-UI-and-DOM" title="https://github.com/TelerikAcademy/JavaScript-UI-and-DOM" target="_blank">https://github.com/TelerikAcademy/JavaScript-UI-and-DOM</a>
@@ -214,9 +196,8 @@
                 - Homeworks:
                     - Assignments
                     - Unit tests for local testing
-        </script>
+
 <!-- attr: { hasScriptWrapper:true, style:"font-size: 43px" } -->
-        <script type="text/template">
             # JavaScript UI & DOM:<br/>Required Software
             - Operating Systems
                 - **Windows**, **Linux** or **OS X** are Ok
@@ -229,7 +210,7 @@
                     - Ready-to-use IDE
                 - **Visual Studio Code**
                     - Light and fast, with a good built-ins
-        </script>
+
 <!-- attr: { hasScriptWrapper:true, class:"slide-questions" } -->
     <h1>JavaScript UI & DOM:<br/>Course Introduction</h1>
     <h2>Questions</h2>

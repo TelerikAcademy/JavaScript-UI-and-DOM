@@ -7,7 +7,6 @@
         <a href="http://academy.telerik.com" class="signature-link">http://academy.telerik.com</a>
     </aside>
 <!-- attr: { hasScriptWrapper:true } -->
-    <script type="text/template">
         # Table of Contents
         - HTML Templates
         - Handlebars.js Template Engine
@@ -17,17 +16,15 @@
         - Handlebars Expressions
           - Block and conditional
         - Helpers
-    </script>
+
 
 <!-- HTML Templates Overview-->
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" id:"html-templates-overview" } -->
-        <script type="text/template">
             # HTML Templates
             ## Overview
-        </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-        <script type="text/template">
             # HTML Templates
             - HTML templates or template engines:
               - Make the HTML dynamic
@@ -36,23 +33,21 @@
             - HTML templates are many:
               - Basic: Handlebars.js, mustache.js, underscore.js, jQuery templates
               - Advanced: KendoUI, AngularJS
-        </script>
+
 
  <!-- Handlebars.js -->
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" id:"handlebarsjs-overview" } -->
-        <script type="text/template">
             # Handlebars.js Overview
             ## Setup and basics
-        </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-        <script type="text/template">
             # Handlebars.js Overview
             - Handlebars.js is an open-source template engine
               - Provides both **run-time and compiled templates** for rendering HTML
               - Allows **one-way data-binding** of HTML elements to JavaScript objects
               - Produces HTML code based on **a template** and a given **JavaScript object**
-        </script>
+
     <!-- section start -->
       <h1>Handlebars.js: Setup and Usage</h1>
       <ul>
@@ -75,7 +70,6 @@
       </li>
     </ul>
 <!-- attr: { hasScriptWrapper:true, style:"font-size: 40px" } -->
-        <script type="text/template">
             # Handlebars.js: Setup and Usage
             - (cont.) To use Handlebars follow the steps:
               - Create a template
@@ -92,31 +86,27 @@
                     htmlTemplate = postTemplateNode.innerHTML,
                     postTemplate = Handlebars.compile(htmlTemplate),
                 postNode.innerHTML = postTemplate(post);
-        </script>
+
 <!-- attr: { hasScriptWrapper:true, class:"slide-section"  } -->
-        <script type="text/template">
             # Setup and Usage
             ## Live Demo
-        </script>
+
 
 <!-- Templates with Handlebars.js -->
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true,  class:"slide-section" id:"creating-templates" } -->
-    <script type="text/template">
       # Creating HTML Templates with Handlebars.js
       ## Start from the beginning
-    </script>
+
 
 <!-- attr: { hasScriptWrapper:true, style:"font-size:45px" } -->
-    <script type="text/template">
       # Templates with Handlebars.js
       - HTML templates act much like `string.Format()` in **C# ** and **Java** and `stringWithFormat: @"…"` in **Objective-C**
         - Put placeholders within a template string, and replace these placeholders with values
       - Handlebars.js marks placeholders with **double curly brackets** `{{value}}`
         - When rendered, **the placeholders** between the curly brackets are **replaced with the corresponding value**
-    </script>
+
 <!-- attr: { hasScriptWrapper:true,  style:"font-size:45px" } -->
-    <script type="text/template">
       # Handlebars.js Templates Example <!-- .element: style="font-size:1.2em" -->
         - Creating the Template
 
@@ -130,14 +120,12 @@
                   tmplStr = document.getElementById('...').innerHTML
                   template = Handlebars.compile(tmplStr);
               domNode.innerHTML = template(post);
-    </script>
+
 <!-- attr: { hasScriptWrapper:true, class:"slide-section"  } -->
-      <script type="text/template">
           # Creating Handlebars Templates
           ## Live Demo
-      </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-    <script type="text/template">
       # HTML Escaping
       - Handlebars.js escapes all values before rendering them
       - If the value should not be escaped there are two possibilities:
@@ -155,31 +143,27 @@
            };
 
         Mostly used with helpers <!-- .element: class="balloon fragment" style="top: 75%; right: 10%" -->
-    </script>
+
 <!-- attr: { hasScriptWrapper:true, class:"slide-section"  } -->
-      <script type="text/template">
           # HTML Escaping
           ## Live Demo
-      </script>
+
 
 <!-- Handlebars Expressions-->
 
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" id:"handlebars-expressions" } -->
-    <script type="text/template">
       # Handlebars Expressions
       ## Blocks and Condtitionals
-    </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-    <script type="text/template">
       # Handlebars Expressions
       - Handlebars.js supports expressions within the templates
         - Block expressions
           - For iterating over a collection of elements
         - Conditional expressions
-    </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-    <script type="text/template">
       # Block Expressions
       - Block expressions are used to iterate over a collection of objects (like array)
         - Created using `{{# collection}}` and `{{/collection}}`
@@ -195,14 +179,12 @@
 
       The id and the name of every object <!-- .element: class="fragment balloon" style="top: 80%; right: 15%" -->
 
-    </script>
+
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
-    <script type="text/template">
       # Block Expressions
       ## Live Demo
-    </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-    <script type="text/template">
       # Conditional Expressions
       - Render code only if a condition is fulfulled
         - Using `{{# if condition}}` `{{/if}}` or `{{#unless condition}} {{/unless}}`
@@ -224,23 +206,20 @@
 
 
       If author is false-like value,  this code will not be rendered <!-- .element: class="fragment balloon" style="top:61%; right: 8%" -->
-    </script>
+
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
-    <script type="text/template">
       # Conditional Expressions
       ## Live Demo
-    </script>
+
 
 
 <!-- Handlebars Helpers-->
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" id:"handlebarsjs-helpers" } -->
-    <script type="text/template">
       # Handlebars.js Helpers
       ## Helping you even more!
-    </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-    <script type="text/template">
       # Handlebars.js Helpers
       - Handlebars.js helpers are like functions that do a predefined job
       - Built-in helpers:
@@ -249,14 +228,12 @@
         - `{{# with obj}} {{/with}}`
           - Used to shorten the path of property names
           - Write `{{prop}}` instead of `{{obj.prop}}`
-    </script>
+
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
-    <script type="text/template">
       # Handlebars.js Helpers
       ## Live Demo
-    </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-    <script type="text/template">
       # Registering Custom Helpers
       - Handlebars.js supports extension of the built-in helpers
         - Using `Handlebars.registerHelper(…)`;
@@ -275,16 +252,13 @@
       SafeString is mandatory here  <!-- .element: class="balloon fragment" style="top:70%; right: 20%" -->
 
       Otherwise the result will be escaped  <!-- .element: class="balloon fragment"  style="top:75%; right: 10%" -->
-    </script>
+
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
-    <script type="text/template">
       # Registering Handlebars.js Helpers
       ## Live Demo
-    </script>
+
 
 <!-- Questions -->
 <!-- attr: { hasScriptWrapper:true, class:"slide-questions" id:"questions" } -->
- <script type="text/template">
     # HTML Templates
     ## Questions
- </script>

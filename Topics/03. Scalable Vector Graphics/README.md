@@ -9,7 +9,6 @@
 
 <!-- Table of Contents -->
 <!-- attr: { hasScriptWrapper:true, id:"table-of-contents" data-markdown style:"font-size:40px" } -->
-    <script type="text/template">
     # Table of Contents
     - SVG Overview
     - Vector Graphics Overview
@@ -18,26 +17,23 @@
         - Ellipse
         - Path
     - Drawing Text
-    </script>
+
 
 <!-- SVG Overview -->
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, id:"svg-overview" class:"slide-section" } -->
-        <script type="text/template">
             # SVG Overview
             ## What is SVG?
-        </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-        <script type="text/template">
             # SVG Overview
             - SVG is a technology for describing two dimensional vector graphics
                 - Uses an extension of XML
             - SVG stands for Scalable Vector Graphics
             - SVG is platform independent
                 - Understood by most browsers
-        </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-        <script type="text/template">
             # Vector Graphics Overview
             - Vector graphics are based on mathematical expressions
                 - The same on any resolution and zoom level and are not pixelated
@@ -47,7 +43,7 @@
                 - Shapes or polygons
             - Represent images in computer graphics
             - Vectors are locations in a dimensional space
-        </script>
+
     <!-- section start -->
         <h1>Using SVG in a Web Page</h1>
         <ul>
@@ -61,20 +57,17 @@
 <!--                     <img src="imgs/svg-sample.png" width="150" class="fragment" style="position: absolute; top:30%; left:85%" /> -->
         <!-- <p class="balloon fragment">SVG uses a coordinate system for the sizes and positions</p> -->
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
-        <script type="text/template">
             # Simple SVG
             ## Live Demo
-        </script>
+
 
 <!-- SVG Shapes -->
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, id:"svg-shapes" class:"slide-section" } -->
-        <script type="text/template">
             # SVG Shapes
             ## What can SVG do?
-        </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-        <script type="text/template">
             # SVG Shapes
             - As mentioned, vector graphics are built from graphic primitives
                 - Points
@@ -82,11 +75,10 @@
                 - Shapes: rectangular, circle, etc…
             - SVG supports most of the basic shapes
                 - More complex shapes can be created using the basic ones
-        </script>
+
 
     <!-- Lines -->
 <!-- attr: { hasScriptWrapper:true, style:"font-size: 40px" } -->
-        <script type="text/template">
             # SVG Shapes: Line
             - `<line>` is the most basic shape in SVG
             - Creates a line between two points
@@ -105,16 +97,14 @@
             <img src="imgs/svg-line-example.png" class="fragment" style="width:150px; position: absolute; top: 25%; left: 80%"/>
 
             <p class="balloon fragment" style="top: 55%; left: 75%">Stroke sets the <br/>- *color** of the line </p>
-        </script>
+
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
-        <script type="text/template">
             # Defining Lines with SVG
             ## Live Demo
-        </script>
+
 
     <!-- Rects and Circles -->
 <!-- attr: { hasScriptWrapper:true } -->
-        <script type="text/template">
             # SVG Shapes: Rects and Circles
             - `<rect>` creates a rectangular with a **top-left position**, **width** and **height**
             - `<circle>` creates a circle with **center position** and **radius**
@@ -130,23 +120,20 @@
                 <circle cx="150" cy="150" r="45" fill="# 999"/>
 
             <img src="imgs/svg-rects-circles-example.png" width="150px" style="position: absolute; top: 40%; right:2%" class="fragment" />
-        </script>
+
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
-        <script type="text/template">
             # Circles and Rectangles with SVG
             ## Live Demo
-        </script>
+
 
 
 <!-- SVG Paths -->
  <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, id:"svg-paths" class:"slide-section" } -->
-        <script type="text/template">
             # SVG Paths
             ## Defining more than rects
-        </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-        <script type="text/template">
             # SVG Paths
             - SVG can define more complex shapes using the path
                 - Create straight line from a point to other point
@@ -156,9 +143,8 @@
 
 
                 <path d="M 50 50 L 175 310 H210"></path>
-        </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-        <script type="text/template">
             # SVG Paths: Commands
             - The path commands are as follows:
                 - `M x y` or `m x y`
@@ -169,9 +155,8 @@
                     - Creates a **horizontal**/**vertical** line from the **marker point** to the **given point**
                 - `Z` or `z`
                     - **Closes the path**, connects the first and last pointsю
-        </script>
+
 <!-- attr: { hasScriptWrapper:true, style:"font-size:40px" } -->
-        <script type="text/template">
             # SVG Paths: Line Commands
             - Paths example
                 - Drawing the letter **"R"**
@@ -190,14 +175,12 @@
             <div style="text-align: center">
                 <img src="imgs/svg-paths-sample.png" style="width:70%" />
             </div>
-        </script>
+
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
-        <script type="text/template">
             # SVG Paths: Line Commands
             ## Live Demo
-        </script>
+
 <!-- attr: { hasScriptWrapper:true, style:"font-size:40px" } -->
-        <script type="text/template">
             # SVG Paths: Curves
             - `C x1 y1 x2 y2 x y`
                 - Cubic Bezier curve
@@ -209,9 +192,8 @@
                 - **One control** point: `(x1, y1)`
                 - **Ending point** at `(x, y)`
                 - `T x y` continues the curve
-        </script>
+
 <!-- attr: { hasScriptWrapper:true, style:"font-size:43px" } -->
-        <script type="text/template">
             # SVG Paths: Curves Example
             - Cubic Bezier Curve:
 
@@ -227,22 +209,19 @@
                 <img src="imgs/svg-paths-cubic-bezier-curve-sample.png" height="250" />
                 <img src="imgs/svg-paths-quadratic-bezier-curve-sample.png" height="250" />
             </div>
-        </script>
+
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
-        <script type="text/template">
             # SVG Paths: Curves
             ## Live Demo
-        </script>
+
 
 <!-- SVG DOM API -->
   <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, id:"svg-dom-api" class:"slide-section" } -->
-        <script type="text/template">
             # SVG DOM API
             ## SVG with JavaScript
-        </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-        <script type="text/template">
             # SVG DOM API
             - SVG is plain old XML
                 - SVG elements **can be selected** just as DOM elements
@@ -258,7 +237,7 @@
                 rect.setAttribute('width', width);
                 rect.setAttribute('height', height);
                 document.getElementById('the-svg').appendChild(rect);
-        </script>
+
     <!-- section start -->
         <h1>SVG Styles</h1>
         <ul>
@@ -280,12 +259,9 @@
             <img src="imgs/svg-styles-sample.png" height="250" class="fragment"/>
         </div>
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
-        <script type="text/template">
             # SVG DOM and Styles
             ## Live Demo
-        </script>
+
 <!-- attr: { hasScriptWrapper:true, id:"questions" class:"slide-questions" } -->
-    <script type="text/template">
         # Scallable Vector Graphics
         ## Questions
-    </script>

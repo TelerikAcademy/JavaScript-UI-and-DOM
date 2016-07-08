@@ -9,7 +9,6 @@
 
 <!-- Table of Contents -->
 <!-- attr: { hasScriptWrapper:true, id:"table-of-contents" data-markdown style:"font-size:40px" } -->
-    <script type="text/template">
     # Table of Contents
     - Overview and usage of the canvas
     - Drawing shapes
@@ -23,17 +22,15 @@
     - Transformations
         - Save and restore context state
         - Translate
-    </script>
+
 
 <!-- The HTML5 Canvas -->
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, id:"html5-canvas" data-markdown class:"slide-section" } -->
-        <script type="text/template">
             # The HTML5 Canvas
             ## The way of the graphics in web
-        </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-        <script type="text/template">
         # The HTML5 Canvas
         - The Canvas is the way to draw in the browser
             - Uses JavaScript for the drawing
@@ -41,9 +38,8 @@
         - The Canvas is part of the HTML5 specification
             - Supported in most browsers
                 - Both desktop and mobile
-        </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-        <script type="text/template">
         # Using the Canvas
         - The Canvas is a rectangular sheet
             - All the drawing is done inside this sheet
@@ -60,9 +56,8 @@
             canvasCtx.fillRect(10, 10, 30, 30);
 
         - Set width and height <!-- .element: style="top:48%; left: 70%" class="fragment balloon" -->
-        </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-        <script type="text/template">
             # The HTML5 Canvas Context
             - The canvas HTML element provides many ways for drawing
                 - Rectangular 2d drawing
@@ -70,22 +65,19 @@
                 - WebGL drawing
             - HTML5 provides APIs for all these types of drawing
              - The way to use a specific canvas API is to get the corresponding context
-        </script>
+
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
-        <script type="text/template">
             # Using the HTML5 Canvas
             ## Live Demo
-        </script>
+
 
 <!-- Drawing Shapes -->
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, id:"drawing-shapes" data-markdown class:"slide-section" } -->
-        <script type="text/template">
             # Drawing Shapes
             ## Rects, Arcs, Ellipses
-        </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-        <script type="text/template">
             # Canvas Shapes
             - The Canvas provides ways to draw all kinds of shapes
                 - Rects, arcs, ellipses, lines, etc…
@@ -98,9 +90,8 @@
                 var canvasCtx = canvas.getContext('2d');
                 canvasCtx.fillRect(10, 10, 25, 25);
                 canvasCtx.strokeRect(10, 10, 25, 25);
-        </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-        <script type="text/template">
             # Drawing Rects
             - Drawing rects is the simplest way to draw with the canvas
                 - Build-in functionality
@@ -110,7 +101,7 @@
                 - `context.strokeRect (x, y, width, height)` <!-- .element: style="font-size: 0.9em" -->
                     - Same as fillRect
                     - Only the border of the shape is drawn
-        </script>
+
     <!-- section start -->
         <h1>Drawing Rects: Example</h1>
         <ul>
@@ -124,30 +115,26 @@ ctx.strokeStyle = 'rgb(2, 55, 155)';
 ctx.fillRect(20, 20, 140, 90);
 ctx.strokeRect(20, 20, 140, 90);</code></pre>
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
-        <script type="text/template">
             # Drawing Rects
             ## Live Demo
-        </script>
+
 
 <!-- Canvas Paths -->
 
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, id:"canvas-paths" data-markdown class:"slide-section" } -->
-        <script type="text/template">
             # Canvas Paths
             ## Drawing arcs and lines
-        </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-        <script type="text/template">
             # Canvas Paths
             - The Canvas can do much more than just drawing rectangles
                 - Bezier curves, ellipses, arcs
                 - Much of the power of the Canvas comes from the path
             - The path is just a set of connected dots
                 - Depending on the method used, the dots can be connected using straight line or curve
-        </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-        <script type="text/template">
             # Canvas Paths (2)
             - The canvas context has methods for paths:
                 - beginPath()
@@ -158,9 +145,8 @@ ctx.strokeRect(20, 20, 140, 90);</code></pre>
                     - Draws a straight line from the position of the path marker to position (x, y)
                 - `fill()` / `stroke()`
                     - Fills or strokes the path
-        </script>
+
 <!-- attr: { hasScriptWrapper:true, style:"font-size: 45px" } -->
-        <script type="text/template">
             # How the Canvas Works?
             - The canvas only marks dots on the canvas sheet
                 - And remembers how these dots are connected
@@ -179,22 +165,19 @@ ctx.strokeRect(20, 20, 140, 90);</code></pre>
                 ctx.closePath();
                 ctx.fill();
 
-        </script>
+
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
-        <script type="text/template">
             # Using the Path
             ## Live Demo
-        </script>
+
 
 <!-- Drawing Ellipses -->
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, id:"drawing-ellipses" data-markdown class:"slide-section" } -->
-        <script type="text/template">
             # Drawing Ellipses
             ## Using the path
-        </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-        <script type="text/template">
             # Drawing Ellipses
             - The Canvas has a built-in methods for drawing ellipses
             - arc(x, y, radius, from, to, counterclockwise)
@@ -202,14 +185,13 @@ ctx.strokeRect(20, 20, 140, 90);</code></pre>
             - Positions in ellipses are described using radians (degrees)
             - The degrees to radians formula is:
                 - **`radians = degrees * PI/180`**
-        </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-        <script type="text/template">
             # Degrees and Radians
             <div style="text-align: center; padding-top:5px">
                 <img src="imgs/degrees-radians.png" width="600px"/>
             </div>
-        </script>
+
 <!-- attr: { hasScriptWrapper:true, style:"font-size: 40px" } -->
         # Drawing Ellipses: Example
         - To draw ellipses, a path must be started:
@@ -234,12 +216,10 @@ ctx.strokeRect(20, 20, 140, 90);</code></pre>
             //the bigger part (counterclockwise)
             ctx.arc(x, y, r, Math.PI/2, 2- Math.PI, true);
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
-        <script type="text/template">
             # Drawing Ellipses and Segments
             ## Live Demo
-        </script>
+
 <!-- attr: { hasScriptWrapper:true, style:"font-size: 40px" } -->
-        <script type="text/template">
             # Drawing Circular Sectors
             - A circular sector is the portion of a circle enclosed by two radiuses
             - The Canvas has no built-in methods for creating circular sectors
@@ -250,9 +230,8 @@ ctx.strokeRect(20, 20, 140, 90);</code></pre>
                 <img src="imgs/drawing-ellipses-sector-small.png" width="250" style="margin-right:20px"/>
                 <img src="imgs/drawing-ellipses-sector-big.png" width="250" />
             </div>
-        </script>
+
 <!-- attr: { hasScriptWrapper:true,  } -->
-        <script type="text/template">
             # Drawing Circular Sectors: Example
             - **context.closePath()** connects the first and the last dots from the Path
 
@@ -264,22 +243,19 @@ ctx.strokeRect(20, 20, 140, 90);</code></pre>
                   ctx.closePath();
                   ctx.stroke();
                 }
-        </script>
+
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
-        <script type="text/template">
             # Drawing Circular Sectors
             ## Live Demo
-        </script>
+
 
 <!-- Drawing Curves -->
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, id:"drawing-curves" data-markdown class:"slide-section" } -->
-        <script type="text/template">
             # Drawing Curves
             ## Quadratic and Bezier
-        </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-        <script type="text/template">
             # Drawing Curves with the Canvas
             - The Canvas supports two types of curves:
                 - **Quadratic** curves
@@ -287,9 +263,8 @@ ctx.strokeRect(20, 20, 140, 90);</code></pre>
                 - **Bezier** curves
                     - A more complex curve based on two control points
             - Both quadratic and Bezier curves are done using a path
-        </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-        <script type="text/template">
             # Quadratic Curves <!-- .element: style="margin-bottom: 45px" -->
             - Quadratic curves are basic curves
                 - Using **two context points** and a **control point**
@@ -299,37 +274,32 @@ ctx.strokeRect(20, 20, 140, 90);</code></pre>
             <div style="text-align: center">
                 <img src="imgs/qudratic-curve-sample.png" width="450px" />
             </div>
-        </script>
+
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
-        <script type="text/template">
             # Quadratic Curves
             ## Live Demo
-        </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-        <script type="text/template">
             # Bezier Curves <!-- .element: style="margin-bottom: 45px" -->
             - Bezier curves are like quadratic curves, but with **two context** and **two control** points
 
             <div style="text-align: center; margin-top: 15px">
                 <img src="imgs/bezier-curve-sample.png" width="450px" style="border-radius: 15px; border: 1px solid black"/>
             </div>
-        </script>
+
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
-        <script type="text/template">
             # Bezier Curves
             ## Live Demo
-        </script>
+
 
 <!-- Drawing Text in canvas -->
 
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, id:"drawing-text" data-markdown class:"slide-section" } -->
-        <script type="text/template">
             # Drawing Text in Canvas
             ## With styles
-        </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-        <script type="text/template">
             # Drawing Text
             - The HTML5 canvas can also **draw text**:
                 - Methods:
@@ -339,9 +309,8 @@ ctx.strokeRect(20, 20, 140, 90);</code></pre>
                     - `context.font` – sets the font size and font family of the text
                     - `context.fillStyle` – the fill color of the text
                     - `context.strokeStyle` – the stroke color of the text
-        </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-        <script type="text/template">
             # Drawing Text: Example
             - Draw the text 'Telerik Academy'
                 - Filled with **yellowgreen** color, stroked with **dark green** color
@@ -360,22 +329,19 @@ ctx.strokeRect(20, 20, 140, 90);</code></pre>
                 }
 
             <img class="fragment" src="imgs/drawing-text-demo.png" width="300" style="position: absolute; top: 30%; left: 70%" />
-        </script>
+
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
-        <script type="text/template">
             # Drawing Text in Canvas
             ## Live Demo
-        </script>
+
 
 <!-- Canvas Styles -->
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, id:"canvas-styles" data-markdown class:"slide-section" } -->
-        <script type="text/template">
             # Canvas Styles
             ## Colors and Stuff
-        </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-        <script type="text/template">
             # Canvas Styles
             - The canvas supports two styles
                 - Styles for **fill** and **stroke**
@@ -383,22 +349,19 @@ ctx.strokeRect(20, 20, 140, 90);</code></pre>
                 - Styles for **types of stroke**
                     - Dashed or solid
                     - Done using kind of workaround
-        </script>
+
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
-        <script type="text/template">
             # Canvas Styles
             ## Live Demo
-        </script>
+
 
 <!-- Canvas Transformations -->
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, id:"transformations" data-markdown class:"slide-section" } -->
-        <script type="text/template">
             # Canvas Transformations
             ## scale(), rotate()
-        </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-        <script type="text/template">
             # Canvas Transformations
             - The Canvas can do transformations
                 - i.e. it can be rotated, scaled or transformed
@@ -407,23 +370,20 @@ ctx.strokeRect(20, 20, 140, 90);</code></pre>
                 - At position **(dx * X, dy * Y)**
                 - With width **(dx* W)** and height **(dy* H)**
             - `context.rotate(D)` – all drawing is rotated with angle **D degrees**
-        </script>
+
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
-        <script type="text/template">
             # Canvas Transformations
             ## Live Demo
-        </script>
+
 
 
 <!-- Per-pixel Manipulation -->
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, id:"per-pixel-manipulation" class:"slide-section" } -->
-        <script type="text/template">
             # Canvas Per-pixel Manipulation
             ## Change only portions of the canvas
-        </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-        <script type="text/template">
             # Canvas Per-pixel Manipulation
             - Canvas supports **per-pixel manipulation**
                 - All the pixels can be **manipulated one-by-one**
@@ -431,9 +391,8 @@ ctx.strokeRect(20, 20, 140, 90);</code></pre>
                 - Returns the image data object
                     - The image data is for the rectangle with **top-left corner at (x, y)** with **width w** and **height h**
                 - The image data contains **an array of numbers** for each of the pixels
-        </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-        <script type="text/template">
             # Canvas Per-pixel Manipulation (2)
             - The array of pixels holds values between `0` and `255`
                 - Each value represents a **color component** from **RGBA**
@@ -442,9 +401,8 @@ ctx.strokeRect(20, 20, 140, 90);</code></pre>
                     - `pixels[i]` holds the **RED** component
                     - `pixels[i+1]` holds the **GREEN** component
                     - `pixels[i+2]` holds the **BLUE** component
-        </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-        <script type="text/template">
             # Canvas Per-pixel Manipulation: Example
             - Invert all the colors of an canvas
                 - Change each color component `CC` with `255-CC`
@@ -462,16 +420,12 @@ ctx.strokeRect(20, 20, 140, 90);</code></pre>
                     data[i+2] = 255 - data[i+2];
                 }
                 ctx.putImageData(imageData, 0, 0);
-        </script>
+
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
-        <script type="text/template">
             # Canvas Per-pixel Manipulations
             ## Live Demo
-        </script>
+
 
 <!-- attr: { hasScriptWrapper:true, id:"questions" class:"slide-questions" } -->
-    <script type="text/template">
         # The HTML5 Canvas
         ## Questions
-    </script>
-

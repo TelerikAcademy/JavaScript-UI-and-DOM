@@ -7,7 +7,6 @@
         <a href="http://academy.telerik.com" class="signature-link">http://academy.telerik.com</a>
     </aside>
 <!-- attr: { hasScriptWrapper:true } -->
-    <script type="text/template">
         # Table of Contents
         - JavaScript Event Model
         - Event Registration
@@ -16,26 +15,23 @@
         - Cross-Browser Event Handler
         - Capturing and Bubbling Events
         - Custom Events
-    </script>
+
 
 <!--Event Model-->
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" id:"event-model" } -->
-        <script type="text/template">
             # JavaScript Event Model <!-- .element: style="margin-top: 12%" -->
             <img src="imgs/section-js-event-model.jpg">
-        </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-        <script type="text/template">
             # JavaScript Event Model
             - The DOM event model provides a way for the user to interact with the browser environment
             - The DOM event model consists of events and event listeners attached to the DOM objects
             <div style="text-align: center">
                 <img src="imgs/sample-js-event-model.png" style="border: none; background: none; box-shadow:none" />
             </div>
-        </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-        <script type="text/template">
             # Event Types
             - DOM provides a set of common event types that are used in 99% of the time
                 - Mouse events
@@ -49,9 +45,8 @@
             <div style="text-align: center">
                 <img src="imgs/sample-js-event-model.png" style="border: none; background: none; box-shadow:none" />
             </div>
-        </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-      <script type="text/template">
         # Common Event Types
         |- *Mouse Events**|**Keyboard Events**|
         |:------------:|:---------------:|
@@ -61,9 +56,8 @@
         |mousedown   |
         |mouseover   |
         |mouseout    |
-      </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-      <script type="text/template">
         # Common Event Types
         |- *UI Events**|**Focus Events**|
         |:-----------:|:---------------:|
@@ -73,9 +67,8 @@
         |resize       |focusout
         |change       |
         |input        |
-      </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-      <script type="text/template">
         # Common Event Types
         |- *Touch Events**|
         |:--------------:|
@@ -86,23 +79,21 @@
         |touchcancel     |
         |touchenter      |
         |touchleave      |
-      </script>
+
 <!-- Event Registration-->
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" id:"event-registration" } -->
-      <script type="text/template">
         # Event Registration <!-- .element: style="margin-top: 10%" -->
         <img src="imgs/section-event-register.jpg" style="border: 3px solid yellowgreen; border-radius: 15px"/>
-      </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-      <script type="text/template">
         # Event Handlers
         - The developer could register an event handler/listener for a specific event type and DOM element
         - The registration can be performed with:
           - HTML Attributes
           - Using DOM element properties
           - Using DOM event handler
-      </script>
+
     <!-- section start -->
       <h1>As HTML Attribute</h1>
       <ul>
@@ -117,14 +108,12 @@
   console.log("You click the Button");
 }</code></pre>
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
-      <script type="text/template">
         # Register Event Handlers using HTML Attributes
         ## Live Demo
-      </script>
+
 
 
 <!-- attr: { hasScriptWrapper:true } -->
-      <script type="text/template">
         # Using DOM Element Properties
         - Use standard DOM events on certain DOM element and assign a reference to a function
           - Can be anonymous
@@ -142,14 +131,12 @@
             button.onclick = function onButtonClick() {
               console.log("You clicked the button");
             }
-      </script>
+
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
-      <script type="text/template">
         # Using DOM Element Properties
         ## Live Demo
-      </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-      <script type="text/template">
         # Using DOM Event Listeners
         - The standard way for attaching event handlers to DOM
           - The Basic Syntax is:
@@ -168,24 +155,21 @@
             button.addEventListener("click", function () {
               console.log("You clicked me");
             }, false);
-      </script>
+
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
-      <script type="text/template">
         # Registering Event Handlers Using DOM
         ## Live Demo
-      </script>
+
 
 <!-- The Event Object-->
 
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" id:"event-object" } -->
-    <script type="text/template">
       # The Event Object <!-- .element: style="margin-top: 5%" -->
       ## Get the Event Data
       <img src="imgs/section-event-object.png" style="background-color: rgba(0,0,0,0); border: none; box-shadow:none" />
-    </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-    <script type="text/template">
       # Event Object
       - The event handlers have access to the event object passed as function parameter
       - The event object contains information about:
@@ -194,9 +178,8 @@
         - The **key that was pressed** when a keyboard event was fired
         - The **mouse button that was pressed** when a mouse event was fired
         - The **position** of the mouse on the screen
-    </script>
+
 <!-- attr: { hasScriptWrapper:true, style:"font-size:40px" } -->
-    <script type="text/template">
       # Event Object
       - The event object is accessible as the only argument of the function handler
 
@@ -217,7 +200,7 @@
             if(!event) event = window.event;
             // Your code…
           }
-    </script>
+
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
     <script>
       # Event Object <!-- .element: style="margin-top: 5%" -->
@@ -229,12 +212,10 @@
            <!-- Cross-browser Event handlers-->
            <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" id:"cross-browser-handlers" } -->
-   <script type="text/template">
     # Cross-browser Event Handlers
     ## Remember a certain browser
-  </script>
+
 <!-- attr: { hasScriptWrapper:true, style:"font-size:40px" } -->
-  <script type="text/template">
     # Cross-browser Compatibility
     - `addEventListener()` is n0t supported everywhere
       - Older versions of IE have their own method for registering event handlers
@@ -253,9 +234,8 @@
             domElement.addEventListener(…); }
           // Reeeally old browsers
           else { domElement["on" + eventType] = handler; }
-  </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-  <script type="text/template">
     # CrossBrowser Event Handler
     - This can be wrapped in a method:
       - Create a function with three parameters
@@ -263,23 +243,20 @@
         - Event type
         - Event handler
       - Use the method your browser supports
-  </script>
+
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
-  <script type="text/template">
     # Cross-Browser Event Handler
     ## Live Demo
-  </script>
+
 
            <!-- Capturing and bubbling Events-->
 
            <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" id:"capturing-bubbling-events" } -->
-   <script type="text/template">
     # Capturing and Bubbling Events
     ## Top to Bottom and the other way around
-   </script>
+
 <!-- attr: { hasScriptWrapper:true, style:"font-size: 42px" } -->
-   <script type="text/template">
     # The Event Chain
     - When the user clicks on an HTML element, the event is also fired on all of its parents
 
@@ -301,14 +278,12 @@
 
     - The **button is still the target**, but the click event is fired on all of its parents
       - An event is fired on all elements in the chain
-   </script>
+
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
-   <script type="text/template">
     # The Event Chain
     ## Live Demo
-   </script>
+
 <!-- attr: { hasScriptWrapper:true, style:"font-size: 42px" } -->
-   <script type="text/template">
      # Two Types of Event Chains
      - There are two types of event chains
       - Capturing and Bubbling
@@ -318,9 +293,8 @@
      - **Capturing** handlers **go down** the chain
       - The first executed handler is on the parent of all
       - The last executed handler is on the target
-   </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-    <script type="text/template">
       # Capturing Event Chain
       - Capturing goes down the event chain
         - The first executed handler is the one of the parent of all
@@ -343,9 +317,8 @@
         <img class="fragment" src="imgs/sample-capturing-arrow-down.png" height="230" style="border: none; background: none;box-shadow: none; position: absolute; top: 42%; left: 25%">
 
 
-    </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-    <script type="text/template">
       # Bubbling Event Chaing
       - Bubbling bubbles up the event chain
         - The first executed handler is the one on the target
@@ -367,25 +340,22 @@
         - 4 <!-- .element: class="balloon fragment" style="top: 27%; left: 65%" -->
 
         <img class="fragment" src="imgs/sample-capturing-arrow-up.png" height="230" style="border: none; background: none;box-shadow: none; position: absolute; top: 28%; left: 25%">
-    </script>
+
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" style:"font-size:40px" } -->
-    <script type="text/template">
       <div style="float:left; width: 45%;">
         # Capturing and Bubbling Event Chains
         ## Live Demo
       </div>
       <img src="imgs/section-demo-capturing-bubbling.png" style="float:right; border-radius: 15px">
-    </script>
+
 
            <!-- Custom Events -->
            <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" id:"custom-events" } -->
-   <script type="text/template">
     # Custom Events
     ## When built-ins are not enought
-   </script>
+
 <!-- attr: { hasScriptWrapper:true, style:"font-size: 40px" } -->
-   <script type="text/template">
     # Custom Events
     - To create custom events use the `CustomEvent()` constructor
 
@@ -404,10 +374,9 @@
         body.addEventListener("tripleClick", function() {
         	alert("You click three times");
         }, false);
-   </script>
+
 
 <!-- attr: { hasScriptWrapper:true, class:"slide-questions" id:"questions" } -->
- <script type="text/template">
     # JavaScript Event Model
     ## Questions
- </script>
+

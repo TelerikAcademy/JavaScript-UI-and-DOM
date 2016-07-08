@@ -9,7 +9,6 @@
 
 <!-- Table of Contents -->
 <!-- attr: { hasScriptWrapper:true, id:"table-of-contents" data-markdown style:"font-size:40px" } -->
-    <script type="text/template">
     # Table of Contents
     - KineticJS overview and setup
         - Working with KineticJS
@@ -18,23 +17,21 @@
         - Rects, circles, paths, blobs
     - Event handlers
         - Attaching click, drag&drop
-    </script>
+
 
 <!-- SVG Overview -->
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, id:"svg-overview" class:"slide-section" } -->
-        <script type="text/template">
             # KineticJS
             ## Overview and Setup
-        </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-        <script type="text/template">
             # KineticJS Overview
             - KineticJS is a JavaScript framework to work with the Canvas
                 - Introduces a refined API for canvas functionality
                 - Has stages and layers for better canvas performance
                     - Layers contain different sets of objects that can be used together
-        </script>
+
 <!-- attr: { hasScriptWrapper:true, style:"font-size: 45px" } -->
         <h1>KineticJS Setup</h1>
         <ul>
@@ -50,7 +47,6 @@
         <pre><code><div id="canvas-container"></div></code></pre>
         </script>
 <!-- attr: { hasScriptWrapper:true } -->
-        <script type="text/template">
             # KineticJS Setup
             - To use KineticJS (cont.):
                 - Do the following in the script:
@@ -72,7 +68,7 @@
 
 
 
-        </script>
+
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
         <script  type="text/template">
         # Setting up KineticJS
@@ -82,10 +78,9 @@
 <!-- Drawing shapes -->
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" id:"drawing-shapes" } -->
-        <script type="text/template">
         # Drawing Shapes with KineticJS
         ## Rects, Circles, Line, etc...
-        </script>
+
     <!-- section start -->
         <h1>Drawing Shapes with KineticJS</h1>
         <ul>
@@ -180,14 +175,12 @@
             </tr>
         </table>
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
-        <script type="text/template">
             # Drawing Shapes
             ## Live Demo
-        </script>
+
 
 
 <!-- attr: { hasScriptWrapper:true, class:"slide-questions" id:"questions" } -->
-    <script type="text/template">
         # KineticJS Overview
         ## Questions
-    </script>
+

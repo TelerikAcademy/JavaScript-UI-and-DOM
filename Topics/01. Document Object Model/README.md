@@ -9,7 +9,6 @@
 
 <!-- Table of Contents -->
 <!-- attr: { hasScriptWrapper:true,  } -->
-    <script type="text/template">
         # Table of Contents
         - Document Object Model (DOM)
         - The DOM API
@@ -19,23 +18,20 @@
         - NodeLists
         - LiveNodeList
         - StaticNodeList
-    </script>
+
 <!-- Document Object Model -->
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
-        <script type="text/template">
             # Document Object Model (DOM)
             ## The way to access HTML with JavaScript
-        </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-        <script type="text/template">
             # Document Object Model
             - The Document Object Model is an **API for HTML and XML** documents
                 - Provides a **structural representation** of the document
                 - Developers can **modify the content and UI** of a web page
-        </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-        <script type="text/template">
             # Document Object Model
             - The DOM consists of objects to manipulate a web page
                 - All the properties, methods and events are **organized into objects**
@@ -43,7 +39,7 @@
             - How to use the DOM of an HTML page?
                 - Write JavaScript to interact with the DOM
                     - JavaScript uses the DOM API (native implementation for each browser)
-        </script>
+
 
 <!-- DOM API -->
 <!-- section start -->
@@ -52,7 +48,6 @@
         <h1 style="margin-top: 0">DOM API</h1>
         <h2>Using the DOM with JavaScript</h2>
 <!-- attr: { hasScriptWrapper:true } -->
-        <script type="text/template">
             # The DOM API
             - The DOM API consists of objects and methods to interact with the HTML page
                 - Can add or remove HTML elements
@@ -61,9 +56,8 @@
             - DOM introduces objects that represent HTML elements and their properties
                 - `document.documentElement` is `<html>`
                 - `document.body` is the body of the page
-        </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-        <script type="text/template">
             # DOM Objects
             - Each of the HTML elements has corresponding DOM object type
                 - **HTMLLIElement** represents `<li>`
@@ -73,9 +67,8 @@
                 - **HTMLImageElement** has `src` property
             - The **document** object is a special object
                 - It represents the entry point for the DOM API
-        </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-        <script type="text/template">
             # HTML Elements
             - HTML elements have properties that match attributes
                 - `id`, `className`, `draggable`, `style`, `onclick`, etc…
@@ -83,9 +76,8 @@
                 - **HTMLImageElement** has property `src`
                 - **HTMLInputElement** has property `value`
                 - **HTMLAnchorElement** has property `href`
-        </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-        <script type="text/template">
             # HTML Elements
             - HTML elements have properties for content
                 - `innerHTML`
@@ -94,22 +86,19 @@
                     - Returns as a string the content of the element, with the element
                 - `innerText` / `textContent`
                     - Returns as a string the text content of the element, without the tags
-        </script>
+
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
-        <script type="text/template">
             # DOM Objects
             ## Live Demo
-        </script>
+
 
 <!-- Selecting DOM Elements -->
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
-        <script type="text/template">
             # Selecting DOM Elements
             <img src="imgs/selecting-dom-elements.png" height="250"/>
-        </script>
+
 <!-- attr: { hasScriptWrapper:true, style:"font-size:43px" } -->
-        <script type="text/template">
             # Selecting HTML Elements
             - HTML elements can be found and cached into variables using the DOM API
                 - Select single element
@@ -122,9 +111,8 @@
                 - Using predefined collections of elements
                         var links = document.links;
                         var forms = document.forms;
-        </script>
+
 <!-- attr: { hasScriptWrapper:true, style:"font-size: 43px" } -->
-        <script type="text/template">
             # Using getElementsByXXX() Methods
             - DOM API contains methods for selecting elements based on some characteristic
                 - getElementById(id):
@@ -133,9 +121,8 @@
                 - getElementsByClassName(className):
                     - Returns a **collection of elements**
                             var posts = document.getElementsByClassName('post-item');
-        </script>
+
 <!-- attr: { hasScriptWrapper:true, style:"font-size: 43px" } -->
-        <script type="text/template">
             # Using getElementsByXXX() Methods
             - DOM API contains methods for selecting elements based on some characteristic
                 - getElementsByTagName(tagName);
@@ -144,14 +131,12 @@
                 - getElementsByName(name);
                     - Returns a **collection of elements**
                             var gendersGroup = document.getElementsByName('genders[]');
-        </script>
+
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
-        <script type="text/template">
             # Selecting Elements with getElementsByXXX()
             ## Live Demo
-        </script>
+
 <!-- attr: { hasScriptWrapper:true, style:"font-size: 43px" } -->
-        <script type="text/template">
             # Using querySelector() Methods
             - The DOM API has methods that use CSS-like selectors to find and select HTML elements
                 - `querySelector(selector)` returns the **left most element** that matches the selector
@@ -164,12 +149,11 @@
                 var header = document.querySelector('# header');
                 //li elements contained in element with id=main-nav
                 var navItems = document.querySelectorAll('# main-nav li');
-        </script>
+
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
-        <script type="text/template">
             # Selecting Elements with querySelector()
             ## Live Demo
-        </script>
+
 <!-- attr: { hasScriptWrapper:true, style:"font-size: 43px" } -->
             <h1>Selecting Nested Elements</h1>
             <ul>
@@ -189,20 +173,17 @@ var divsInWrapper = wrapper.getElementsByTagName('div');</code></pre>
                 </li>
             </ul>
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
-        <script type="text/template">
             # Selecting Nested Elements
             ## Live Demo
-        </script>
+
 
 <!-- NodeLists -->
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
-        <script type="text/template">
             # NodeLists
             ## The result of querying DOM elements
-        </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-        <script type="text/template">
             # NodeLists
             - A NodeList is a collection returned by the DOM selector methods:
                 - `getElementsByTagName(tagName)`
@@ -217,9 +198,8 @@ var divsInWrapper = wrapper.getElementsByTagName('div');</code></pre>
                 for(var i=0; i < divs.length; i++){
                    //do stuff with divs[i]…
                 }
-        </script>
+
 <!-- attr: { hasScriptWrapper:true } -->
-        <script type="text/template">
             # NodeLists (2)
             - NodeList looks like an array, but is not
                 - It's an object with properties similar to array
@@ -234,22 +214,19 @@ var divsInWrapper = wrapper.getElementsByTagName('div');</code></pre>
                 //divs[1] = ...
                 //divs[length] = ...
                 //divs[item] = ...
-        </script>
+
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
-        <script type="text/template">
             # NodeLists
             ## Live Demo
-        </script>
+
 
 <!-- Static and Live Node Lists -->
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
-        <script type="text/template">
             # Static NodeList and<br/>Live NodeList
             ## What is that? What is the difference?
-        </script>
+
 <!-- attr: { hasScriptWrapper:true, style:"font-size:43px" } -->
-        <script type="text/template">
             # Static NodeList and Live NodeList
             - There are two kinds of NodeLists
                 - `getElementsByXXX()` return a **LiveNodeList**
@@ -259,15 +236,11 @@ var divsInWrapper = wrapper.getElementsByTagName('div');</code></pre>
                 - While static list contain the elements as they were at the execution of the method
             - Keep in mind that a LiveNodeList is slower than a regular array
              - Need to cache its length for better performance
-        </script>
+
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
-        <script type="text/template">
             # Static NodeList and<br/>Live NodeList
             ## Live Demo
-        </script>
+
 <!-- attr: { hasScriptWrapper:true, class:"slide-questions" } -->
-    <script type="text/template">
         # Document Object Model (DOM)
         ## Questions
-    </script>
-</script>
