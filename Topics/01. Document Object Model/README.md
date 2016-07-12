@@ -1,7 +1,10 @@
 <!-- section start -->
+
 <!-- attr: { hasScriptWrapper:true, class:"slide-title" } -->
-<h1>Document Object Model</h1>
-<h2>The True power of dynamic web pages</h2>
+
+# Document Object Model</h1>
+## The True power of dynamic web pages</h2>
+
 <aside class="signature">
     <p class="signature-course">JavaScript DOM & UI</p>
     <p class="signature-initiative">Telerik Software Academy</p>
@@ -11,6 +14,7 @@
 <!-- Table of Contents -->
 <!-- attr: { hasScriptWrapper:true,  } -->
 # Table of Contents
+
 - Document Object Model (DOM)
 - The DOM API
 - Selecting DOM elements
@@ -21,7 +25,9 @@
 - StaticNodeList
 
 <!-- Document Object Model -->
+
 <!-- section start -->
+
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
 # Document Object Model (DOM)
 ## The way to access HTML with JavaScript
@@ -43,12 +49,12 @@
 
 <!-- DOM API -->
 <!-- section start -->
-<!-- attr: { hasScriptWrapper:true, class:"slide-section" style:"text-align: center" } -->
-<img src="imgs/dom-api-section.png" style="height: 250px; margin-top:50px;border-radius: 15px"/>
+<!-- attr: { hasScriptWrapper:true, class:"slide-section", style:"text-align: center" } -->
 <h1 style="margin-top: 0">DOM API</h1>
 <h2>Using the DOM with JavaScript</h2>
 
 <!-- attr: { hasScriptWrapper:true } -->
+
 # The DOM API
 - The DOM API consists of objects and methods to interact with the HTML page
     - Can add or remove HTML elements
@@ -59,6 +65,7 @@
     - `document.body` is the body of the page
 
 <!-- attr: { hasScriptWrapper:true } -->
+
 # DOM Objects
 - Each of the HTML elements has corresponding DOM object type
     - **HTMLLIElement** represents `<li>`
@@ -70,6 +77,7 @@
     - It represents the entry point for the DOM API
 
 <!-- attr: { hasScriptWrapper:true } -->
+
 # HTML Elements
 - HTML elements have properties that match attributes
     - `id`, `className`, `draggable`, `style`, `onclick`, etc…
