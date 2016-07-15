@@ -30,11 +30,13 @@
 	</div>
 
 	<script> 	
-		var divs = document.getElementsByTagName('div');
+		var divs = document.getElementsByTagName('div'),
+			index;
 		
 		console.log(divs instanceof Array);
 		console.log(divs instanceof HTMLCollection);
-		for (var index in divs) {
+		
+		for (index in divs) {
 			console.log('divs['+index+'] = ' + divs[index])
 		}
 	</script>

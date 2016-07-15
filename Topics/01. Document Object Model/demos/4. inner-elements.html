@@ -20,8 +20,10 @@
 		</nav>
 	</header>
 	<script>			
-		var mainNav = document.querySelector('#main-nav');
-		var navItems = mainNav.querySelectorAll('ul > li > a');
+		var mainNav = document.querySelector('#main-nav'),
+			navItems = mainNav.querySelectorAll('ul > li > a'),
+			i;
+			
 		for (var i = 0; i < navItems.length; i++) {
 			console.log(navItems[i].innerHTML)
 		}
