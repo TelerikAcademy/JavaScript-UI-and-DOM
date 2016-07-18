@@ -126,12 +126,12 @@ var forms = document.forms;
 <!-- attr: { hasScriptWrapper:true, style:"font-size: 0.9em" } -->
 # Using `getElementsBy`<br/> Methods
 - DOM API contains methods for selecting elements based on some characteristic
-  - getElementById(id):
+  - `getElementById(id)`:
     - Returns a **single element** or `null`
 ```js
 var header = document.getElementById('header');
 ```
-  - getElementsByClassName(className):
+  - `getElementsByClassName(className)`:
     - Returns a **collection of elements**
 ```js
 var posts = document.getElementsByClassName('post-item');
@@ -140,12 +140,12 @@ var posts = document.getElementsByClassName('post-item');
 <!-- attr: { hasScriptWrapper:true, style:"font-size: 0.9em", showInPresentation:true } -->
 <!-- # Using `getElementsBy`<br/> Methods -->
 - DOM API contains methods for selecting elements based on some characteristic
-  - getElementsByTagName(tagName);
+  - `getElementsByTagName(tagName)`;
     - Returns a **collection of elements**
 ```js
 var sidebars = document.getElementsByTagName('sidebar');
 ```
-  - getElementsByName(name);
+  - `getElementsByName(name)`;
     - Returns a **collection of elements**
 ```js
 var gendersGroup = document.getElementsByName('genders');
