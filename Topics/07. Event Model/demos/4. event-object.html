@@ -10,11 +10,11 @@
 
     <script type="text/javascript">
         var button = document.getElementById("button");
-        alert('asdasdasd');
-        alert(button);
+
         // button.onclick = function (e) {
         button.addEventListener("click", function (e) {
-            if (!e) e = window.event;
+            //Fixed the Event object for older IEs
+            e = e || window.event; 
             
             // Get Mouse Cordinates
             console.log("Mouse coordinates:");
