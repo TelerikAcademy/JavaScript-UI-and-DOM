@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>JavaScript Event Model - Capturing and Bubbling Events</title>
-    <script src="scripts/cross-browser-events.js"></script>
     <link rel="stylesheet" href="styles/styles.css" />
 </head>
 <body onload="onBodyLoad()">
@@ -19,24 +18,11 @@
 
     <script>
         function onBubbleClick() {
-            console.log("Bubble: " + this.nodeName);
+            console.log("Bubbling: " + this.nodeName);
         }
 
         function onCaptureClick() {
-            console.log("Capture: " + this.nodeName);
-        }
-
-        function getFirstElementChild(element) {
-            if (!element) {
-                return;
-            }
-
-            var child = element.firstChild;
-            while (child && child.nodeType !== Node.ELEMENT_NODE) {
-                child = child.nextSibling;
-            }
-
-            return child;
+            console.log("Capturing: " + this.nodeName);
         }
 
         function onBodyLoad() {
@@ -45,7 +31,7 @@
                 element.addEventListener("click", onBubbleClick, false);
                 element.addEventListener("click", onCaptureClick, true);
 
-                element = getFirstElementChild(element);
+                element = element.firstElementChild;
             }
         }
     </script>

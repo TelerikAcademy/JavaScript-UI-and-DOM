@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>JavaScript Event Model - The Event Chain</title>
-    <script src="scripts/cross-browser-events.js"></script>
     <link rel="stylesheet" href="styles/styles.css" />
 </head>
 <body onload="onBodyLoad()">
@@ -21,24 +20,11 @@
             console.log(this.nodeName);
         }
 
-        function getFirstElementChild(element) {
-            if (!element) {
-                return;
-            }
-
-            var child = element.firstChild;
-            while (child && child.nodeType !== Node.ELEMENT_NODE) {
-                child = child.nextSibling;
-            }
-
-            return child;
-        }
-
         function onBodyLoad() {
             var element = document.body;
             while (element) {
-                attachEventHandler(element, "click", onClick);
-                element = getFirstElementChild(element);
+                element.addEventListener("click", onClick, false);
+                element = element.firstElementChild;
             }
         }
     </script>
