@@ -13,16 +13,17 @@
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, id:"table-of-contents" } -->
 # Table of Contents
-- [Traversing the DOM](dom-traversing)
+- [DOM Elements](#dom-elements)
+- [Traversing the DOM](#dom-traversing)
   - [Parents, Children and Siblings]()
-- [DOM manipulation]()
+- [DOM manipulation](#dom-manipulation)
   - [Adding, Removing and Altering Elements]()
-- [Static and Live NodeLists]()
+- [DOM Optimizations](#dom-optimizations)
 
 
 <!-- section start -->
-<!-- attr: { hasScriptWrapper:true, id:"dom-element", class:"slide-section" } -->
-# DOM Elements
+<!-- attr: { hasScriptWrapper:true, id:"dom-elements", class:"slide-section" } -->
+# <a id="dom-elements"></a>DOM Elements
 ## What is the DOM built from?
 
 <!-- attr: { hasScriptWrapper:true } -->
@@ -48,7 +49,7 @@
 <!-- Traversing the DOM -->
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, class:"slide-section", id:"dom-traversing" } -->
-# Traversing the DOM <!-- .element: style="margin-top:55px" -->
+# <a id="dom-traversing"></a>Traversing the DOM <!-- .element: style="margin-top:55px" -->
 <img class="slide-image" showInPresentation="true" src="imgs/traversing-the-dom-section-slide.png" style="left:0;" />
 
 <!-- attr: { hasScriptWrapper:true } -->
@@ -114,7 +115,7 @@ function iterateList (listId) {
 
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, class:"slide-section", id:"dom-manipulation" } -->
-# Manipulating the DOM
+# <a id="dom-manipulation"></a>Manipulating the DOM
 ## Making a web page dynamic
 
 <!-- attr: { hasScriptWrapper:true } -->
@@ -208,13 +209,13 @@ function iterateList (listId) {
   <div id="f"><p id="the-p">text</p></div>
   <div id="s"></div>
 ```
-  
+
 ```javascript
   var second = document.getElementById("s");
   var theP = document.getElementById("the-p");
   second.appendChild(theP);
 ```
-  
+
 ```html
   //the DOM is:
   <div id="f"></div>
@@ -247,7 +248,7 @@ function iterateList (listId) {
 <!-- DOM Optimizations-->
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, class:"slide-section", id:"dom-optimizations" } -->
-# DOM Optimizations
+# <a id="dom-optimizations"></a>DOM Optimizations
 ## Everybody likes it fast, right?
 
 <!-- attr: { hasScriptWrapper:true } -->
@@ -269,10 +270,10 @@ function iterateList (listId) {
 
 <!-- attr: { hasScriptWrapper:true, style:"font-size: 40px" } -->
 # Optimizing <br/>the Appending of Elements
-- Using DocumentFragment
-  - Append the elements to a DocumentFragment
-  - Appending DocumentFragment to the DOM appends only its child elements
-  <!-- //link jsperf is unavailable  - http://jsperf.com/append-doc-fragment/2 <!-- .element: target="_blank" -->
+- Using `DocumentFragment`
+  - Append the elements to a `DocumentFragment`
+  - Appending `DocumentFragment` to the DOM appends only its child elements
+  <!-- //link jsperf is unavailable  - http://jsperf.com/append-doc-fragment/2 -->
 
 ```javascript
     var dFrag = document.createDocumentFragment();
