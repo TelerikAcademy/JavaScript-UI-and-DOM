@@ -1,8 +1,7 @@
-#Event Model
-_For instructions on how to run the tests, check the following link: 
-https://github.com/TelerikAcademy/JavaScript-UI-and-DOM/blob/master/README.md#user-content-preparing-the-local-machine-for-unit-testing-with-mocha-and-chai_
+# Event Model
+_For instructions on how to run the tests, check [here](https://github.com/TelerikAcademy/JavaScript-UI-and-DOM/blob/master/RUN_TESTS.md)
 
-##Task 1
+##  Task 1
 Create a function that takes an id or DOM element and:
 * If an id is provided, select the element
 * Finds all elements with class `button` or `content` within the provided element
@@ -18,4 +17,4 @@ Create a function that takes an id or DOM element and:
     * If there isn't a `.content` element **after the clicked `.button`** and **before other `.button`**, do nothing
 * Throws if:
   * The provided DOM element is non-existant
-  * The id is either not a string or does not select any DOM element
+  * The id is neither a string nor a DOM element

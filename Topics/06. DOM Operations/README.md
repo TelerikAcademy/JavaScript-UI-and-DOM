@@ -77,7 +77,7 @@
 
 ```javascript
 function iterateList (listId) {
-    var trainersList = document.getElementsById(listId);
+    var trainersList = document.getElementById(listId);
     var parent = trainersList.parentNode;
     log("parent of trainers-list: " + parent.nodeName +
         " with id: " + parent.id);
