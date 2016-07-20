@@ -3,7 +3,7 @@
 
 ##  Task description
 
-You can find the task description [here](/task)
+You can find the task description [here](task)
 
 
 ##  Steps for solving the task:
@@ -65,8 +65,9 @@ You can find the task description [here](/task)
                 textTemplate.innerHTML = textFromAddTextbox;
                 newItem = itemTemplate.cloneNode(true);
                 ```
+
 -   Deleting Elements
     -   Think of how to detect a click on `.button` inside a `.list-item`
-        -   _Hint:_ attach the click event on the `.items-list` elements
+        -   _Hint:_ attach the click event on the `.items-list` elements: [link](https://github.com/TelerikAcademy/JavaScript-UI-and-DOM/blob/master/Topics/07.%20Event%20Model/README.md#event-object)
     -   Think of how to delete the whole `.list-item` element
         -   _Hint:_ starting from the clicked `.button`, find its the parent with class `list-item` and delete it
