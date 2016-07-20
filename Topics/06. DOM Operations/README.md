@@ -13,16 +13,17 @@
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, id:"table-of-contents" } -->
 # Table of Contents
-- [Traversing the DOM](dom-traversing)
+- [DOM Elements](#dom-elements)
+- [Traversing the DOM](#dom-traversing)
   - [Parents, Children and Siblings]()
-- [DOM manipulation]()
+- [DOM manipulation](#dom-manipulation)
   - [Adding, Removing and Altering Elements]()
-- [Static and Live NodeLists]()
+- [DOM Optimizations](#dom-optimizations)
 
 
 <!-- section start -->
-<!-- attr: { hasScriptWrapper:true, id:"dom-element", class:"slide-section" } -->
-# DOM Elements
+<!-- attr: { hasScriptWrapper:true, id:"dom-elements", class:"slide-section" } -->
+# <a id="dom-elements"></a>DOM Elements
 ## What is the DOM built from?
 
 <!-- attr: { hasScriptWrapper:true } -->
@@ -48,7 +49,7 @@
 <!-- Traversing the DOM -->
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, class:"slide-section", id:"dom-traversing" } -->
-# Traversing the DOM <!-- .element: style="margin-top:55px" -->
+# <a id="dom-traversing"></a>Traversing the DOM <!-- .element: style="margin-top:55px" -->
 <img class="slide-image" showInPresentation="true" src="imgs/traversing-the-dom-section-slide.png" style="left:0;" />
 
 <!-- attr: { hasScriptWrapper:true } -->
@@ -60,8 +61,8 @@
       - Elements immediatelly **before** and **after** the element
 - These properties can be used to traverse through the DOM
 
-<!-- attr: { hasScriptWrapper:true } -->
-# Traversing the DOM
+<!-- attr: { hasScriptWrapper:true, showInPresentation:true } -->
+<!-- # Traversing the DOM -->
 - `element.parentNode`
     - Returns the direct **parent** of the element
     - The parent of document is null
@@ -69,14 +70,14 @@
     - Returns a nodeList of all the **child nodes**
         - Including the **text nodes** (whitespaces)
 
-<!-- attr: { hasScriptWrapper:true } -->
-# Traversing the DOM
+<!-- attr: { hasScriptWrapper:true, showInPresentation:true } -->
+<!-- # Traversing the DOM -->
 
 - Traverse a `<ul>` with `<li>`s:
 
 ```javascript
 function iterateList (listId) {
-    var trainersList = document.getElementsById(listId);
+    var trainersList = document.getElementById(listId);
     var parent = trainersList.parentNode;
     log("parent of trainers-list: " + parent.nodeName +
         " with id: " + parent.id);
@@ -114,7 +115,7 @@ function iterateList (listId) {
 
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, class:"slide-section", id:"dom-manipulation" } -->
-# Manipulating the DOM
+# <a id="dom-manipulation"></a>Manipulating the DOM
 ## Making a web page dynamic
 
 <!-- attr: { hasScriptWrapper:true } -->
@@ -140,8 +141,8 @@ function iterateList (listId) {
   console.log(liElement instanceof HTMLDivElement); //false
 ```
 
-<!-- attr: { hasScriptWrapper:true } -->
-# Creating HTML Еlements
+<!-- attr: { hasScriptWrapper:true, showInPresentation:true } -->
+<!-- # Creating HTML Еlements -->
 - After an HTML element is created it can be treated as if it was selected from the DOM
 - When HTML elements are created dynamically they are just **JavaScript objects**
     - They are still not in the DOM (the web page)
@@ -198,8 +199,8 @@ function iterateList (listId) {
   - Change its properties
   - Change its appearance
 
-<!-- attr: { hasScriptWrapper:true } -->
-# Altering the Elements
+<!-- attr: { hasScriptWrapper:true, showInPresentation:true } -->
+<!-- # Altering the Elements -->
 - Keep in mind that each HTML element is unique in the DOM
   - If JavaScript changes its appearance or its position, it is still the same element object
 
@@ -208,13 +209,13 @@ function iterateList (listId) {
   <div id="f"><p id="the-p">text</p></div>
   <div id="s"></div>
 ```
-  
+
 ```javascript
   var second = document.getElementById("s");
   var theP = document.getElementById("the-p");
   second.appendChild(theP);
 ```
-  
+
 ```html
   //the DOM is:
   <div id="f"></div>
@@ -247,7 +248,7 @@ function iterateList (listId) {
 <!-- DOM Optimizations-->
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, class:"slide-section", id:"dom-optimizations" } -->
-# DOM Optimizations
+# <a id="dom-optimizations"></a>DOM Optimizations
 ## Everybody likes it fast, right?
 
 <!-- attr: { hasScriptWrapper:true } -->
@@ -267,12 +268,12 @@ function iterateList (listId) {
   - It is a **minimal DOM element**, with no parent
   - It is used to **store ready-to-append** elements and append them at once to the DOM
 
-<!-- attr: { hasScriptWrapper:true, style:"font-size: 40px" } -->
-# Optimizing <br/>the Appending of Elements
-- Using DocumentFragment
-  - Append the elements to a DocumentFragment
-  - Appending DocumentFragment to the DOM appends only its child elements
-  <!-- //link jsperf is unavailable  - http://jsperf.com/append-doc-fragment/2 <!-- .element: target="_blank" -->
+<!-- attr: { hasScriptWrapper:true, style:"font-size: 40px", showInPresentation:true } -->
+<!-- # Optimizing <br/>the Appending of Elements -->
+- Using `DocumentFragment`
+  - Append the elements to a `DocumentFragment`
+  - Appending `DocumentFragment` to the DOM appends only its child elements
+  <!-- //link jsperf is unavailable  - http://jsperf.com/append-doc-fragment/2 -->
 
 ```javascript
     var dFrag = document.createDocumentFragment();
@@ -296,8 +297,8 @@ function iterateList (listId) {
 - This is an issue when creating many elements that have a common structure
   - Only **one or two** things are different for all elements
 
-<!-- attr: { hasScriptWrapper:true } -->
-# Faster Creation<br/>of Elements
+<!-- attr: { hasScriptWrapper:true, showInPresentation:true } -->
+<!-- # Faster Creation<br/>of Elements -->
 - Creating a **dynamic list** of elements
   - All of the `<li>` elements have the **same classes**, **styles**, **attributes**
   - Only the `innerHTML` is different
