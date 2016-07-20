@@ -2,7 +2,7 @@
 
 ##  Installing Node.js
 
--   Install [Node.js](https://nodejs.org/en/) "Node.js")
+-   Install [Node.js 6+](https://nodejs.org/en/ "Node.js")
     -   Add `node` to `PATH` ([instructions](http://stackoverflow.com/questions/27864040/fixing-npm-path-in-windows-8/32159233))
     -   Try if it is working by typing in CMD/Terminal `$ node -v` (should produce result)
 -	Open CMD/Terminal and run `$ npm install -g mocha`
