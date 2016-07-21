@@ -1,0 +1,47 @@
+<html>
+<head>
+  <style>
+    body, div, ul, li {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Calibri, sans-serif;
+    }
+
+    #weather-forecast {
+      list-style: none;
+    }
+
+      #weather-forecast .day-forecast {
+        width: 80px;
+        display: inline-block;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        margin: 5px;
+        padding: 10px;
+      }
+
+    #template {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+
+  </div>
+
+  <div id="template">
+    <li class="day-forecast">
+      <div class="date-cont"></div>
+      <img class="forecast-icon" />
+      <div class="temp-cont"></div>
+    </li>
+  </div>
+
+  <script src="scripts/weather-forecast-data.js"></script>
+  <script src="scripts/weather-forecast-main.js"></script>
+</body>
+</html>
