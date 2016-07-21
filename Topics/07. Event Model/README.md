@@ -12,13 +12,11 @@
 
 <!-- attr: { hasScriptWrapper:true } -->
 # Table of Contents
-- JavaScript Event Model
-- Event Registration
-- HTML Attributes, DOM Properties and Methods
-- Event Object
-- Cross-Browser Event Handler
-- Capturing and Bubbling Events
-- Custom Events
+- [JavaScript Event Model](#js-event-model)
+- [Event Registration](#event-registration)
+    - HTML Attributes, DOM Properties and Methods
+- [Event Object](event-object)
+- [Capturing and Bubbling Events](#capturing-bubbling-events)
 
 <!--Event Model-->
 
@@ -50,7 +48,7 @@
     - **DOM** events
 - Full list of all DOM event types:
     - http://www.w3.org/TR/DOM-Level-3-Events/#event-types-list
-- You could also defined Custom Event Types
+- You could also define Custom Event Types
 
 <!-- attr: { hasScriptWrapper:true, style: 'font-size: 0.9em' } -->
 # Common Event Types
