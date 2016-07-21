@@ -29,12 +29,13 @@
 <!-- attr: { hasScriptWrapper:true } -->
 # HTML Templates
 - HTML templates or template engines:
-  - Make the HTML dynamic
+  - Make the **HTML dynamic**
     - Allow programming logic inside the otherwise static HTML
-  - Provide cleaner and more sustainable way to dynamically create DOM elements
+  - Provide **cleaner and more sustainable** way to dynamically create DOM elements
 - HTML templates are many:
   - Basic: Handlebars.js, mustache.js, underscore.js, jQuery templates
   - Advanced: KendoUI, AngularJS
+
 
 <!-- Handlebars.js -->
 <!-- section start -->
@@ -44,30 +45,29 @@
 
 <!-- attr: { hasScriptWrapper:true } -->
 # Handlebars.js Overview
-- Handlebars.js is an open-source template engine
+- **Handlebars.js** is an open-source template engine
   - Provides both **run-time and compiled templates** for rendering HTML
   - Allows **one-way data-binding** of HTML elements to JavaScript objects
   - Produces HTML code based on **a template** and a given **JavaScript object**
 
 <!-- attr: { hasScriptWrapper:true } -->
 # Handlebars.js<br/>Setup and Usage
-- To use Handlebars follow the steps:
-  - Acquire handlerbars.js:
-    - From the site at [handlebarsjs.com](http://handlebarsjs.com)
-    - Using bower:
+- Acquire handlerbars.js:
+  - From the site at [handlebarsjs.com](http://handlebarsjs.com)
+  - Using bower: 
 ```
-	bower install handlebars
+bower install handlebars
 ```
-    - Src the script in the HTML file
+  - Src the script in the HTML file
+
 ```
 <script src="path/to/handlebars.js"></ script>
 ```
 
 <!-- attr: { hasScriptWrapper:true, style:"font-size: 40px" } -->
 # Handlebars.js<br/>Setup and Usage
-- (cont.) To use Handlebars follow the steps:
-  - Create a template
-  - In a script tag with invalid type attribute
+- Create a template
+- In a script tag with invalid type attribute
 
 ```
 <div class='post'>
@@ -75,7 +75,7 @@
   <p class="post-content">{{{content}}}</p>
 </div>
 ```
-  - Render the template with JavaScript:
+- Render the template with JavaScript:
 
 ```
     var post = {title: '…', content: '…'},
@@ -162,7 +162,7 @@
 <!-- attr: { hasScriptWrapper:true } -->
 # Block Expressions
 - Block expressions are used to iterate over a collection of objects (like array)
-  - Created using `{{#collection}}` and `{{/collection}}`
+  - Created using<br/>`{{#collection}}` and `{{/collection}}`
     - Everything between will be evaluated for each object in the collection
 
 ```
@@ -183,7 +183,7 @@
 
 <!-- attr: { hasScriptWrapper:true } -->
 # Conditional Expressions
-- Render code only if a condition is fulfulled
+- Render code only if a condition is fulfilled
   - Using `{{#if condition}}` `{{/if}}` or `{{#unless condition}} {{/unless}}`
 
 ```
