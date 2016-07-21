@@ -22,14 +22,14 @@ You can find the task description [here](task)
             -   Contains `items-list`
             -   `.items-list` contains many
     -   You can always use the **CSS** as an additional help
--   What HTML tag should we use?
+-   What HTML tags should we use?
     -   Always prefer the semantically correct tags
     -   If there many consequetive items with similar UI:
         -    `UL` and `OL`
     -   If a text is bolded, bigger, highlighted:
         -   `H1`, `H2`, ..., `STRONG`
     -   If something looks like a button:
-        -   `BUTTON` `INPUT[SUBMIT]`, `INPUT[BUTTON]
+        -   `BUTTON` `INPUT[SUBMIT]`, `INPUT[BUTTON]`
             -   When the buttons sends something to a server
         -   `A` (anchor)
             -   When the button redirects to another page
