@@ -143,7 +143,7 @@ var data = {
 ```
   - And executing:
 ```
-             $('#books-list').listview(books);
+$('#books-list').listview(books);
 ```
   - Should generate:
 ```       
