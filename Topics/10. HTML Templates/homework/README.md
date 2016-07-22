@@ -30,7 +30,7 @@ data = {
   }]          
 };
 ```
-    - the template should generate:    
+  - the template should generate:    
 ```
 <table class="items-table"> 
   <thead>
@@ -98,7 +98,7 @@ var data = {
   }] 
 }
 ```          
-    - Should produce:
+  - Should produce:
 ```
 <div class="container">
   <h1>Animals</h1>
@@ -141,11 +141,11 @@ var data = {
   </li>	
 </script>           
 ```
-    - And executing:
+  - And executing:
 ```
              $('#books-list').listview(books);
 ```
-    - Should generate:
+  - Should generate:
 ```       
  <ul id="books-list" data-template="book-item-template">
   <li class="book-item">
