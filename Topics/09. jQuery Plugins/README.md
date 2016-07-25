@@ -46,8 +46,8 @@ $("#tabs-holder").tabs();
 $("#grid" ).sortable();
 ```
 
-<!-- <img class="slide-image" showInPresentation="true" src="\imgs\pic01.png" style="top:28.88%; left:59.47%; width:35.92%; z-index:1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="\imgs\pic02.png" style="top:53.16%; left:59.47%; width:35.92%; z-index:1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs/pic01.png" style="top:28.88%; left:59.47%; width:35.92%; z-index:1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs/pic02.png" style="top:53.16%; left:59.47%; width:35.92%; z-index:1" /> -->
 
 
 <!-- attr: { showInPresentation:true, class:'slide-section demo' } -->
