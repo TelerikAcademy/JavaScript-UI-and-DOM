@@ -2,11 +2,11 @@
 <!-- attr: { hasScriptWrapper:true, class:"slide-title" } -->
 # jQuery Overview
 ## Unleash the Power of jQuery
-<!-- <img class="slide-image" showInPresentation="true" src="\imgs\pic00.png" style="top:55.35%; left:83.27%; width:17.08%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="\imgs\pic02.png" style="top:18.48%; left:-0.09%; width:34.51%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="\imgs\pic03.png" style="top:52.03%; left:51.93%; width:17.19%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="\imgs\pic04.png" style="top:52.97%; left:73.83%; width:32.39%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="\imgs\pic05.png" style="top:3.71%; left:85.40%; width:23.56%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs/pic00.png" style="top:55.35%; left:83.27%; width:17.08%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs/pic02.png" style="top:18.48%; left:-0.09%; width:34.51%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs/pic03.png" style="top:52.03%; left:51.93%; width:17.19%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs/pic04.png" style="top:52.97%; left:73.83%; width:32.39%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs/pic05.png" style="top:3.71%; left:85.40%; width:23.56%; z-index:-1" /> -->
 
 <aside class="signature">
   <p class="signature-course">JavaScript DOM & UI</p>
@@ -27,7 +27,7 @@
 - [AJAX](#jquery-ajax)
   - jQuery AJAX Methods
   - Executing AJAX Requests
-<!-- <img class="slide-image" showInPresentation="true" src="\imgs\pic06.png" style="top:29.09%; left:72.05%; width:29.97%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs/pic06.png" style="top:29.09%; left:72.05%; width:29.97%; z-index:-1" /> -->
 
 
 <!-- section start -->
@@ -85,10 +85,10 @@
 <!-- section start -->
 <!-- attr: { id:'selectors', class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Selectors and DOM Manipulation
-<!-- <img class="slide-image" showInPresentation="true" src="\imgs\pic08.png" style="top:62.23%; left:55.64%; width:52.15%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="\imgs\pic09.png" style="top:59.29%; left:8.70%; width:22.04%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs/pic08.png" style="top:62.23%; left:55.64%; width:52.15%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs/pic09.png" style="top:59.29%; left:8.70%; width:22.04%; z-index:-1" /> -->
 
-<!-- <img class="slide-image" showInPresentation="true" src="\imgs\pic11.png" style="top:0.96%; left:30.67%; width:16.47%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs/pic11.png" style="top:0.96%; left:30.67%; width:16.47%; z-index:-1" /> -->
 
 
 <!-- attr: { id:'', class:'', showInPresentation:true, hasScriptWrapper:false, style:'font-size:0.9em' } -->
@@ -214,7 +214,7 @@ $("body").prepend("<h1>header</h1>");
 var $divElement = $('<div>');
 var $anotherDivElement = $('<div />');
 ```
-<!-- <img class="slide-image" showInPresentation="true" src="\imgs\pic14.png" style="top:57.11%; left:90.95%; width:14.63%; z-index:1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs/pic14.png" style="top:57.11%; left:90.95%; width:14.63%; z-index:1" /> -->
 
 <!-- attr: { class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Adding Elements to the DOM
@@ -246,9 +246,9 @@ $('p').remove();
 <!-- attr: { id:'', class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Removing Elements
 ## [Demo]()
-<!-- <img class="slide-image" showInPresentation="true" src="\imgs\pic15.png" style="top:49.37%; left:63.01%; width:32.16%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="\imgs\pic16.png" style="top:3.33%; left:74.11%; width:21.72%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="\imgs\pic18.png" style="top:6.03%; left:17.46%; width:38.72%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs/pic15.png" style="top:49.37%; left:63.01%; width:32.16%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs/pic16.png" style="top:3.33%; left:74.11%; width:21.72%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs/pic18.png" style="top:6.03%; left:17.46%; width:38.72%; z-index:-1" /> -->
 
 
 <!-- section start -->
