@@ -27,8 +27,8 @@
 - [AJAX](#jquery-ajax)
   - jQuery AJAX Methods
   - Executing AJAX Requests
+  
 <!-- <img class="slide-image" showInPresentation="true" src="imgs/pic06.png" style="top:29.09%; left:72.05%; width:29.97%; z-index:-1" /> -->
-
 
 <!-- section start -->
 <!-- attr: { id:'whatis-jquery', class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
