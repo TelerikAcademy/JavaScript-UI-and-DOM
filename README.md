@@ -48,7 +48,7 @@ The **JavaScript UI and DOM** is about building of low-level user interface. The
 
 ### [10. HTML Templates](/Topics/10. HTML Templates)
 
-##### [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/presentation.png" height="18"/>Slides](https://rawgit.com/TelerikAcademy/JavaScript-UI-and-DOM/blob/master/Topics/10.%20HTML%20Templates/index.html) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/code.png" height="15"> Demos](/Topics/10. HTML Templates/demos) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/homework.png" height="15">Tasks](/Topics/10. HTML Templates/homework) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/video.png" height="15"> Videos](/Topics/10. HTML Templates/VIDEOS.md)
+##### [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/presentation.png" height="18"/>Slides](https://rawgit.com/TelerikAcademy/JavaScript-UI-and-DOM/master/Topics/10.%20HTML%20Templates/index.html) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/code.png" height="15"> Demos](/Topics/10. HTML Templates/demos) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/homework.png" height="15">Tasks](/Topics/10. HTML Templates/homework) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/video.png" height="15"> Videos](/Topics/10. HTML Templates/VIDEOS.md)
 
 ### [11. DOM Performance](/Topics/11. DOM Performance)
 
