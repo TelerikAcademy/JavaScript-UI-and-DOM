@@ -86,7 +86,7 @@ function solve() {
         listItemTemplate.className = "list-item";
 
         btnDeleteListItem = document.createElement("a");
-        btnDeleteListItem.className = "button";
+        btnDeleteListItem.className = "button button-delete";
         btnDeleteListItem.innerHTML = "X";
 
         textListItem = document.createElement("strong");
@@ -145,7 +145,7 @@ function solve() {
         function onListResultClick(ev) {
             var btn = ev.target,
                 parent;
-            if (btn.className.indexOf("button") < 0) {
+            if (btn.className.indexOf("button-delete") < 0) {
                 return;
             }
 
