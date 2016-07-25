@@ -16,7 +16,7 @@
 
 
 <!-- section start -->
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
+<!-- attr: { hasScriptWrapper:true, style:'' } -->
 # Table of Contents
 - [What is jQuery?](#whatis-jquery)
 - jQuery Fundamentals
