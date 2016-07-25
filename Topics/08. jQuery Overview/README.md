@@ -32,8 +32,8 @@
 
 <!-- section start -->
 <!-- attr: { id:'whatis-jquery', class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
-# What is jQuery?
-## The world’s most popular JavaScript library
+<!-- # What is jQuery?
+## The world’s most popular JavaScript library -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:false, style:'' } -->
@@ -84,7 +84,7 @@
 
 <!-- section start -->
 <!-- attr: { id:'selectors', class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
-# Selectors and DOM Manipulation
+<!-- # Selectors and DOM Manipulation -->
 <!-- <img class="slide-image" showInPresentation="true" src="imgs/pic08.png" style="top:62.23%; left:55.64%; width:52.15%; z-index:-1" /> -->
 <!-- <img class="slide-image" showInPresentation="true" src="imgs/pic09.png" style="top:59.29%; left:8.70%; width:22.04%; z-index:-1" /> -->
 
@@ -129,8 +129,8 @@ $(".widgets").fade(1);
 ```
 
 <!-- attr: { class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
-# Selection with jQuery
-## [Demo]()
+<!-- # Selection with jQuery
+## [Demo]() -->
 
 
 <!-- attr: { id:'dom-manipulation', class:'', showInPresentation:true, hasScriptWrapper:false, style:'' } -->
@@ -194,8 +194,8 @@ $node.parents("#wrapper")     .attr("id");
 ```
 
 <!-- attr: { class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
-# DOM Traversal
-## [Demo]()
+<!-- # DOM Traversal
+## [Demo]() -->
 
 
 <!-- attr: { id:'', class:'', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
@@ -217,8 +217,8 @@ var $anotherDivElement = $('<div />');
 <!-- <img class="slide-image" showInPresentation="true" src="imgs/pic14.png" style="top:57.11%; left:90.95%; width:14.63%; z-index:1" /> -->
 
 <!-- attr: { class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
-# Adding Elements to the DOM
-## [Demo]()
+<!-- # Adding Elements to the DOM
+## [Demo]() -->
 
 <!-- attr: { id:'', class:'', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Removing Elements
@@ -244,8 +244,8 @@ $('p').remove();
 ```
 
 <!-- attr: { id:'', class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
-# Removing Elements
-## [Demo]()
+<!-- # Removing Elements
+## [Demo]() -->
 <!-- <img class="slide-image" showInPresentation="true" src="imgs/pic15.png" style="top:49.37%; left:63.01%; width:32.16%; z-index:-1" /> -->
 <!-- <img class="slide-image" showInPresentation="true" src="imgs/pic16.png" style="top:3.33%; left:74.11%; width:21.72%; z-index:-1" /> -->
 <!-- <img class="slide-image" showInPresentation="true" src="imgs/pic18.png" style="top:6.03%; left:17.46%; width:38.72%; z-index:-1" /> -->
@@ -253,8 +253,8 @@ $('p').remove();
 
 <!-- section start -->
 <!-- attr: { id:'objects-events', class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
-# jQuery
-## Objects and Events
+<!-- # jQuery
+## Objects and Events -->
 
 
 <!-- attr: { id:'jquery-objects', class:'', showInPresentation:true, hasScriptWrapper:false, style:'' } -->
@@ -313,8 +313,8 @@ $("ul").on("click", "li", onListItemClick);
 ```
 
 <!-- attr: { id:'', class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
-# jQuery Event Handlers
-## [Demo]()
+<!-- # jQuery Event Handlers
+## [Demo]() -->
 
 
 <!-- attr: { id:'', class:'', showInPresentation:true, hasScriptWrapper:true, style:'font-size:0.9em' } -->
@@ -333,13 +333,13 @@ $('<button>')
 ```
 
 <!-- attr: { id:'', class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
-# jQuery Chaining
-## [Demo]()
+<!-- # jQuery Chaining
+## [Demo]() -->
 
 
 <!-- section start -->
 <!-- attr: { id:'jquery-ajax', class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
-# jQuery AJAX
+<!-- # jQuery AJAX -->
 
 
 <!-- attr: { id:'', class:'', showInPresentation:true, hasScriptWrapper:false, style:'font-size:0.9em' } -->
