@@ -32,7 +32,7 @@
   - Like `addClass()`, `fadeout()` and `hide()`
 
 
-<!-- attr: { hasScriptWrapper:true } -->
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 <!-- # jQuery Plugins -->
 - jQuery has many ready-to-use plugins
   - A library jQueryUI for UI controls
