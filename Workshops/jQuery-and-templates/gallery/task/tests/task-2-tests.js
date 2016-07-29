@@ -2,10 +2,9 @@
 var expect = require('chai').expect;
 var jsdom = require('jsdom');
 var jq = require('jquery');
-var result = require('../tasks/task-2')();
+var result = require('../tasks/task-2');
 
-describe('Task #1 Tests', function () {
-
+describe('Task #2 Tests:', function () {
   var html = `<div id="gallery">
                 <div class="gallery-list">
                     <div class="image-container">
@@ -76,7 +75,6 @@ describe('Task #1 Tests', function () {
     });
   });
 
-
   it('expect to has class ".gallery"', function () {
     document.body.innerHTML = html;
     var rootId = 'gallery';
@@ -106,7 +104,6 @@ describe('Task #1 Tests', function () {
       }
     });
   });
-
 
   it('expect to have 4 columns, when passing a param 4', function () {
     document.body.innerHTML = html;
@@ -229,7 +226,6 @@ describe('Task #1 Tests', function () {
     expect($galleryList.hasClass('blurred')).to.be.true;
   });
 
-
   it('expect a click on the #current-image inside the ".selected" to hide the selected', function () {
     document.body.innerHTML = html;
     var rootId = 'gallery',
@@ -283,7 +279,6 @@ describe('Task #1 Tests', function () {
     expect($nextImage.attr('src')).to.equal($images.eq(nextIndex).attr('src'));
   });
 
-
   it('expect after a click on the first image, the #next-image, #current-image and #previous-image to be updated', function () {
     document.body.innerHTML = html;
     var rootId = 'gallery',
@@ -307,6 +302,7 @@ describe('Task #1 Tests', function () {
     var $nextImage = $gallery.find('#next-image');
 
     var currentIndex = imgIndex;
+
     var prevIndex = (imgIndex - 1 + len) % len;
     var nextIndex = (imgIndex + 1) % len;
 
@@ -380,7 +376,6 @@ describe('Task #1 Tests', function () {
     expect($nextImage.attr('src')).to.equal($images.eq(nextIndex).attr('src'));
   });
 
-
   it('expect a click on #previous-image, the #next-image, #current-image and #previous-image to be updated, when #current-image is in the middle ', function () {
     document.body.innerHTML = html;
     var rootId = 'gallery',
@@ -415,8 +410,6 @@ describe('Task #1 Tests', function () {
     expect($nextImage.attr('src')).to.equal($images.eq(nextIndex).attr('src'));
   });
 
-
-
   it('expect a click on #next-image, the #next-image, #current-image and #previous-image to be updated, when #current-image is the first image ', function () {
     document.body.innerHTML = html;
     var rootId = 'gallery',
@@ -450,7 +443,6 @@ describe('Task #1 Tests', function () {
     expect($currentImage.attr('src')).to.equal($images.eq(currentIndex).attr('src'));
     expect($nextImage.attr('src')).to.equal($images.eq(nextIndex).attr('src'));
   });
-
 
   it('expect a click on #previous-image, the #next-image, #current-image and #previous-image to be updated, when #current-image is the first image ', function () {
     document.body.innerHTML = html;
@@ -519,7 +511,6 @@ describe('Task #1 Tests', function () {
     expect($currentImage.attr('src')).to.equal($images.eq(currentIndex).attr('src'));
     expect($nextImage.attr('src')).to.equal($images.eq(nextIndex).attr('src'));
   });
-
 
   it('expect a click on #previous-image, the #next-image, #current-image and #previous-image to be updated, when #current-image is the first image ', function () {
     document.body.innerHTML = html;

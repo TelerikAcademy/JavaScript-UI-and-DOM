@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "node node_modules/mocha/bin/mocha  tests/"
+    "test": "iojs node_modules/mocha/bin/mocha  tests/"
   },
   "repository": {
     "type": "git",
