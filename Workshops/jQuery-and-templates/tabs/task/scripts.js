@@ -1,3 +1,0 @@
-$.fn.tabs = function () {
-
-};
