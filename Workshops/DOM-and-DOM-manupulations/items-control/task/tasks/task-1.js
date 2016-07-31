@@ -30,9 +30,7 @@ function solve() {
             throw new Error("Invalid HTML element or selector");
         }
 
-        element = document.querySelector(selector);
-
-        fragment = document.createElement('div');
+        fragment = document.createDocumentFragment();
 
         /* Add Controls: START */
 
@@ -43,6 +41,7 @@ function solve() {
         labelAdd.innerHTML = "Enter text: ";
 
         tbAdd = document.createElement("input");
+        
         labelAdd.appendChild(tbAdd);
 
         btnAdd = document.createElement("button");
