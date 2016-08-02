@@ -1,4 +1,5 @@
-# Workshops for jQuery and HTML templates
+# Workshop
+## jQuery plugins
 
 - Task 1: Gallery
   - Task 2 from **JS UI & DOM Exam 2014**
@@ -9,3 +10,15 @@
   - Task 2 from **JS UI & DOM Exam 2015**
   - [Description](tabs/task)
   - [Steps for building a solution](tabs)
+
+## HTML templates
+
+- Task 1: List Template
+  - Task 3 from **JS UI & DOM Exam 2014**
+  - [Description](list-template/task)
+  - [Steps for building a solution](list-template)
+
+- Task 2: 
+  - Task 3 from **JS UI & DOM Exam 2015**
+  - [Description](/tasks)
+  - [Steps for building a solution]()

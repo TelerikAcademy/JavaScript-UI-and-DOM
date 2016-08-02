@@ -1,4 +1,4 @@
-# Steps for building jQuery Plugins with templates
+# Steps for building jQuery Plugins
 
 ##  Task description
 
