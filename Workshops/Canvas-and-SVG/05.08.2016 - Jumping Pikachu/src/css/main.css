@@ -1,0 +1,15 @@
+canvas {
+    position: absolute;
+}
+
+canvas#player-layer {
+    z-index: 10;
+}
+
+canvas#terrain-layer {
+    z-index: 5;
+}
+
+canvas#background-layer {
+    z-index: 0;
+}
