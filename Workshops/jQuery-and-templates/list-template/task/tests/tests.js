@@ -3,7 +3,7 @@ var expect = require('chai').expect;
 var jsdom = require('jsdom');
 var jq = require('jquery');
 var handlebars = require('Handlebars');
-var result = require('../tasks/solution');
+var result = require('../tasks/scripts');
 
 describe('Task #1 Tests', function () {
   before(function (done) {
