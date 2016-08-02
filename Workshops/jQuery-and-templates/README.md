@@ -1,4 +1,3 @@
-# Workshop
 ## jQuery plugins
 
 - Task 1: Gallery
@@ -8,8 +7,9 @@
 
 - Task 2: Tabs
   - Task 2 from **JS UI & DOM Exam 2015**
-  - [Description](tabs/task)
-  - [Steps for building a solution](tabs)
+
+  - [Description](datepicker/task)
+  - [Steps for building a solution](datepicker)
 
 ## HTML templates
 

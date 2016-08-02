@@ -1,0 +1,21 @@
+{
+  "name": "datepicker",
+  "version": "1.0.0",
+  "description": "* Given the HTML (`index.html`), CSS (`styles.css`), JavaScript (`scripts.js` and `jquery.min.js`) build a jQuery plugin for a simple datepicker control\r * _The datepicker must:_\r   * Be built from a simple text input tag\r   * Show a calendar with the current month - the calendar should always show 6 rows of data and fill the empty spaces with the previous and next month's dates\r   * Allow the user to navigate to the previous and next months\r   * Allow the user to select a date from the calendar\r   * Always show at the bottom the current date",
+  "main": "task/index.html",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "node node_modules/mocha/bin/mocha ./tests/tests.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "chai": "^3.2.0",
+    "handlebars": "^3.0.3",
+    "jquery": "^2.1.4",
+    "jsdom": "^5.6.1",
+    "mocha": "^2.2.5"
+  }
+}
