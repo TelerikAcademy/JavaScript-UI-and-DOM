@@ -2,7 +2,7 @@
 var expect = require('chai').expect;
 var jsdom = require('jsdom');
 var jq = require('jquery');
-var result = require('../tasks/solution')();
+var result = require('../task/solution')();
 var handlebars = require('handlebars');
 
 describe('Task #3 Tests', function () {

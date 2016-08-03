@@ -20,5 +20,5 @@
 
 - Task 2: Calendar Template
   - Task 3 from **JS UI & DOM Exam 2015**
-  - [Description](/tasks)
-  - [Steps for building a solution]()
+  - [Description](calendar-template/task)
+  - [Steps for building a solution](calendar-template)
