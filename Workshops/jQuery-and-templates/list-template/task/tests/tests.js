@@ -2,8 +2,8 @@
 var expect = require('chai').expect;
 var jsdom = require('jsdom');
 var jq = require('jquery');
-var handlebars = require('Handlebars');
-var result = require('../tasks/scripts');
+var handlebars = require('../node_modules/handlebars/dist/handlebars');
+var result = require('../tasks/solution');
 
 describe('Task #1 Tests', function () {
   before(function (done) {
