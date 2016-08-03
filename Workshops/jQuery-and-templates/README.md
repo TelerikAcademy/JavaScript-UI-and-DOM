@@ -18,7 +18,7 @@
   - [Description](list-template/task)
   - [Steps for building a solution](list-template)
 
-- Task 2: 
+- Task 2: Calendar Template
   - Task 3 from **JS UI & DOM Exam 2015**
   - [Description](/tasks)
   - [Steps for building a solution]()

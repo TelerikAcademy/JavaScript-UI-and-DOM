@@ -2,7 +2,7 @@
 
 ## Description
 
-You can find the task description [here]().
+You can find the task description [here](./task/README.md).
 
 ## Steps for solving the task
 
