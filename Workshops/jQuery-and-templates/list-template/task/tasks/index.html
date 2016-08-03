@@ -9,30 +9,12 @@
 	<div id="authors">
 	</div>
 	<script id="authors-template" type='text/x-handlebars-template'>
-    {{#authors}}
-      <div class="box {{#if right}}right{{/if}}">
-        <div class="inner">
-          <p>
-            <img alt="{{name}}" src="{{image}}" width="100" height="133">
-          </p>
-          <div>
-            <h3>{{name}}</h3>
-            {{#titles}}
-              <p>{{{this}}}</p>
-            {{/titles}}
-            <ul>
-              {{#urls}}
-              <li>
-                <a href="{{this}}" target="_blank">{{this}}</a>
-              </li>
-              {{/urls}}
-            </ul>
-          </div>
-        </div>
-      </div>
-    {{/authors}}
 	</script>
 	<script src="handlebars.js"></script>
+  <script src="./solution.js"></script>
 	<script src="scripts.js"></script>
+  <!--<script>
+    solve()('authors-template');
+  </script>-->
 </body>
 </html>
