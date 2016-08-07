@@ -2,14 +2,18 @@ canvas {
     position: absolute;
 }
 
-canvas#player-layer {
-    z-index: 10;
+#player-canvas {
+    z-index: 10
 }
 
-canvas#terrain-layer {
-    z-index: 5;
+#pokeball-canvas {
+    z-index: 5
 }
 
-canvas#background-layer {
-    z-index: 0;
+#background-canvas {
+    z-index: 1;
+}
+
+.sprite-image {
+    display: none;
 }

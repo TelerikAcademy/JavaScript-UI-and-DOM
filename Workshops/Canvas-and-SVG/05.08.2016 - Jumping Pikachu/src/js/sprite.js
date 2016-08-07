@@ -1,13 +1,17 @@
-var createSprite = (function () {
+function createSprite(options) {
 
     'use strict';
 
-    var clearOffset = 10;
+    var clearOffset = 5;
 
     function render(drawCoordinates, clearCoordinates) {
-
+        // { x: Number, y: Number }
         var self = this;
-        
+        //     x1 = self.coordinates.x + self.width / 2,
+        //     y1 = self.coordinates.y + self.height / 2;
+
+        // self.context.beginPath
+
         self.context.clearRect(
             clearCoordinates.x - clearOffset,
             clearCoordinates.y - clearOffset,
@@ -16,8 +20,8 @@ var createSprite = (function () {
         );
 
         self.context.drawImage(
-            self.image,
-            self.width * self.frameIndex,
+            self.spritesheet,
+            self.frameIndex * self.width,
             0,
             self.width,
             self.height,
@@ -33,14 +37,15 @@ var createSprite = (function () {
     function update() {
 
         var self = this;
-        
-        self.ticksCount += 1;
-        if(self.ticksCount > self.ticksPerFrame) {
-            self.ticksCount = 0;
-            
+
+        self.loopTicksCount += 1;
+
+        if(self.loopTicksCount >= self.loopTicksPerFrame) {
+            self.loopTicksCount = 0;
+
             self.frameIndex += 1;
 
-            if(self.frameIndex > self.numberOfFrames) {
+            if(self.frameIndex >= self.numberOfFrames) {
                 self.frameIndex = 0;
             }
         }
@@ -48,22 +53,18 @@ var createSprite = (function () {
         return self;
     }
 
-    function sprite(options) {
-
-        return {
-            name: options.name,
-            image: options.image,
-            height: options.height,
-            width: options.width,
-            frameIndex: 0,
-            ticksCount: 0,
-            numberOfFrames: options.numberOfFrames,
-            ticksPerFrame: options.ticksPerFrame,
-            context: options.context,
-            render: render,
-            update: update
-        };
-    }
+    var sprite = {
+        spritesheet: options.spritesheet,
+        context: options.context, // drawing context
+        width: options.width, // width of a single sprite
+        height: options.height, // height of a single sprite
+        numberOfFrames: options.numberOfFrames,
+        loopTicksPerFrame: options.loopTicksPerFrame,
+        frameIndex: 0,
+        loopTicksCount: 0,
+        render: render,
+        update: update
+    };
 
     return sprite;
-} ());
+}

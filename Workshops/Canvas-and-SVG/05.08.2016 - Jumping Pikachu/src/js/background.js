@@ -1,43 +1,40 @@
-var createBackground = function (options) {
+function createBackground(options) {
+    var backgroundCanvas = document.getElementById('background-canvas'),
+        context = backgroundCanvas.getContext('2d'),
+        backgroundImg = document.getElementById('background');
 
-    'use strict';
+    backgroundCanvas.height = options.height;
+    backgroundCanvas.width = options.width;
+
+    function render() {
+        context.drawImage(
+            this.image,
+            this.coordinates.x,
+            0
+        );
+
+        context.drawImage(
+            this.image,
+            this.image.width - Math.abs(this.coordinates.x),
+            0
+        );
+    }
+
+    function update() {
+        this.coordinates.x -= this.speedX;
+
+        if(Math.abs(this.coordinates.x) > this.image.width ) {
+            this.coordinates.x = 0;
+        }
+    }
 
     var background = {
+        image: backgroundImg,
+        speedX: options.speedX, 
         coordinates: { x: 0, y: 0 },
-        speed: options.speed,
-        image: options.image,
-        height: options.height,
-        width: options.width,
-        context: options.context,
-        render: function () {
-            var self = this;
-
-            self.context.drawImage(
-                self.image,
-                self.coordinates.x,
-                self.coordinates.y
-            );
-
-            self.context.drawImage(
-                self.image,
-                self.image.width - Math.abs(self.coordinates.x),
-                self.coordinates.y
-            );
-
-            return self;
-        },
-        update: function () {
-            var self = this;
-
-            self.coordinates.x -= self.speed.x;
-
-            if(Math.abs(self.coordinates.x) > self.image.width) {
-                self.coordinates.x = 0;
-            }
-
-            return self;
-        }
+        render: render,
+        update: update
     };
-    
+
     return background;
-};
+}
