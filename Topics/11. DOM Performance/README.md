@@ -37,7 +37,7 @@
 
 <!-- attr: { style: 'font-size: 0.85em', showInPresentation: true } -->
 # Using cloning for similar elements
-- Use `node.cloneNode(true)` (**native**) or `$element.clone()` (**jQuery**) for better performance when creating many similar elements 
+- Use `node.cloneNode(true)` (**native**) or `$element.clone()` (**jQuery**) for better performance when creating many similar elements
 - Only when there is a small difference between the elements
   - i.e. when many links have only different `href` and `innerHTML`
 - [Read more](https://developer.mozilla.org/en-US/docs/Web/API/Node/cloneNode) about `node.cloneNode()`
@@ -76,7 +76,7 @@ for(var i = 0; i < count; i += 1) {
 # Document fragments
 - Use `DocumentFragment` to minimize redraws when adding elements to the DOM
   - The following code will trigger a single browser redraws:
-    
+
 ```js
 var docFragment = document.createDocumentFragment(),  
     count = 1000;
@@ -84,7 +84,7 @@ var docFragment = document.createDocumentFragment(),
 for(var i = 0; i < count; i += 1) {
     docFragment.appendChild(document.createElement('div'));
 }
-// when done, append the fragment to the dom 
+// when done, append the fragment to the dom
 container.appendChild(docFragment);
 ```
 
@@ -137,11 +137,11 @@ $('#dynamic-menu').find('a').addClass('nav-link');
 
 ```js
 // preffer the following(triggers less redraws)
-element.style = { 
-  color: 'blue', 
-  display: 'inline-block', 
-  width: '20%', 
-  margin: '5px' 
+element.style = {
+  color: 'blue',
+  display: 'inline-block',
+  width: '20%',
+  margin: '5px'
 };
 
 // over
@@ -324,7 +324,7 @@ someElement.addEventListener('click', function () {
 <!-- attr: { id: 'high-rate-events', style: 'font-size: 0.8em' } -->
 # <a id="high-rate-events"></a>High-rate events
 - Events like **scrolling**, **mousemove**, **resizing** can fire at a high rate- if heavy operations are executed on every event raise, this can lead to performance problems
-  
+
 ```js
 document.addEventListener('mousemove', function () {
     console.log('handler executed!');
@@ -334,7 +334,7 @@ document.addEventListener('mousemove', function () {
 
 
 <!-- attr: { style: 'font-size: 0.8em', showInPresentation: true } -->
-<!--  High-rate events -->
+<!-- # High-rate events -->
 - A possible solution is to attach event handlers that execute after a number of event fires or after a time interval
 
 ```js
@@ -347,7 +347,7 @@ function createIntervalFunction(func, interval) {
 
         canExecute = false;
         func.apply(this, arguments);
-        
+
         setTimeout(function () {
             canExecute = true;
         }, interval);
