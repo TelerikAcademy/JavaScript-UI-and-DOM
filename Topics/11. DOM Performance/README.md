@@ -163,11 +163,11 @@ element.style.margin = '5px';
 - _Example_ **without caching**:
 
 ```js
-var hidePanelsBtn = document.getElementsById('#hide-panels-btn');
+var hidePanelsBtn = document.getElementById('hide-panels-btn');
 
 hidePanelsBtn.addEventListener('click', function () {
     // this query is repeated every for each button press
-    var panels = document.getElementsByClassName('.panel');
+    var panels = document.getElementsByClassName('panel');
 
     for(var i = 0, len = panels.length; i < len; i += 1) {
         panels[i].classList.add('panel-hidden');
@@ -183,8 +183,8 @@ hidePanelsBtn.addEventListener('click', function () {
 ```js
 // panels are cached as array here
 var panels = [].slice.call(
-                  document.getElementsByClassName('.panel')),
-    hidePanelsBtn = document.getElementsById('#hide-panels-btn');
+                  document.getElementsByClassName('panel')),
+    hidePanelsBtn = document.getElementById('hide-panels-btn');
 
 hidePanelsBtn.addEventListener('click', function () {
     // the panels are accessed from the variable above
@@ -214,7 +214,7 @@ var nameItems = document.querySelectorAll('#names-list li');
 
 ```js
 var namesList = document.querySelector('#names-list'),
-    nameItems = namesList.children();
+    nameItems = namesList.children;
 ```
 
 <!-- attr: { showInPresentation: true } -->
