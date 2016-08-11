@@ -31,7 +31,4 @@
 |   Team "Hemingway Special"      | 16:10 | 
 |   Team "Bacardi"                | 16:20 | 
 |   Team "Margarita"              | 16:30 | 
-|   Online Team "Charles Dickens" | 18:00 | 
-|   Online Team "Franz Kafka"     | 18:10 | 
-|   Online Team "Victor Hugo"     | 18:20 | 
-|   Online Team "Marcel Proust"   | 18:30 | 
+|   All Online Teams              | 18:00-18:30 | 
