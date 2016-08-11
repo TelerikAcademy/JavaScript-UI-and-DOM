@@ -88,6 +88,7 @@ for(var i = 0; i < count; i += 1) {
 container.appendChild(docFragment);
 ```
 
+<!-- attr: { hasScriptWrapper: true } -->
 # Appending to containers
 - _Example_ with jQuery:
 
