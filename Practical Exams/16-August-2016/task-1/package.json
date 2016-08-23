@@ -1,0 +1,21 @@
+{
+    "name": "task-1-autocomplete",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.html",
+    "directories": {
+        "test": "tests"
+    },
+    "scripts": {
+        "test": "node node_modules/mocha/bin/mocha ./tests"
+    },
+    "author": "Doncho Minkov",
+    "license": "MIT",
+    "dependencies": {
+        "chai": "^3.2.0",
+        "handlebars": "^3.0.3",
+        "jquery": "^2.1.4",
+        "jsdom": "^5.6.1",
+        "mocha": "^2.2.5"
+    }
+}

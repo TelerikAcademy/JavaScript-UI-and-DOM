@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>File explorer</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+    <main id="file-explorer">
+        <section class="file-explorer">
+            <div class="add-wrapper">
+                <a class="add-btn visible"></a><input type="text"></div>
+            <ul class="items">
+                <li class="file-item item"><a class="item-name">index.html</a>
+                    <a class="del-btn"></a>
+                </li>
+                <li class="file-item item"><a class="item-name">main.css</a>
+                    <a class="del-btn"></a>
+                </li>
+                <li class="dir-item item collapsed"><a class="item-name">imgs</a>
+                    <ul class="items">
+                        <li class="file-item item"><a class="item-name">wallpaper.png</a>
+                            <a class="del-btn"></a>
+                        </li>
+                        <li class="file-item item"><a class="item-name">result.jpg</a>
+                            <a class="del-btn"></a>
+                        </li>
+                    </ul>
+                    <a class="del-btn"></a>
+                </li>
+                <li class="dir-item item collapsed"><a class="item-name">js</a>
+                    <ul class="items">
+                        <li class="file-item item"><a class="item-name">weird.js</a>
+                            <a class="del-btn"></a>
+                        </li>
+                        <li class="file-item item"><a class="item-name">batman.js</a>
+                            <a class="del-btn"></a>
+                        </li>
+                    </ul>
+                    <a class="del-btn"></a>
+                </li>
+                <li class="file-item item"><a class="item-name">notes.txt</a>
+                    <a class="del-btn"></a>
+                </li>
+                <li class="file-item item"><a class="item-name">solution.js</a>
+                    <a class="del-btn"></a>
+                </li>
+            </ul>
+        </section>
+        <article class="file-preview">
+            <p class="file-content"></p>
+        </article>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="./solution.js"></script>
+    <script>
+        solve()({
+            'index.html': '<h1>Good luck!</h1>',
+            'main.css': '/* no styles here : ( */',
+            'wallpaper.png': 'Cannot be displayed.',
+            'result.jpg': 'Cannot be displayed.',
+            'weird.js': 'var let = 5;',
+            'batman.js': 'new Array(16).join("hero" - 2) + " Batmaaaaan" //paste in console for some fun',
+            'notes.txt': 'never forget that javascript hates you! :D',
+            'solution.js': 'console.log("not really");'
+        });
+    </script>
+</body>
+
+</html>

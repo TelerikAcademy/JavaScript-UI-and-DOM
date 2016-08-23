@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Autocomplete</title>
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+
+    <div class="autocomplete">
+        <input class="tb-pattern" type="text" />
+        <a href="#" class="btn-add">Add</a>
+        <ul class="suggestions-list">
+
+        </ul>
+    </div>
+
+    <script src="task-1.js">
+    </script>
+
+    <script>
+        window.onload = function() {
+            solve()(".autocomplete", ["Apples"]);
+        };
+    </script>
+</body>
+
+</html>

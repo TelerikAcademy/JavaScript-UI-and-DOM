@@ -1,0 +1,61 @@
+#container {
+    width: 30%;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: inline-block;
+    margin: 5px;
+}
+
+ul.tabs-nav {
+    width: 100%;
+}
+
+ul.tabs-nav li {
+    padding: 5px;
+    border: 1px solid gray;
+}
+
+ul.tabs-nav li:hover {
+    background: lightgray;
+}
+
+ul.tabs-nav a.tab-link {
+    font-style: italic;
+    color: cornflowerblue;
+    text-decoration: none;
+}
+
+li.tab-content {
+    display: none;
+}
+
+li.tab-content.visible {
+    display: inline-block;
+    border-top: 1px solid gray;
+    width: 100%;
+    padding: 5px;
+}
+
+li.tab-content.visible p {
+    display: inline-block;
+}
+
+li.tab-content.visible button.btn-edit {
+    float: right;
+    background-color: cornflowerblue;
+    margin: 10px 0;
+    border: 1px solid gray;
+    cursor: pointer;
+}
+
+li.tab-content.visible textarea.edit-content {
+    display: block;
+    width: 50%;
+    height: 10em;
+    resize: none;
+}

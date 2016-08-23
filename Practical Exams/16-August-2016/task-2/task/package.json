@@ -1,0 +1,27 @@
+{
+  "name": "file-explorer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tests/tests.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "node node_modules/mocha/bin/mocha ./tests/tests.js"
+  },
+  "author": "Konstantin Simeonov",
+  "license": "MIT",
+  "dependencies": {
+    "chai": "^3.5.0",
+    "jquery": "^3.1.0",
+    "jsdom": "^9.4.1",
+    "mocha": "^2.5.3"
+  },
+  "keywords": [
+    "files",
+    "explorer",
+    "exam",
+    "task",
+    "jquery"
+  ]
+}

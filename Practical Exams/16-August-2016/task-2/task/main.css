@@ -1,0 +1,161 @@
+body {
+    overflow: scroll;
+}
+
+#root {
+    width: 100%;
+}
+
+.file-explorer * {
+    margin: 0;
+    padding: 0;
+}
+
+.file-explorer {
+    position: relative;
+    float: left;
+    width: 20em;
+    height: 100%;
+    min-height: 50em;
+    border: 2px solid lightslategray;
+    border-right: none;
+    padding: 10px 0 10px 0;
+    border-radius: 15px 0 0 0;
+}
+
+.file-explorer .items {
+    list-style: none;
+}
+
+.file-explorer .items .item.dir-item {
+    height: 100%;
+}
+
+.file-explorer .items .items {
+    margin-left: 2em
+}
+
+.file-explorer .items .file-item > .item-name::before {
+    content: '';
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    background-image: url('./imgs/file-icon.png');
+}
+
+.file-explorer .items .dir-item > .item-name::before {
+    content: '';
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    background-image: url('./imgs/folder-icon.png');
+}
+
+.file-explorer .items .item {
+    position: relative;
+    left: 0;
+    height: 2em;
+    width: 100%;
+}
+
+.file-explorer .items .item-name {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    margin-left: 1%;
+    text-decoration: none;
+    color: #3f89ba;
+}
+
+.file-explorer .items .item-name:hover, .file-explorer .del-btn {
+    cursor: pointer;
+}
+
+.file-explorer .items .item-name:hover::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2em;
+    left: 0;
+    background: #b9d1e5;
+    z-index: -1;
+}
+
+.file-explorer .collapsed .items {
+    display: none;
+}
+
+.file-preview * {
+    margin: 0;
+    padding: 0;
+}
+
+.file-preview {
+    float: left;
+    width: 20%;
+    height: 100%;
+    min-height: 50em;
+    border: 2px solid lightslategray;
+    border-radius: 15px 0 0 0;
+    padding: 10px;
+}
+
+.file-explorer .add-wrapper {
+    width: 100%;
+    height: 2em;
+    margin-bottom: 2.5%;
+}
+
+.file-explorer .add-btn::before {
+    content: ' ';
+    margin-left: 5%;
+    display: inline-block;
+    height: 1.5em;
+    width:  1.5em;
+    background-image: url('./imgs/plus.jpg');
+    background-size: cover;
+}
+
+.file-explorer .add-btn:hover::before {
+    cursor: pointer;
+}
+
+.file-explorer .add-btn {
+    display: none;
+    margin-left: 5%;
+}
+
+.file-explorer input {
+    height: 1.5em;
+    width: 60%;
+    margin-left: 5%;
+    display: none;
+}
+
+.file-explorer input.visible {
+    display: inline-block;
+}
+
+.file-explorer .add-btn.visible {
+    display: inline-block;
+}
+
+.file-explorer .del-btn::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    right: 1em;
+    height: 1em;
+    width:  1em;
+    background-image: url('./imgs/trash.jpg');
+    background-size: cover;
+    opacity: 0.5;
+}
+
+.file-explorer .del-btn {
+    position: absolute;
+    top: 0;
+    margin-top: 2.5%;
+    right: 1em;
+    text-decoration: none;
+}

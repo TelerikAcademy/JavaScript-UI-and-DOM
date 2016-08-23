@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>File explorer</title>
+    <link rel="stylesheet" href="./main.css" />
+</head>
+
+<body>
+
+    <main id="file-explorer"></main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="./file-explorer-builder.js"></script>
+
+    <script>
+    solve()();
+    $('#file-explorer').fileExplorer([
+                        {
+                            name: 'dir1',
+                            files: [
+                                { name: 'file1.txt', content: 'some text' },
+                                { name: 'file2.txt', content: 'another text' },
+                                { name: 'tests.js', content: '// writing tests is boring' },
+                                { name: 'file3.cs', content: 'public static void override sealed new internal volatile inline Main(){ System.Console.WriteLine("hello"); }' },
+                                { name: 'sticky-note.txt', content: 'wash the dishes!' }
+                            ]
+                        },
+                        {
+                            name: 'trash',
+                            files: [
+                                { name: 'file1.txt', content: 'some text' },
+                                { name: 'file2.txt', content: 'another text' },
+                                { name: 'directory', files: [{ name: 'file-in-dir.txt', content: 'hello' }, { name: 'asdklf', content: 'hfdfhdf' }] }
+                            ]
+                        },
+                        {
+                            name: 'win32',
+                            files: []
+                        },
+                        { name: 'movie.mp4', content: 'cannot preview!' },
+                        { name: 'forkbomb.bat', content: ':e\n%0|%0\ngoto :e' },
+                        { name: 'testest.test', content: 'testy test' },
+                        { name: 'test.test.test', content: 'another test' },
+                    ]);
+</script>
+
+
+</body>
+
+</html>

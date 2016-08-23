@@ -1,0 +1,16 @@
+## What to test
+- Dynamically generated tabs
+    - Should generate correct DOM structure
+        - Correct elements
+        - Correct classes
+        - Correct content
+- Tab clicks should change the view
+    - Correct content should be displayed
+    - Via classes, not inline styles
+- Edit button clicks should
+    - Add a `textarea` to the DOM with value the content of the current tab
+    - Change the button text to 'Save'
+- Save button clicks should
+    - Set the content of the current tab to the value of the `textarea`
+    - Remove the textarea from the DOM
+    - Change the button text back to 'Edit'

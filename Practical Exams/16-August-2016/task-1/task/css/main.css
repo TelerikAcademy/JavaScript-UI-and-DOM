@@ -1,0 +1,28 @@
+.autocomplete {
+    position: relative;
+}
+
+.suggestions-list {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+}
+
+.suggestions-list .suggestion {
+    border-top: 1px solid black;
+    text-align: center;
+    padding: 5px 15px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+}
