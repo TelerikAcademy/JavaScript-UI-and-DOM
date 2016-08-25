@@ -1,4 +1,4 @@
-# Task ?: File explorer
+# Task 2 - File explorer
 
 ## Description
 
