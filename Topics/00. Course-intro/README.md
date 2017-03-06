@@ -15,7 +15,7 @@
 - What's next in the Academy
 - The JavaScript DOM & UI Course Curriculum
 - Exams and Evaluation
-    - Standart Criteria
+    - Standard Criteria
     - Bonuses
 - Resources for the Course
 
