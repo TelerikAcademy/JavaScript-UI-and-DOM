@@ -6,7 +6,7 @@
 <aside class="signature">
     <p class="signature-course">JavaScript DOM & UI</p>
     <p class="signature-initiative">Telerik Software Academy</p>
-    <a href="http://academy.telerik.com" class="signature-link">http://academy.telerik.com</a>
+    <a href="https://telerikacademy.com" class="signature-link">https://telerikacademy.com</a>
 </aside>
 
 <!-- attr: { hasScriptWrapper:true } -->

@@ -6,7 +6,7 @@
 <aside class="signature">
     <p class="signature-course">JavaScript DOM & UI</p>
     <p class="signature-initiative">Telerik Software Academy</p>
-    <a href="http://academy.telerik.com" class="signature-link">http://academy.telerik.com</a>
+    <a href="https://telerikacademy.com" class="signature-link">https://telerikacademy.com</a>
 </aside>
 
 <!-- <img class="slide-image" showInPresentation="true" src="imgs/dom-first.jpg" style="top: 50%; right: 0%; width: 40%; border-radius: 15px; border: 3px solid yellowgreen; transform: rotate(7deg)" /> -->
@@ -267,11 +267,11 @@ for (var i in divs) {
 - "Web Design with HTML 5, CSS 3 and JavaScript" course @ Telerik Academy
     - [javascript course](http://academy.telerik.com/student-courses/web-design-and-ui/javascript-fundamentals/about)
   - Telerik Software Academy
-    - [academy.telerik.com](academy.telerik.com)
+    - [telerikacademy.com](https://telerikacademy.com)
   - Telerik Academy @ Facebook
-    - [facebook.com/TelerikAcademy](facebook.com/TelerikAcademy)
+    - [facebook.com/TelerikAcademy](https://facebook.com/TelerikAcademy)
   - Telerik Software Academy Forums
-    - [forums.academy.telerik.com](http://telerikacademy.com/Forum/Home)
+    - [forums.academy.telerik.com](https://telerikacademy.com/Forum/Home)
 
 <!-- <img class="slide-image" showInPresentation="true"  src="imgs/pic00.png" style="top:58.18%; left:90.52%; width:16.97%; z-index:-1" /> -->
 <!-- <img class="slide-image" showInPresentation="true"  src="imgs/pic41.png" style="top:30%; left:68.14%; width:36.30%; z-index:-1" /> -->
