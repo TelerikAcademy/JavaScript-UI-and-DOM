@@ -22,7 +22,7 @@
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
 # JavaScript DOM & UI
-## Coming To The Next Module
+## About to make the next step
 
 <!-- attr: { hasScriptWrapper:true } -->
 # What's next?
@@ -71,7 +71,7 @@
 - **HTML Templates**
     - Creating and using HTML Templates
 
-<!-- attr: { hasScriptWrapper:true, showInPresentation:true } -->
+<!-- attr: { hasScriptWrapper:true, showInPresentation:true, style:"font-size:0.9em" } -->
 <!-- # JavaScript UI & DOM:<br/>Course schedule -->
 - **jQuery and HTML Templates Workshop**
 - **Canvas and SVG workshop**

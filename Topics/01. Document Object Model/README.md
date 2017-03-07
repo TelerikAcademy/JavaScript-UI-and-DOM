@@ -221,7 +221,7 @@ for(var i = 0, length = divs.length; i < length; i += 1){
 - NodeList looks like an array, but is not
     - It's an object with properties similar to array
         - Has length and indexer
-    - Traversing an array with for-in loop works unexpected:
+    - Traversing an array with `for-in` loop works unexpected:
 
 ```js
 console.log(Array.isArray(divs)); // false
@@ -244,8 +244,8 @@ for (var i in divs) {
 <!-- attr: { hasScriptWrapper:true, style:"font-size:0.85em" } -->
 # Static NodeList and Live NodeList
 - There are two kinds of NodeLists
-    - `getElementsBy` methods return a **LiveNodeList**
-    - `querySelectorAll` returns a StaticNodeList
+    - `getElementsBy` methods return a `LiveNodeList`
+    - `querySelectorAll` returns a `StaticNodeList`
 - Live lists keep track of the selected elements
     - Even when changes are made to the DOM
     - While static list contain the elements as they were at the execution of the method
