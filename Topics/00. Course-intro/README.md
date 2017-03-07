@@ -27,7 +27,7 @@
 <!-- attr: { hasScriptWrapper:true } -->
 # What's next?
 - JavaScript DOM & UI
-    - Continuation of JS Fundamentals
+    - Continuation of JS Fundamentals, JS OOP
     - Fundamentals of building UI in the browser
 - Schedule:
     - Lectures 2 times a week
