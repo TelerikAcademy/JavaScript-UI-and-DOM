@@ -46,7 +46,7 @@ Follow the best practices for producing high-quality code:
 -   Use ES 2015 syntax where possible
 -   **Strong cohesion** and **loose coupling**
 -   Use **GIT** as a source control system
-    -   Host it on <a href="http://github.com" title="http://github.com" target="_blank">http://github.com</a>
+    -   Host it on <a href="https://github.com" title="https://github.com" target="_blank">https://github.com</a>
 
 ##  Optional Requirements
 
@@ -64,7 +64,7 @@ If you have a chance, time and a suitable situation, you might add some of the f
 
 ##  Deliverables
 
--   Upload a brief video (2-3 mins) of your application and upload it in [YouTube](http://youtube.com)
+-   Upload a brief video (2-3 mins) of your application and upload it in [YouTube](https://youtube.com)
     -   **Each project without an uploaded video in YouTube will be considered not done**
 -   Upload your project in http://best.telerikacademy.com
     -   A brief description of your application
@@ -80,7 +80,7 @@ If you have a chance, time and a suitable situation, you might add some of the f
     -   Show the source code
     -   Show the commits logs to confirm that team member have contributed.
     -   Optionally you might prepare a presentation (3-4 slides)
-Please be **strict in timing!** Be well prepared for presenting maximum of your work for minimum time. Bring your own laptop. Test it preliminary with the multimedia projector. Open the project assets beforehand to save time. You have 10 minutes, no more
+Please be **strict in timing!** Be well prepared for presenting maximum of your work for minimum time. Bring your own laptop. Test it preliminary with the multimedia projector. Open the project assets beforehand to save time. You have 10 minutes, no more!
 
 ##  Give Feedback about Your Teammates
 You will be invited to provide feedback about all your teammates, their attitude to this project, their technical skills, their team working skills, their contribution to the project, etc. The feedback is important part of the project evaluation so take it seriously and be honest
