@@ -21,7 +21,6 @@
 <!--Event Model-->
 
 <!-- section start -->
-
 <!-- attr: { hasScriptWrapper:true, class:"slide-section", id:"js-event-model" } -->
 # JavaScript Event Model <!-- .element: style="margin-top: 12%" -->
 
@@ -56,8 +55,8 @@
 | **Mouse Events** | **Touch Events** | **Keyboard Events** |
 | :--------------: | :--------------: | :-----------------: |
 | `click`          | `tap`            | `keypress`          |
-| `hover`          | `touchstart`     |  `keydown`           |
-| `mouseup`        | `touchend`       |  `keyup`             |
+| `hover`          | `touchstart`     | `keydown`           |
+| `mouseup`        | `touchend`       | `keyup`             |
 | `mousedown`      | `touchmove`
 | `mouseover`      | `touchcancel`
 | `mouseout`       | `touchenter`
@@ -72,7 +71,7 @@
 | `select`       |  `focusin`
 | `resize`       |  `focusout`
 | `change`       |
-| `input`       |
+| `input`        |
 
 <!-- Event Registration-->
 
@@ -171,8 +170,8 @@ button.addEventListener("click", function () {
 - The event object contains information about:
   - The **type** of the event
   - The **target** of the event
-  - The **key that was pressed** when a keyboard event was fired
-  - The **mouse button that was pressed** when a mouse event was fired
+  - The **key that was pressed** when a keyboard event was fired
+  - The **mouse button that was pressed** when a mouse event was fired
   - The **position** of the mouse on the screen
 
 <!-- attr: { hasScriptWrapper:true, style:"font-size:40px" } -->

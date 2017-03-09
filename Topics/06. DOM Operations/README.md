@@ -67,7 +67,7 @@
     - Returns the direct **parent** of the element
     - The parent of document is null
 - `element.childNodes`
-    - Returns a nodeList of all the **child nodes**
+    - Returns a `nodeList` of all the **child nodes**
         - Including the **text nodes** (whitespaces)
 
 <!-- attr: { hasScriptWrapper:true, showInPresentation:true } -->
@@ -145,8 +145,8 @@ function iterateList (listId) {
 <!-- # Creating HTML Еlements -->
 - After an HTML element is created it can be treated as if it was selected from the DOM
 - When HTML elements are created dynamically they are just **JavaScript objects**
-    - They are still not in the DOM (the web page)
-    - New HTML elements must be **appended to DOM**
+  - They are still not in the DOM (the web page)
+  - New HTML elements must be **appended to DOM**
 
 ```javascript
   var studentsList = document.createElement("ul");
