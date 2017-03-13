@@ -11,7 +11,7 @@
 <aside class="signature">
   <p class="signature-course">JavaScript DOM & UI</p>
 	<p class="signature-initiative">Telerik Software Academy</p>
-	<a href="https://telerikacademy.com " class="signature-link">https://telerikacademy.com </a>
+	<a href="https://telerikacademy.com" class="signature-link">https://telerikacademy.com</a>
 </aside>
 
 
@@ -363,10 +363,10 @@ $('<button>')
 - "Web Design with HTML 5, CSS 3 and JavaScript" course @ Telerik Academy
     - [javascript course](http://academy.telerik.com/student-courses/web-design-and-ui/javascript-fundamentals/about)
   - Telerik Software Academy
-    - [academy.telerik.com](academy.telerik.com)
+    - [telerikacademy.com](https://telerikacademy.com/)
   - Telerik Academy @ Facebook
-    - [facebook.com/TelerikAcademy](facebook.com/TelerikAcademy)
+    - [facebook.com/TelerikAcademy](https://facebook.com/TelerikAcademy)
   - Telerik Software Academy Forums
-    - [forums.academy.telerik.com](http://telerikacademy.com/Forum/Home)
+    - [forums.academy.telerik.com](https://telerikacademy.com/Forum/Home)
 
 <!-- <img class="slide-image" showInPresentation="true"  src="imgs/pic00.png" style="top:58.18%; left:90.52%; width:16.97%; z-index:-1" /> -->
