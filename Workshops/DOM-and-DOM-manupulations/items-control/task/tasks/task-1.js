@@ -41,14 +41,13 @@ function solve() {
         labelAdd.innerHTML = "Enter text: ";
 
         tbAdd = document.createElement("input");
-
+        
         labelAdd.appendChild(tbAdd);
 
-        btnAdd = document.createElement("a");
+        btnAdd = document.createElement("button");
         btnAdd.className = "button";
         btnAdd.addEventListener("click", onAddButtonClick, false);
         btnAdd.innerHTML = "Add";
-        btnAdd.style.display = "inline-block";
 
         addControls.appendChild(labelAdd);
         addControls.appendChild(btnAdd);
@@ -82,18 +81,7 @@ function solve() {
         listResults = document.createElement("ul");
         listResults.className = "items-list";
 
-        listItemTemplate = document.createElement("li");
-        listItemTemplate.className = "list-item";
-
-        btnDeleteListItem = document.createElement("a");
-        btnDeleteListItem.className = "button button-delete";
-        btnDeleteListItem.innerHTML = "X";
-
-        textListItem = document.createElement("strong");
-        listItemTemplate.appendChild(btnDeleteListItem);
-        listItemTemplate.appendChild(textListItem);
-
-        listResults.addEventListener("click", onListResultClick, false);
+        // listResults.addEventListener("click", onListResultClick, false);
 
 
         resultControls.appendChild(listResults);
@@ -114,9 +102,18 @@ function solve() {
             var value = tbAdd.value;
             tbAdd.value = "";
 
+            listItemTemplate = document.createElement("li");
+            listItemTemplate.className = "list-item";
+            textListItem = document.createElement("strong");
             textListItem.innerHTML = value;
+            btnDeleteListItem = document.createElement("button");
+            btnDeleteListItem.className = "button button-delete";
+            btnDeleteListItem.innerHTML = "X";
+            btnDeleteListItem.addEventListener("click", onListResultClick, this, false);
+            listItemTemplate.appendChild(btnDeleteListItem);
+            listItemTemplate.appendChild(textListItem);
 
-            listResults.appendChild(listItemTemplate.cloneNode(true));
+            listResults.appendChild(listItemTemplate);
         }
 
         function onSearchTextboxInput() {
@@ -143,25 +140,7 @@ function solve() {
         }
 
         function onListResultClick(ev) {
-            var btn = ev.target,
-                parent;
-            if (btn.className.indexOf("button-delete") < 0) {
-                return;
-            }
-
-            parent = btn;
-            while (parent && parent.className.indexOf("list-item") < 0) {
-                console.log(parent.nodeName);
-                parent = parent.parentNode;
-            }
-
-            if (!parent) {
-                return;
-            }
-
-            listResults.removeChild(parent);
+            this.parentNode.parentNode.removeChild(this.parentNode);
         }
     };
 }
-
-module.exports = solve;
