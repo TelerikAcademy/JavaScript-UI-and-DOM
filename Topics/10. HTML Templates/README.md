@@ -150,7 +150,7 @@ bower install handlebars
 <!-- section start -->
 <!-- attr: { hasScriptWrapper:true, class:"slide-section", id:"handlebars-expressions" } -->
 # Handlebars Expressions
-## Blocks and Condtitionals
+## Blocks and Conditionals
 
 <!-- attr: { hasScriptWrapper:true } -->
 # Handlebars Expressions
@@ -202,7 +202,7 @@ bower install handlebars
   </ul>
 ```
 
-<span class="balloon fragment" style="width:330px; top:80%; left:38%">If author is false-like value,  this code will not be rendered</span>
+<span class="balloon fragment" style="width:330px; top:80%; left:38%">If author is false-like value, this code will not be rendered</span>
 
 <!-- attr: { hasScriptWrapper:true, class:"slide-section" } -->
 # Conditional Expressions
