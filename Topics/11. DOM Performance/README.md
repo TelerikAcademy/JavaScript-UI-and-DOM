@@ -220,7 +220,7 @@ var namesList = document.querySelector('#names-list'),
 
 <!-- attr: { showInPresentation: true } -->
 <!-- # Efficient selectors -->
-- Try to explain the performance of the following statemenets(assume they query the same HTML and return the same result):
+- Try to explain the performance of the following statemenets (assume they query the same HTML and return the same result):
 
 ```js
 $('#some-id .some-class .another-class');
