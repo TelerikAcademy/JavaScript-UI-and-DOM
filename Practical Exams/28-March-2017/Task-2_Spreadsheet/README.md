@@ -51,7 +51,7 @@ The following must be created and added to the **selector** element:
   - Copy the value in the `input` element into the `span` element
 - _NOTE:_ use `dblclick` and `blur` events
 
-[Play with the solution](task/index_obfuscated.html) (don't worry, you can't submit it)
+[Play with the solution](https://rawgit.com/TelerikAcademy/JavaScript-UI-and-DOM/master/Practical%20Exams/28-March-2017/Task-2_Spreadsheet/task/index_obfuscated.html) (don't worry, you can't submit it)
 
 ## Additional notes
 

@@ -50,7 +50,7 @@ Each column should contain:
   - Item text should appear in the input field
 - _NOTE:_ use the `click` event
 
-[Play with the solution](task/index_obfuscated.html) (don't worry, you can't submit it)
+[Play with the solution](https://rawgit.com/TelerikAcademy/JavaScript-UI-and-DOM/master/Practical%20Exams/28-March-2017/Task-1_Item-lists/task/index_obfuscated.html) (don't worry, you can't submit it)
 
 ## Additional notes
 
