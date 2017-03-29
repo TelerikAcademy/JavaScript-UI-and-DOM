@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../node_modules/handlebars/dist/handlebars.js"></script>
+    <link rel="stylesheet" href="css/tabs.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="tabs">
+    </div>
+    <script type="text/handlebars-template" id="template">
+        <!-- Your template here! -->
+    </script>
+
+    <script>
+        var templateId = "template";
+        var templateHtml = document.getElementById(templateId).innerHTML;
+        var templateFunc = Handlebars.compile(templateHtml);
+
+        var data = {
+            titles: [{
+                text: "Tab 1",
+                link: "tab-1"
+            }, {
+                text: "Tab 2",
+                link: "tab-2"
+            }, {
+                text: "Tab 3",
+                link: "tab-3"
+            }],
+            contents: [{
+                link: "tab-1",
+                text: "Tab 1, no so special...",
+            }, {
+                link: "tab-2",
+                text: "<p>Some text in a p</p><a href=\"#\">a link</a>",
+            }, {
+                link: "tab-3",
+                text: "<strong>And a list</strong><ul><li>Just</li><li>a</li><li>regular</li><li>list</li></ul>"
+            }]
+        };
+
+        var resultHtml = templateFunc(data);
+
+        document.getElementById("tabs").innerHTML = resultHtml;
+    </script>
+</body>
+
+</html>

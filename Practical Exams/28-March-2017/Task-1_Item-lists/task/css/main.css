@@ -1,0 +1,37 @@
+.column-container {
+	width: 500px;
+	height: 400px;
+	border: solid 1px black;
+	overflow-y: auto;
+}
+
+.select {
+	padding: 20px;
+	border-bottom: solid 1px black;
+}
+
+.column {
+	width: 50%;
+	float: left;
+	font-size: 20px;
+}
+
+.entry {
+	padding: 5px;
+	cursor: pointer;
+}
+
+.entry:hover {
+	background-color: lightgray;
+}
+
+.delete {
+	float: right;
+	color: red;
+	visibility: hidden;
+	margin-right: 5px;
+}
+
+.entry:hover .delete {
+	visibility: visible;
+}

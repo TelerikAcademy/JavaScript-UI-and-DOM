@@ -1,0 +1,54 @@
+.list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-size: 0;
+}
+
+.list .list-item {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem
+}
+
+.tabs-control {
+    height: 600px;
+    width: 600px;
+    display: inline-block;
+    border: 1px solid black;
+}
+
+.list-titles {
+    background: #eee
+}
+
+.list-titles .list-item {
+    display: inline-block;
+    background: #aaa;
+    border-right: 1px solid black;
+}
+
+.title {
+    display: inline-block;
+    padding: 10px 25px;
+    font-size: 1.1em
+}
+
+.title:hover {
+    background-color: #777;
+    color: white;
+    cursor: pointer
+}
+
+.tab-content-toggle {
+    display: none
+}
+
+.content {
+    display: none;
+    padding: 5px 15px;
+}
+
+.tab-content-toggle:checked+.content {
+    display: block;
+}
